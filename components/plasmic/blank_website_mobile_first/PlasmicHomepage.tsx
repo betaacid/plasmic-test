@@ -59,10 +59,17 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import Button from "../../Button"; // plasmic-import: 7v6YGoE2Zo0o/component
+
+import { useScreenVariants as useScreenVariantsajVfn3Ya69H5 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: AJVfn3Ya69h5/globalVariant
+
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import projectcss from "./plasmic.module.css"; // plasmic-import: i9knz7EXdrcBWswQTuKKjX/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: t6bbWH5XZ4fm/css
+
+import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: k4ujBvekGioO/icon
+import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: H5Yxuv6_n5vq/icon
 
 createPlasmicElementProxy;
 
@@ -77,7 +84,8 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
-  h1?: Flex__<"h1">;
+  headerSection?: Flex__<"section">;
+  button?: Flex__<typeof Button>;
 };
 
 export interface DefaultHomepageProps {}
@@ -121,6 +129,10 @@ function PlasmicHomepage__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsajVfn3Ya69H5()
+  });
+
   return (
     <React.Fragment>
       <Head></Head>
@@ -147,17 +159,216 @@ function PlasmicHomepage__RenderFunc(props: {
           )}
         >
           <h1
-            data-plasmic-name={"h1"}
-            data-plasmic-override={overrides.h1}
             className={classNames(
               projectcss.all,
               projectcss.h1,
               projectcss.__wab_text,
-              sty.h1
+              sty.h1__r3AkG
             )}
           >
             {"You won't believe what happens next."}
           </h1>
+          <section
+            data-plasmic-name={"headerSection"}
+            data-plasmic-override={overrides.headerSection}
+            className={classNames(projectcss.all, sty.headerSection)}
+          >
+            <Stack__
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__wrbg8)}
+            >
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__okmBy)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={
+                  hasVariant(globalVariants, "screen", "desktopOnly")
+                    ? "152px"
+                    : "82px"
+                }
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/blank_website_mobile_first/images/cocktailOnTable.png",
+                  fullWidth: 304,
+                  fullHeight: 214,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__r6Ms5
+                )}
+              >
+                <React.Fragment>
+                  <React.Fragment>{""}</React.Fragment>
+                  {
+                    <h3
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h3,
+                        projectcss.__wab_text,
+                        sty.h3__s8CyR
+                      )}
+                    >
+                      {"COCKTAIL"}
+                    </h3>
+                  }
+                  <React.Fragment>{""}</React.Fragment>
+                </React.Fragment>
+              </div>
+            </Stack__>
+            <div className={classNames(projectcss.all, sty.freeBox__agGoN)}>
+              <div className={classNames(projectcss.all, sty.freeBox__ewVxr)}>
+                <h3
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.h3,
+                    projectcss.__wab_text,
+                    sty.h3__yB37N
+                  )}
+                >
+                  <React.Fragment>
+                    <React.Fragment>{""}</React.Fragment>
+                    {
+                      <h1
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h1,
+                          projectcss.__wab_text,
+                          sty.h1__lb5Wz
+                        )}
+                      >
+                        {"KING"}
+                      </h1>
+                    }
+                    <React.Fragment>{""}</React.Fragment>
+                  </React.Fragment>
+                </h3>
+                <Stack__
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox__tpE3K)}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___2YIc
+                    )}
+                  >
+                    {"Global Beverage Consultant"}
+                  </div>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__zm90M
+                    )}
+                  >
+                    <React.Fragment>
+                      <React.Fragment>{"Expert in "}</React.Fragment>
+                      {
+                        <PlasmicLink__
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.a,
+                            projectcss.__wab_text,
+                            projectcss.plasmic_default__inline,
+                            sty.link___5Zlyj
+                          )}
+                          component={Link}
+                          href={"https://test.com"}
+                          platform={"nextjs"}
+                        >
+                          {"Ready-to-Drink Cocktails"}
+                        </PlasmicLink__>
+                      }
+                      <React.Fragment>{", "}</React.Fragment>
+                      {
+                        <PlasmicLink__
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.a,
+                            projectcss.__wab_text,
+                            projectcss.plasmic_default__inline,
+                            sty.link__sARtq
+                          )}
+                          component={Link}
+                          href={"https://test.com"}
+                          platform={"nextjs"}
+                        >
+                          {"Bar Program Development"}
+                        </PlasmicLink__>
+                      }
+                      <React.Fragment>{" & "}</React.Fragment>
+                      {
+                        <PlasmicLink__
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.a,
+                            projectcss.__wab_text,
+                            projectcss.plasmic_default__inline,
+                            sty.link___2Cn6U
+                          )}
+                          component={Link}
+                          href={"https://test.com"}
+                          platform={"nextjs"}
+                        >
+                          {"Menu Curation"}
+                        </PlasmicLink__>
+                      }
+                      <React.Fragment>{""}</React.Fragment>
+                    </React.Fragment>
+                  </div>
+                </Stack__>
+                <Button
+                  data-plasmic-name={"button"}
+                  data-plasmic-override={overrides.button}
+                  className={classNames("__wab_instance", sty.button)}
+                  label={
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__dGq2T
+                      )}
+                    >
+                      {"Let\u2019s work together"}
+                    </div>
+                  }
+                />
+              </div>
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__nIRsV)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={
+                  hasVariant(globalVariants, "screen", "desktopOnly")
+                    ? "398px"
+                    : "239px"
+                }
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/blank_website_mobile_first/images/cocktailWithLemon.png",
+                  fullWidth: 478,
+                  fullHeight: 768,
+                  aspectRatio: undefined
+                }}
+              />
+            </div>
+          </section>
         </div>
       </div>
     </React.Fragment>
@@ -165,15 +376,17 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "h1"],
-  h1: ["h1"]
+  root: ["root", "headerSection", "button"],
+  headerSection: ["headerSection", "button"],
+  button: ["button"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  h1: "h1";
+  headerSection: "section";
+  button: typeof Button;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -236,7 +449,8 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    h1: makeNodeComponent("h1"),
+    headerSection: makeNodeComponent("headerSection"),
+    button: makeNodeComponent("button"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

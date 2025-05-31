@@ -121,6 +121,16 @@
       }
     },
     {
+      "name": "Gold-500",
+      "type": "color",
+      "value": "#D7A564",
+      "category": "color",
+      "meta": {
+        "projectId": "i9knz7EXdrcBWswQTuKKjX",
+        "id": "aRsrMLdPve6a"
+      }
+    },
+    {
       "name": "Interaction / Disabled",
       "type": "color",
       "value": "#FFFFFF40",
@@ -368,6 +378,16 @@
       "meta": {
         "projectId": "i9knz7EXdrcBWswQTuKKjX",
         "id": "fL_mRu4Bd1K7"
+      }
+    },
+    {
+      "name": "Stone-600",
+      "type": "color",
+      "value": "#57534E",
+      "category": "color",
+      "meta": {
+        "projectId": "i9knz7EXdrcBWswQTuKKjX",
+        "id": "FY8xQgIqhrmL"
       }
     },
     {

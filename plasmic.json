@@ -292,6 +292,16 @@
           "id": "9s3m2OrgrCbA",
           "name": "logo.png",
           "filePath": "../public/plasmic/blank_website_mobile_first/images/logoPng.png"
+        },
+        {
+          "id": "8dT7ra4lfaZm",
+          "name": "cocktail-on-table",
+          "filePath": "../public/plasmic/blank_website_mobile_first/images/cocktailOnTable.png"
+        },
+        {
+          "id": "dYOS4hEH_rh4",
+          "name": "cocktail-with-lemon",
+          "filePath": "../public/plasmic/blank_website_mobile_first/images/cocktailWithLemon.png"
         }
       ],
       "indirect": false,
