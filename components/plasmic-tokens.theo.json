@@ -131,6 +131,16 @@
       }
     },
     {
+      "name": "Gold-400",
+      "type": "color",
+      "value": "#DAB98D",
+      "category": "color",
+      "meta": {
+        "projectId": "i9knz7EXdrcBWswQTuKKjX",
+        "id": "5Fd7Ld29XUJq"
+      }
+    },
+    {
       "name": "Gold-500",
       "type": "color",
       "value": "#D7A564",

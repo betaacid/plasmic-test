@@ -295,6 +295,11 @@
           "id": "OaJD_NBb6Nrq",
           "name": "LineBreakIcon",
           "moduleFilePath": "plasmic/blank_website_mobile_first/icons/PlasmicIcon__LineBreak.tsx"
+        },
+        {
+          "id": "LCLxgt2Kqs7i",
+          "name": "InstagramLogoIcon",
+          "moduleFilePath": "plasmic/blank_website_mobile_first/icons/PlasmicIcon__InstagramLogo.tsx"
         }
       ],
       "images": [
@@ -382,6 +387,61 @@
           "id": "DDNjnqbqthIO",
           "name": "press banner",
           "filePath": "../public/plasmic/blank_website_mobile_first/images/pressBanner.png"
+        },
+        {
+          "id": "e6LjTuMdyTz-",
+          "name": "sf-competition-award",
+          "filePath": "../public/plasmic/blank_website_mobile_first/images/sfCompetitionAward.png"
+        },
+        {
+          "id": "JHywalR4PX5S",
+          "name": "sf-competition-medals",
+          "filePath": "../public/plasmic/blank_website_mobile_first/images/sfCompetitionMedals.png"
+        },
+        {
+          "id": "PbVIjtioTJuP",
+          "name": "spirit-and-business-log0",
+          "filePath": "../public/plasmic/blank_website_mobile_first/images/spiritAndBusinessLog0.png"
+        },
+        {
+          "id": "Xq35PGtl0SpV",
+          "name": "spirit-and-business-medals",
+          "filePath": "../public/plasmic/blank_website_mobile_first/images/spiritAndBusinessMedals.svg"
+        },
+        {
+          "id": "MfOBNUKxbcWc",
+          "name": "50-best-discovery-logo",
+          "filePath": "../public/plasmic/blank_website_mobile_first/images/_50BestDiscoveryLogo.png"
+        },
+        {
+          "id": "HZBnQIYIPqyB",
+          "name": "bar-awards",
+          "filePath": "../public/plasmic/blank_website_mobile_first/images/barAwards.png"
+        },
+        {
+          "id": "5vRkMjCTGOFG",
+          "name": "eric-holding-boxes",
+          "filePath": "../public/plasmic/blank_website_mobile_first/images/ericHoldingBoxes.png"
+        },
+        {
+          "id": "ApMT1Qvnlzpe",
+          "name": "eric-social-profile-pic",
+          "filePath": "../public/plasmic/blank_website_mobile_first/images/ericSocialProfilePic.png"
+        },
+        {
+          "id": "9_a_5EaXmBZt",
+          "name": "red-cocktail-with-garnish",
+          "filePath": "../public/plasmic/blank_website_mobile_first/images/redCocktailWithGarnish.png"
+        },
+        {
+          "id": "4y69_SZ44BfA",
+          "name": "eric-standing-with-dj",
+          "filePath": "../public/plasmic/blank_website_mobile_first/images/ericStandingWithDj.png"
+        },
+        {
+          "id": "ww8Ll5c2bf4t",
+          "name": "cocktail-with-clover-stirrer",
+          "filePath": "../public/plasmic/blank_website_mobile_first/images/cocktailWithCloverStirrer.png"
         }
       ],
       "indirect": false,
