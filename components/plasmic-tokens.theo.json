@@ -1,6 +1,36 @@
 {
   "props": [
     {
+      "name": "Basic/Container-Background",
+      "type": "color",
+      "value": "#FFFFFF",
+      "category": "color",
+      "meta": {
+        "projectId": "i9knz7EXdrcBWswQTuKKjX",
+        "id": "l0iSpOhxlbf7"
+      }
+    },
+    {
+      "name": "Basic/Overlay-Background",
+      "type": "color",
+      "value": "#0A0A0A80",
+      "category": "color",
+      "meta": {
+        "projectId": "i9knz7EXdrcBWswQTuKKjX",
+        "id": "ZFi15_1l4scI"
+      }
+    },
+    {
+      "name": "Basic/Text-Primary",
+      "type": "color",
+      "value": "#030712",
+      "category": "color",
+      "meta": {
+        "projectId": "i9knz7EXdrcBWswQTuKKjX",
+        "id": "HXsMa3wzw1ML"
+      }
+    },
+    {
       "name": "Brand/Brand",
       "type": "color",
       "value": "#2563EB",
@@ -108,6 +138,16 @@
       "meta": {
         "projectId": "i9knz7EXdrcBWswQTuKKjX",
         "id": "c7f_ZdzO1orj"
+      }
+    },
+    {
+      "name": "Font-MD",
+      "type": "fontsize",
+      "value": "1rem",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "i9knz7EXdrcBWswQTuKKjX",
+        "id": "QUgoBqCTF3ZT"
       }
     },
     {
@@ -361,6 +401,16 @@
       }
     },
     {
+      "name": "Sans-serif",
+      "type": "fontfamily",
+      "value": "Inter",
+      "category": "fontfamily",
+      "meta": {
+        "projectId": "i9knz7EXdrcBWswQTuKKjX",
+        "id": "ZVFtDHvz8N_b"
+      }
+    },
+    {
       "name": "Size-10",
       "type": "spacing",
       "value": "0.625rem",
@@ -381,6 +431,16 @@
       }
     },
     {
+      "name": "Size-16",
+      "type": "spacing",
+      "value": "1rem",
+      "category": "spacing",
+      "meta": {
+        "projectId": "i9knz7EXdrcBWswQTuKKjX",
+        "id": "VgXEx0kjSLoh"
+      }
+    },
+    {
       "name": "Size-2",
       "type": "spacing",
       "value": "0.125rem",
@@ -388,6 +448,16 @@
       "meta": {
         "projectId": "i9knz7EXdrcBWswQTuKKjX",
         "id": "juALtTVskdE8"
+      }
+    },
+    {
+      "name": "Size-24",
+      "type": "spacing",
+      "value": "1.5rem",
+      "category": "spacing",
+      "meta": {
+        "projectId": "i9knz7EXdrcBWswQTuKKjX",
+        "id": "E_JLwjZYr7vG"
       }
     },
     {

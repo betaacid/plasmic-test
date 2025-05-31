@@ -60,6 +60,8 @@ import {
 } from "@plasmicapp/react-web/lib/host";
 
 import Button from "../../Button"; // plasmic-import: 7v6YGoE2Zo0o/component
+import Modal from "../../Modal"; // plasmic-import: pwrU8-lOfcyk/component
+import Button2 from "../../Button2"; // plasmic-import: PmMcfy4rIU7X/component
 
 import { useScreenVariants as useScreenVariantsajVfn3Ya69H5 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: AJVfn3Ya69h5/globalVariant
 
@@ -123,6 +125,8 @@ export type PlasmicHomepage__OverridesType = {
   testimonialsSection?: Flex__<"section">;
   _?: Flex__<"div">;
   footer?: Flex__<"section">;
+  menuModal?: Flex__<typeof Modal>;
+  contactModal?: Flex__<typeof Modal>;
 };
 
 export interface DefaultHomepageProps {}
@@ -166,6 +170,30 @@ function PlasmicHomepage__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
+    () => [
+      {
+        path: "menuModal.isOpen",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "contactModal.isOpen",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      }
+    ],
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: {},
+    $refs
+  });
+
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsajVfn3Ya69H5()
   });
@@ -201,11 +229,59 @@ function PlasmicHomepage__RenderFunc(props: {
             className={classNames(projectcss.all, sty.navSection)}
           >
             <div className={classNames(projectcss.all, sty.freeBox__elpz9)}>
-              <MenuSvgIcon
-                className={classNames(projectcss.all, sty.svg__t1WBv)}
-                role={"img"}
-              />
+              <PlasmicLink__
+                className={classNames(
+                  projectcss.all,
+                  projectcss.a,
+                  sty.link__fZahv
+                )}
+                component={Link}
+                onClick={async event => {
+                  const $steps = {};
 
+                  $steps["updateMenuModalIsOpen"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          variable: {
+                            objRoot: $state,
+                            variablePath: ["menuModal", "isOpen"]
+                          },
+                          operation: 0,
+                          value: true
+                        };
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+
+                          $stateSet(objRoot, variablePath, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateMenuModalIsOpen"] != null &&
+                    typeof $steps["updateMenuModalIsOpen"] === "object" &&
+                    typeof $steps["updateMenuModalIsOpen"].then === "function"
+                  ) {
+                    $steps["updateMenuModalIsOpen"] = await $steps[
+                      "updateMenuModalIsOpen"
+                    ];
+                  }
+                }}
+                platform={"nextjs"}
+              >
+                <MenuSvgIcon
+                  className={classNames(projectcss.all, sty.svg__t1WBv)}
+                  role={"img"}
+                />
+              </PlasmicLink__>
               <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__mn83Y)}
@@ -247,6 +323,46 @@ function PlasmicHomepage__RenderFunc(props: {
                     {"Let's work together"}
                   </div>
                 }
+                onClick={async event => {
+                  const $steps = {};
+
+                  $steps["updateContactModalIsOpen"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          variable: {
+                            objRoot: $state,
+                            variablePath: ["contactModal", "isOpen"]
+                          },
+                          operation: 0,
+                          value: true
+                        };
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+
+                          $stateSet(objRoot, variablePath, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateContactModalIsOpen"] != null &&
+                    typeof $steps["updateContactModalIsOpen"] === "object" &&
+                    typeof $steps["updateContactModalIsOpen"].then ===
+                      "function"
+                  ) {
+                    $steps["updateContactModalIsOpen"] = await $steps[
+                      "updateContactModalIsOpen"
+                    ];
+                  }
+                }}
                 roundedFull={true}
                 start={
                   <EmailIconSvgIcon
@@ -2880,6 +2996,62 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
             </Stack__>
           </section>
+          <Modal
+            data-plasmic-name={"menuModal"}
+            data-plasmic-override={overrides.menuModal}
+            className={classNames("__wab_instance", sty.menuModal)}
+            isKeyboardDismissDisabled={false}
+            isOpen={generateStateValueProp($state, ["menuModal", "isOpen"])}
+            onOpenChange={async (...eventArgs: any) => {
+              generateStateOnChangeProp($state, ["menuModal", "isOpen"]).apply(
+                null,
+                eventArgs
+              );
+
+              if (
+                eventArgs.length > 1 &&
+                eventArgs[1] &&
+                eventArgs[1]._plasmic_state_init_
+              ) {
+                return;
+              }
+            }}
+            trigger={null}
+          />
+
+          <Modal
+            data-plasmic-name={"contactModal"}
+            data-plasmic-override={overrides.contactModal}
+            className={classNames("__wab_instance", sty.contactModal)}
+            heading={
+              <h3
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h3,
+                  projectcss.__wab_text,
+                  sty.h3___2Hu72
+                )}
+              >
+                {"Email Modal"}
+              </h3>
+            }
+            isOpen={generateStateValueProp($state, ["contactModal", "isOpen"])}
+            onOpenChange={async (...eventArgs: any) => {
+              generateStateOnChangeProp($state, [
+                "contactModal",
+                "isOpen"
+              ]).apply(null, eventArgs);
+
+              if (
+                eventArgs.length > 1 &&
+                eventArgs[1] &&
+                eventArgs[1]._plasmic_state_init_
+              ) {
+                return;
+              }
+            }}
+            trigger={null}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -2920,7 +3092,9 @@ const PlasmicDescendants = {
     "post4",
     "testimonialsSection",
     "_",
-    "footer"
+    "footer",
+    "menuModal",
+    "contactModal"
   ],
   navSection: ["navSection"],
   headerSection: ["headerSection", "h1"],
@@ -2978,7 +3152,9 @@ const PlasmicDescendants = {
   post4: ["post4"],
   testimonialsSection: ["testimonialsSection", "_"],
   _: ["_"],
-  footer: ["footer"]
+  footer: ["footer"],
+  menuModal: ["menuModal"],
+  contactModal: ["contactModal"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -3017,6 +3193,8 @@ type NodeDefaultElementType = {
   testimonialsSection: "section";
   _: "div";
   footer: "section";
+  menuModal: typeof Modal;
+  contactModal: typeof Modal;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -3113,6 +3291,8 @@ export const PlasmicHomepage = Object.assign(
     testimonialsSection: makeNodeComponent("testimonialsSection"),
     _: makeNodeComponent("_"),
     footer: makeNodeComponent("footer"),
+    menuModal: makeNodeComponent("menuModal"),
+    contactModal: makeNodeComponent("contactModal"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
