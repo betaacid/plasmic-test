@@ -89,7 +89,6 @@ import LineBreakIcon from "./icons/PlasmicIcon__LineBreak"; // plasmic-import: O
 import InstagramLogoIcon from "./icons/PlasmicIcon__InstagramLogo"; // plasmic-import: LCLxgt2Kqs7i/icon
 import SpeechBubbleIcon from "./icons/PlasmicIcon__SpeechBubble"; // plasmic-import: s311iITGUFs6/icon
 import ContactEmailIcon from "./icons/PlasmicIcon__ContactEmail"; // plasmic-import: u1EK1ushqS6H/icon
-import CloseIcon from "./icons/PlasmicIcon__Close"; // plasmic-import: ravm44jH31So/icon
 
 createPlasmicElementProxy;
 
@@ -3040,276 +3039,7 @@ function PlasmicHomepage__RenderFunc(props: {
           <Modal
             data-plasmic-name={"menuModal"}
             data-plasmic-override={overrides.menuModal}
-            content={
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__mPbXa)}
-              >
-                <PlasmicLink__
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    sty.link__a9RfX
-                  )}
-                  component={Link}
-                  platform={"nextjs"}
-                >
-                  <CloseIcon
-                    className={classNames(projectcss.all, sty.svg___7MybT)}
-                    role={"img"}
-                  />
-
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__lCpa
-                    )}
-                  >
-                    {"Menu"}
-                  </div>
-                </PlasmicLink__>
-                <PlasmicLink__
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    projectcss.__wab_text,
-                    sty.link__zBXvL
-                  )}
-                  component={Link}
-                  platform={"nextjs"}
-                >
-                  <React.Fragment>
-                    <React.Fragment>{""}</React.Fragment>
-                    {
-                      <h3
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h3,
-                          projectcss.__wab_text,
-                          sty.h3___6Ofic
-                        )}
-                      >
-                        {"HOME"}
-                      </h3>
-                    }
-                    <React.Fragment>{""}</React.Fragment>
-                  </React.Fragment>
-                </PlasmicLink__>
-                <PlasmicLink__
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    projectcss.__wab_text,
-                    sty.link___8Pw1V
-                  )}
-                  component={Link}
-                  href={"#about-me"}
-                  platform={"nextjs"}
-                >
-                  <React.Fragment>
-                    <React.Fragment>{""}</React.Fragment>
-                    {
-                      <h3
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h3,
-                          projectcss.__wab_text,
-                          sty.h3__dcf1T
-                        )}
-                      >
-                        {"ABOUT ME"}
-                      </h3>
-                    }
-                    <React.Fragment>{""}</React.Fragment>
-                  </React.Fragment>
-                </PlasmicLink__>
-                <PlasmicLink__
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    projectcss.__wab_text,
-                    sty.link__kJmoM
-                  )}
-                  component={Link}
-                  href={"#portfolio"}
-                  platform={"nextjs"}
-                >
-                  <React.Fragment>
-                    <React.Fragment>{""}</React.Fragment>
-                    {
-                      <h3
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h3,
-                          projectcss.__wab_text,
-                          sty.h3___7KXj1
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "var(--token-YgWl7Z_Ys_1v)" }}
-                          >
-                            {"PORTFOLIO"}
-                          </span>
-                        </React.Fragment>
-                      </h3>
-                    }
-                    <React.Fragment>{""}</React.Fragment>
-                  </React.Fragment>
-                </PlasmicLink__>
-                <PlasmicLink__
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    projectcss.__wab_text,
-                    sty.link__sjUxd
-                  )}
-                  component={Link}
-                  href={"#services"}
-                  platform={"nextjs"}
-                >
-                  <React.Fragment>
-                    <React.Fragment>{""}</React.Fragment>
-                    {
-                      <h3
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h3,
-                          projectcss.__wab_text,
-                          sty.h3___3Cv7Y
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "var(--token-YgWl7Z_Ys_1v)" }}
-                          >
-                            {"SERVICES"}
-                          </span>
-                        </React.Fragment>
-                      </h3>
-                    }
-                    <React.Fragment>{""}</React.Fragment>
-                  </React.Fragment>
-                </PlasmicLink__>
-                <PlasmicLink__
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    projectcss.__wab_text,
-                    sty.link__fp3K3
-                  )}
-                  component={Link}
-                  href={"#press"}
-                  platform={"nextjs"}
-                >
-                  <React.Fragment>
-                    <React.Fragment>{""}</React.Fragment>
-                    {
-                      <h3
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h3,
-                          projectcss.__wab_text,
-                          sty.h3__h41Ar
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "#FFFFFF" }}
-                          >
-                            {"PRESS"}
-                          </span>
-                        </React.Fragment>
-                      </h3>
-                    }
-                    <React.Fragment>{""}</React.Fragment>
-                  </React.Fragment>
-                </PlasmicLink__>
-                <PlasmicLink__
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    projectcss.__wab_text,
-                    sty.link__pqHiS
-                  )}
-                  component={Link}
-                  href={"#contact"}
-                  platform={"nextjs"}
-                >
-                  <React.Fragment>
-                    <React.Fragment>{""}</React.Fragment>
-                    {
-                      <h3
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h3,
-                          projectcss.__wab_text,
-                          sty.h3__lCJcT
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "var(--token-YgWl7Z_Ys_1v)" }}
-                          >
-                            {"CONTACT"}
-                          </span>
-                        </React.Fragment>
-                      </h3>
-                    }
-                    <React.Fragment>{""}</React.Fragment>
-                  </React.Fragment>
-                </PlasmicLink__>
-                <PlasmicLink__
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    sty.link__owTmd
-                  )}
-                  component={Link}
-                  href={"https://instagram.com/cocktails__king/"}
-                  platform={"nextjs"}
-                  target={"_blank"}
-                >
-                  <InstagramLogoIcon
-                    className={classNames(projectcss.all, sty.svg__mlfE0)}
-                    role={"img"}
-                  />
-
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__ggezW
-                    )}
-                  >
-                    <React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{ color: "var(--token-00hQVsY5huLW)" }}
-                      >
-                        {"@cocktails__king"}
-                      </span>
-                    </React.Fragment>
-                  </div>
-                </PlasmicLink__>
-              </Stack__>
-            }
-            footer={null}
-            heading={null}
+            className={classNames("__wab_instance", sty.menuModal)}
             isOpen={generateStateValueProp($state, ["menuModal", "isOpen"])}
             onOpenChange={async (...eventArgs: any) => {
               generateStateOnChangeProp($state, ["menuModal", "isOpen"]).apply(
@@ -3325,8 +3055,6 @@ function PlasmicHomepage__RenderFunc(props: {
                 return;
               }
             }}
-            showFooter={false}
-            showHeader={false}
           />
 
           <AntdModal
@@ -3420,7 +3148,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__fZUu
+                      sty.formField___5ESRx
                     )}
                     label={"Name"}
                     name={"name"}
@@ -3430,10 +3158,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     />
                   </FormItemWrapper>
                   <FormItemWrapper
-                    className={classNames(
-                      "__wab_instance",
-                      sty.formField__mhF2Z
-                    )}
+                    className={classNames("__wab_instance", sty.formField__faD)}
                     label={"Message"}
                     name={"message"}
                   >
@@ -3442,7 +3167,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     />
                   </FormItemWrapper>
                   <AntdButton
-                    className={classNames("__wab_instance", sty.button__fNuI9)}
+                    className={classNames("__wab_instance", sty.button__hFfgt)}
                     submitsForm={true}
                     type={"primary"}
                   >
@@ -3450,7 +3175,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__qOgx9
+                        sty.text___1ZpF
                       )}
                     >
                       {"Submit"}

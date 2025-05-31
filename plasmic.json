@@ -336,11 +336,6 @@
           "id": "u1EK1ushqS6H",
           "name": "ContactEmailIcon",
           "moduleFilePath": "plasmic/blank_website_mobile_first/icons/PlasmicIcon__ContactEmail.tsx"
-        },
-        {
-          "id": "ravm44jH31So",
-          "name": "CloseIcon",
-          "moduleFilePath": "plasmic/blank_website_mobile_first/icons/PlasmicIcon__Close.tsx"
         }
       ],
       "images": [
