@@ -60,8 +60,6 @@ import {
 } from "@plasmicapp/react-web/lib/host";
 
 import Button from "../../Button"; // plasmic-import: 7v6YGoE2Zo0o/component
-import Modal from "../../Modal"; // plasmic-import: 5SZcaRjHDDZd/component
-import Button2 from "../../Button2"; // plasmic-import: PVKK-xU6-q6G/component
 
 import { useScreenVariants as useScreenVariantsajVfn3Ya69H5 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: AJVfn3Ya69h5/globalVariant
 
@@ -80,7 +78,6 @@ import LineBreakIcon from "./icons/PlasmicIcon__LineBreak"; // plasmic-import: O
 import InstagramLogoIcon from "./icons/PlasmicIcon__InstagramLogo"; // plasmic-import: LCLxgt2Kqs7i/icon
 import SpeechBubbleIcon from "./icons/PlasmicIcon__SpeechBubble"; // plasmic-import: s311iITGUFs6/icon
 import ContactEmailIcon from "./icons/PlasmicIcon__ContactEmail"; // plasmic-import: u1EK1ushqS6H/icon
-import CloseIcon from "./icons/PlasmicIcon__Close"; // plasmic-import: mT9OwePIsVqk/icon
 
 createPlasmicElementProxy;
 
@@ -127,7 +124,6 @@ export type PlasmicHomepage__OverridesType = {
   testimonialsSection?: Flex__<"section">;
   _?: Flex__<"div">;
   footer?: Flex__<"section">;
-  menuModal?: Flex__<typeof Modal>;
 };
 
 export interface DefaultHomepageProps {}
@@ -173,24 +169,6 @@ function PlasmicHomepage__RenderFunc(props: {
 
   const $globalActions = useGlobalActions?.();
 
-  const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
-    () => [
-      {
-        path: "menuModal.isOpen",
-        type: "private",
-        variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => false
-      }
-    ],
-    [$props, $ctx, $refs]
-  );
-  const $state = useDollarState(stateSpecs, {
-    $props,
-    $ctx,
-    $queries: {},
-    $refs
-  });
-
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsajVfn3Ya69H5()
   });
@@ -234,45 +212,6 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.link___2BygW
                 )}
                 component={Link}
-                onClick={async event => {
-                  const $steps = {};
-
-                  $steps["updateMenuModalIsOpen"] = true
-                    ? (() => {
-                        const actionArgs = {
-                          variable: {
-                            objRoot: $state,
-                            variablePath: ["menuModal", "isOpen"]
-                          },
-                          operation: 0,
-                          value: true
-                        };
-                        return (({
-                          variable,
-                          value,
-                          startIndex,
-                          deleteCount
-                        }) => {
-                          if (!variable) {
-                            return;
-                          }
-                          const { objRoot, variablePath } = variable;
-
-                          $stateSet(objRoot, variablePath, value);
-                          return value;
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                  if (
-                    $steps["updateMenuModalIsOpen"] != null &&
-                    typeof $steps["updateMenuModalIsOpen"] === "object" &&
-                    typeof $steps["updateMenuModalIsOpen"].then === "function"
-                  ) {
-                    $steps["updateMenuModalIsOpen"] = await $steps[
-                      "updateMenuModalIsOpen"
-                    ];
-                  }
-                }}
                 platform={"nextjs"}
               >
                 <MenuSvgIcon
@@ -2979,374 +2918,6 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
             </Stack__>
           </section>
-          <Modal
-            data-plasmic-name={"menuModal"}
-            data-plasmic-override={overrides.menuModal}
-            content={
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__zg8Gq)}
-              >
-                <PlasmicLink__
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    sty.link__hiTtt
-                  )}
-                  component={Link}
-                  onClick={async event => {
-                    const $steps = {};
-
-                    $steps["updateMenuModalIsOpen"] = true
-                      ? (() => {
-                          const actionArgs = {
-                            variable: {
-                              objRoot: $state,
-                              variablePath: ["menuModal", "isOpen"]
-                            },
-                            operation: 0,
-                            value: false
-                          };
-                          return (({
-                            variable,
-                            value,
-                            startIndex,
-                            deleteCount
-                          }) => {
-                            if (!variable) {
-                              return;
-                            }
-                            const { objRoot, variablePath } = variable;
-
-                            $stateSet(objRoot, variablePath, value);
-                            return value;
-                          })?.apply(null, [actionArgs]);
-                        })()
-                      : undefined;
-                    if (
-                      $steps["updateMenuModalIsOpen"] != null &&
-                      typeof $steps["updateMenuModalIsOpen"] === "object" &&
-                      typeof $steps["updateMenuModalIsOpen"].then === "function"
-                    ) {
-                      $steps["updateMenuModalIsOpen"] = await $steps[
-                        "updateMenuModalIsOpen"
-                      ];
-                    }
-                  }}
-                  platform={"nextjs"}
-                >
-                  <CloseIcon
-                    className={classNames(projectcss.all, sty.svg__kfVb1)}
-                    role={"img"}
-                  />
-
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__nmyXj
-                    )}
-                  >
-                    {"Menu"}
-                  </div>
-                </PlasmicLink__>
-                <PlasmicLink__
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    projectcss.__wab_text,
-                    sty.link___8Cjp
-                  )}
-                  component={Link}
-                  href={`/`}
-                  onClick={async event => {
-                    const $steps = {};
-
-                    $steps["updateMenuModalIsOpen"] = true
-                      ? (() => {
-                          const actionArgs = {
-                            variable: {
-                              objRoot: $state,
-                              variablePath: ["menuModal", "isOpen"]
-                            },
-                            operation: 0,
-                            value: false
-                          };
-                          return (({
-                            variable,
-                            value,
-                            startIndex,
-                            deleteCount
-                          }) => {
-                            if (!variable) {
-                              return;
-                            }
-                            const { objRoot, variablePath } = variable;
-
-                            $stateSet(objRoot, variablePath, value);
-                            return value;
-                          })?.apply(null, [actionArgs]);
-                        })()
-                      : undefined;
-                    if (
-                      $steps["updateMenuModalIsOpen"] != null &&
-                      typeof $steps["updateMenuModalIsOpen"] === "object" &&
-                      typeof $steps["updateMenuModalIsOpen"].then === "function"
-                    ) {
-                      $steps["updateMenuModalIsOpen"] = await $steps[
-                        "updateMenuModalIsOpen"
-                      ];
-                    }
-                  }}
-                  platform={"nextjs"}
-                >
-                  <React.Fragment>
-                    <React.Fragment>{""}</React.Fragment>
-                    {
-                      <h3
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h3,
-                          projectcss.__wab_text,
-                          sty.h3__loG1Y
-                        )}
-                      >
-                        {"HOME"}
-                      </h3>
-                    }
-                    <React.Fragment>{""}</React.Fragment>
-                  </React.Fragment>
-                </PlasmicLink__>
-                <PlasmicLink__
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    projectcss.__wab_text,
-                    sty.link__grscR
-                  )}
-                  component={Link}
-                  href={"#about-me"}
-                  platform={"nextjs"}
-                >
-                  <React.Fragment>
-                    <React.Fragment>{""}</React.Fragment>
-                    {
-                      <h3
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h3,
-                          projectcss.__wab_text,
-                          sty.h3__zxzrE
-                        )}
-                      >
-                        {"ABOUT ME"}
-                      </h3>
-                    }
-                    <React.Fragment>{""}</React.Fragment>
-                  </React.Fragment>
-                </PlasmicLink__>
-                <PlasmicLink__
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    projectcss.__wab_text,
-                    sty.link__stZ7R
-                  )}
-                  component={Link}
-                  href={"#portfolio"}
-                  platform={"nextjs"}
-                >
-                  <React.Fragment>
-                    <React.Fragment>{""}</React.Fragment>
-                    {
-                      <h3
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h3,
-                          projectcss.__wab_text,
-                          sty.h3__rXyC
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "var(--token-YgWl7Z_Ys_1v)" }}
-                          >
-                            {"PORTFOLIO"}
-                          </span>
-                        </React.Fragment>
-                      </h3>
-                    }
-                    <React.Fragment>{""}</React.Fragment>
-                  </React.Fragment>
-                </PlasmicLink__>
-                <PlasmicLink__
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    projectcss.__wab_text,
-                    sty.link___73Kz5
-                  )}
-                  component={Link}
-                  href={"#services"}
-                  platform={"nextjs"}
-                >
-                  <React.Fragment>
-                    <React.Fragment>{""}</React.Fragment>
-                    {
-                      <h3
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h3,
-                          projectcss.__wab_text,
-                          sty.h3___6IZy
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "var(--token-YgWl7Z_Ys_1v)" }}
-                          >
-                            {"SERVICES"}
-                          </span>
-                        </React.Fragment>
-                      </h3>
-                    }
-                    <React.Fragment>{""}</React.Fragment>
-                  </React.Fragment>
-                </PlasmicLink__>
-                <PlasmicLink__
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    projectcss.__wab_text,
-                    sty.link__cfRec
-                  )}
-                  component={Link}
-                  href={"#press"}
-                  platform={"nextjs"}
-                >
-                  <React.Fragment>
-                    <React.Fragment>{""}</React.Fragment>
-                    {
-                      <h3
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h3,
-                          projectcss.__wab_text,
-                          sty.h3___2FgDs
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "#FFFFFF" }}
-                          >
-                            {"PRESS"}
-                          </span>
-                        </React.Fragment>
-                      </h3>
-                    }
-                    <React.Fragment>{""}</React.Fragment>
-                  </React.Fragment>
-                </PlasmicLink__>
-                <PlasmicLink__
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    projectcss.__wab_text,
-                    sty.link___270JC
-                  )}
-                  component={Link}
-                  href={"#contact"}
-                  platform={"nextjs"}
-                >
-                  <React.Fragment>
-                    <React.Fragment>{""}</React.Fragment>
-                    {
-                      <h3
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h3,
-                          projectcss.__wab_text,
-                          sty.h3__gWb1N
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "var(--token-YgWl7Z_Ys_1v)" }}
-                          >
-                            {"CONTACT"}
-                          </span>
-                        </React.Fragment>
-                      </h3>
-                    }
-                    <React.Fragment>{""}</React.Fragment>
-                  </React.Fragment>
-                </PlasmicLink__>
-                <PlasmicLink__
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    sty.link__g23Om
-                  )}
-                  component={Link}
-                  href={"https://instagram.com/cocktails__king/"}
-                  platform={"nextjs"}
-                  target={"_blank"}
-                >
-                  <InstagramLogoIcon
-                    className={classNames(projectcss.all, sty.svg__sdTiV)}
-                    role={"img"}
-                  />
-
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__azZa
-                    )}
-                  >
-                    <React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{ color: "var(--token-00hQVsY5huLW)" }}
-                      >
-                        {"@cocktails__king"}
-                      </span>
-                    </React.Fragment>
-                  </div>
-                </PlasmicLink__>
-              </Stack__>
-            }
-            isOpen={generateStateValueProp($state, ["menuModal", "isOpen"])}
-            noTrigger={true}
-            onOpenChange={async (...eventArgs: any) => {
-              generateStateOnChangeProp($state, ["menuModal", "isOpen"]).apply(
-                null,
-                eventArgs
-              );
-
-              if (
-                eventArgs.length > 1 &&
-                eventArgs[1] &&
-                eventArgs[1]._plasmic_state_init_
-              ) {
-                return;
-              }
-            }}
-            showHeader={false}
-          />
         </div>
       </div>
     </React.Fragment>
@@ -3387,8 +2958,7 @@ const PlasmicDescendants = {
     "post4",
     "testimonialsSection",
     "_",
-    "footer",
-    "menuModal"
+    "footer"
   ],
   navSection: ["navSection"],
   headerSection: ["headerSection", "h1"],
@@ -3446,8 +3016,7 @@ const PlasmicDescendants = {
   post4: ["post4"],
   testimonialsSection: ["testimonialsSection", "_"],
   _: ["_"],
-  footer: ["footer"],
-  menuModal: ["menuModal"]
+  footer: ["footer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -3486,7 +3055,6 @@ type NodeDefaultElementType = {
   testimonialsSection: "section";
   _: "div";
   footer: "section";
-  menuModal: typeof Modal;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -3583,7 +3151,6 @@ export const PlasmicHomepage = Object.assign(
     testimonialsSection: makeNodeComponent("testimonialsSection"),
     _: makeNodeComponent("_"),
     footer: makeNodeComponent("footer"),
-    menuModal: makeNodeComponent("menuModal"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
