@@ -68,8 +68,10 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic.module.css"; // plasmic-import: i9knz7EXdrcBWswQTuKKjX/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: t6bbWH5XZ4fm/css
 
-import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: k4ujBvekGioO/icon
+import MenuSvgIcon from "./icons/PlasmicIcon__MenuSvg"; // plasmic-import: m6be-c-hP_JG/icon
+import EmailIconSvgIcon from "./icons/PlasmicIcon__EmailIconSvg"; // plasmic-import: zIXVq3DAAel6/icon
 import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: H5Yxuv6_n5vq/icon
+import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: k4ujBvekGioO/icon
 import CrownHaloIcon from "./icons/PlasmicIcon__CrownHalo"; // plasmic-import: QESqRHbH-Tr7/icon
 import LineBreakIcon from "./icons/PlasmicIcon__LineBreak"; // plasmic-import: OaJD_NBb6Nrq/icon
 import InstagramLogoIcon from "./icons/PlasmicIcon__InstagramLogo"; // plasmic-import: LCLxgt2Kqs7i/icon
@@ -89,9 +91,9 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
+  navSection?: Flex__<"section">;
   headerSection?: Flex__<"section">;
   h1?: Flex__<"h1">;
-  button?: Flex__<typeof Button>;
   aboutMeSection?: Flex__<"section">;
   portfolioSection?: Flex__<"section">;
   libertineBlendsProject?: Flex__<"div">;
@@ -193,6 +195,68 @@ function PlasmicHomepage__RenderFunc(props: {
             sty.root
           )}
         >
+          <section
+            data-plasmic-name={"navSection"}
+            data-plasmic-override={overrides.navSection}
+            className={classNames(projectcss.all, sty.navSection)}
+          >
+            <div className={classNames(projectcss.all, sty.freeBox__elpz9)}>
+              <MenuSvgIcon
+                className={classNames(projectcss.all, sty.svg__t1WBv)}
+                role={"img"}
+              />
+
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__mn83Y)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={
+                  hasVariant(globalVariants, "screen", "desktopOnly")
+                    ? "202px"
+                    : "auto"
+                }
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/blank_website_mobile_first/images/logoPng.png",
+                  fullWidth: 152,
+                  fullHeight: 12,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <Button
+                className={classNames("__wab_instance", sty.button__fZIuf)}
+                flatSide={[]}
+                iconStart={
+                  hasVariant(globalVariants, "screen", "desktopOnly")
+                    ? undefined
+                    : true
+                }
+                label={
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__a8Syd
+                    )}
+                  >
+                    {"Let's work together"}
+                  </div>
+                }
+                roundedFull={true}
+                start={
+                  <EmailIconSvgIcon
+                    className={classNames(projectcss.all, sty.svg__gieMo)}
+                    role={"img"}
+                  />
+                }
+              />
+            </div>
+          </section>
           <section
             data-plasmic-name={"headerSection"}
             data-plasmic-override={overrides.headerSection}
@@ -357,9 +421,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   </div>
                 </Stack__>
                 <Button
-                  data-plasmic-name={"button"}
-                  data-plasmic-override={overrides.button}
-                  className={classNames("__wab_instance", sty.button)}
+                  className={classNames("__wab_instance", sty.button__w0Xp)}
                   label={
                     <div
                       className={classNames(
@@ -2827,9 +2889,9 @@ function PlasmicHomepage__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
+    "navSection",
     "headerSection",
     "h1",
-    "button",
     "aboutMeSection",
     "portfolioSection",
     "libertineBlendsProject",
@@ -2860,9 +2922,9 @@ const PlasmicDescendants = {
     "_",
     "footer"
   ],
-  headerSection: ["headerSection", "h1", "button"],
+  navSection: ["navSection"],
+  headerSection: ["headerSection", "h1"],
   h1: ["h1"],
-  button: ["button"],
   aboutMeSection: ["aboutMeSection"],
   portfolioSection: [
     "portfolioSection",
@@ -2923,9 +2985,9 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  navSection: "section";
   headerSection: "section";
   h1: "h1";
-  button: typeof Button;
   aboutMeSection: "section";
   portfolioSection: "section";
   libertineBlendsProject: "div";
@@ -3017,9 +3079,9 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    navSection: makeNodeComponent("navSection"),
     headerSection: makeNodeComponent("headerSection"),
     h1: makeNodeComponent("h1"),
-    button: makeNodeComponent("button"),
     aboutMeSection: makeNodeComponent("aboutMeSection"),
     portfolioSection: makeNodeComponent("portfolioSection"),
     libertineBlendsProject: makeNodeComponent("libertineBlendsProject"),
