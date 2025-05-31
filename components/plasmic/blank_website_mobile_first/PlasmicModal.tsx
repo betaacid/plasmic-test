@@ -157,7 +157,7 @@ function PlasmicModal__RenderFunc(props: {
         {
           closeOnBackdropClick: true,
           showHeader: true,
-          showFooter: false
+          showFooter: true
         },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
