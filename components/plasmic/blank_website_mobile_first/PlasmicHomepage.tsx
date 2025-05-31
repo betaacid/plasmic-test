@@ -59,18 +59,10 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
-import Button from "../../Button"; // plasmic-import: 7v6YGoE2Zo0o/component
-
-import { useScreenVariants as useScreenVariantsajVfn3Ya69H5 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: AJVfn3Ya69h5/globalVariant
-
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import projectcss from "./plasmic.module.css"; // plasmic-import: i9knz7EXdrcBWswQTuKKjX/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: t6bbWH5XZ4fm/css
-
-import MenuSvgIcon from "./icons/PlasmicIcon__MenuSvg"; // plasmic-import: m6be-c-hP_JG/icon
-import EmailIconSvgIcon from "./icons/PlasmicIcon__EmailIconSvg"; // plasmic-import: zIXVq3DAAel6/icon
-import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: H5Yxuv6_n5vq/icon
 
 createPlasmicElementProxy;
 
@@ -85,11 +77,7 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
-  nav?: Flex__<"div">;
-  hamburgerButton?: Flex__<"a"> & Partial<LinkProps>;
-  img?: Flex__<typeof PlasmicImg__>;
-  button?: Flex__<typeof Button>;
-  text?: Flex__<"div">;
+  h1?: Flex__<"h1">;
 };
 
 export interface DefaultHomepageProps {}
@@ -133,10 +121,6 @@ function PlasmicHomepage__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const globalVariants = ensureGlobalVariants({
-    screen: useScreenVariantsajVfn3Ya69H5()
-  });
-
   return (
     <React.Fragment>
       <Head></Head>
@@ -162,83 +146,18 @@ function PlasmicHomepage__RenderFunc(props: {
             sty.root
           )}
         >
-          <div
-            data-plasmic-name={"nav"}
-            data-plasmic-override={overrides.nav}
-            className={classNames(projectcss.all, sty.nav)}
+          <h1
+            data-plasmic-name={"h1"}
+            data-plasmic-override={overrides.h1}
+            className={classNames(
+              projectcss.all,
+              projectcss.h1,
+              projectcss.__wab_text,
+              sty.h1
+            )}
           >
-            <PlasmicLink__
-              data-plasmic-name={"hamburgerButton"}
-              data-plasmic-override={overrides.hamburgerButton}
-              className={classNames(
-                projectcss.all,
-                projectcss.a,
-                sty.hamburgerButton
-              )}
-              component={Link}
-              platform={"nextjs"}
-            >
-              <MenuSvgIcon
-                className={classNames(projectcss.all, sty.svg__eGVs)}
-                role={"img"}
-              />
-            </PlasmicLink__>
-            <PlasmicImg__
-              data-plasmic-name={"img"}
-              data-plasmic-override={overrides.img}
-              alt={""}
-              className={classNames(sty.img)}
-              displayHeight={"auto"}
-              displayMaxHeight={"none"}
-              displayMaxWidth={"100%"}
-              displayMinHeight={"0"}
-              displayMinWidth={"0"}
-              displayWidth={
-                hasVariant(globalVariants, "screen", "desktopOnly")
-                  ? "202px"
-                  : "auto"
-              }
-              loading={"lazy"}
-              src={{
-                src: "/plasmic/blank_website_mobile_first/images/logoPng.png",
-                fullWidth: 152,
-                fullHeight: 12,
-                aspectRatio: undefined
-              }}
-            />
-
-            <Button
-              data-plasmic-name={"button"}
-              data-plasmic-override={overrides.button}
-              className={classNames("__wab_instance", sty.button)}
-              flatSide={[]}
-              iconStart={
-                hasVariant(globalVariants, "screen", "desktopOnly")
-                  ? undefined
-                  : true
-              }
-              label={
-                <div
-                  data-plasmic-name={"text"}
-                  data-plasmic-override={overrides.text}
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text
-                  )}
-                >
-                  {"Let's work together"}
-                </div>
-              }
-              roundedFull={true}
-              start={
-                <EmailIconSvgIcon
-                  className={classNames(projectcss.all, sty.svg__dssO)}
-                  role={"img"}
-                />
-              }
-            />
-          </div>
+            {"You won't believe what happens next."}
+          </h1>
         </div>
       </div>
     </React.Fragment>
@@ -246,23 +165,15 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "nav", "hamburgerButton", "img", "button", "text"],
-  nav: ["nav", "hamburgerButton", "img", "button", "text"],
-  hamburgerButton: ["hamburgerButton"],
-  img: ["img"],
-  button: ["button", "text"],
-  text: ["text"]
+  root: ["root", "h1"],
+  h1: ["h1"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  nav: "div";
-  hamburgerButton: "a";
-  img: typeof PlasmicImg__;
-  button: typeof Button;
-  text: "div";
+  h1: "h1";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -325,11 +236,7 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    nav: makeNodeComponent("nav"),
-    hamburgerButton: makeNodeComponent("hamburgerButton"),
-    img: makeNodeComponent("img"),
-    button: makeNodeComponent("button"),
-    text: makeNodeComponent("text"),
+    h1: makeNodeComponent("h1"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
