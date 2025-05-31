@@ -60,8 +60,9 @@ import {
 } from "@plasmicapp/react-web/lib/host";
 
 import Button from "../../Button"; // plasmic-import: 7v6YGoE2Zo0o/component
+import Modal from "../../Modal"; // plasmic-import: 5SZcaRjHDDZd/component
+import Button2 from "../../Button2"; // plasmic-import: PVKK-xU6-q6G/component
 import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal";
-import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton";
 import { FormWrapper } from "@plasmicpkgs/antd5/skinny/Form";
 import { formHelpers as FormWrapper_Helpers } from "@plasmicpkgs/antd5/skinny/Form";
 import { FormItemWrapper } from "@plasmicpkgs/antd5/skinny/FormItem";
@@ -69,8 +70,7 @@ import { AntdInput } from "@plasmicpkgs/antd5/skinny/registerInput";
 import { inputHelpers as AntdInput_Helpers } from "@plasmicpkgs/antd5/skinny/registerInput";
 import { AntdTextArea } from "@plasmicpkgs/antd5/skinny/registerInput";
 import { inputHelpers as AntdTextArea_Helpers } from "@plasmicpkgs/antd5/skinny/registerInput";
-import Modal from "../../Modal"; // plasmic-import: 5SZcaRjHDDZd/component
-import Button2 from "../../Button2"; // plasmic-import: PVKK-xU6-q6G/component
+import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton";
 
 import { useScreenVariants as useScreenVariantsajVfn3Ya69H5 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: AJVfn3Ya69h5/globalVariant
 
@@ -89,6 +89,7 @@ import LineBreakIcon from "./icons/PlasmicIcon__LineBreak"; // plasmic-import: O
 import InstagramLogoIcon from "./icons/PlasmicIcon__InstagramLogo"; // plasmic-import: LCLxgt2Kqs7i/icon
 import SpeechBubbleIcon from "./icons/PlasmicIcon__SpeechBubble"; // plasmic-import: s311iITGUFs6/icon
 import ContactEmailIcon from "./icons/PlasmicIcon__ContactEmail"; // plasmic-import: u1EK1ushqS6H/icon
+import CloseIcon from "./icons/PlasmicIcon__Close"; // plasmic-import: mT9OwePIsVqk/icon
 
 createPlasmicElementProxy;
 
@@ -135,12 +136,11 @@ export type PlasmicHomepage__OverridesType = {
   testimonialsSection?: Flex__<"section">;
   _?: Flex__<"div">;
   footer?: Flex__<"section">;
-  modal?: Flex__<typeof AntdModal>;
-  modal2?: Flex__<typeof AntdModal>;
+  menuModal?: Flex__<typeof Modal>;
+  formModal?: Flex__<typeof AntdModal>;
   form?: Flex__<typeof FormWrapper>;
   input?: Flex__<typeof AntdInput>;
   textArea?: Flex__<typeof AntdTextArea>;
-  modal3?: Flex__<typeof Modal>;
 };
 
 export interface DefaultHomepageProps {}
@@ -184,16 +184,12 @@ function PlasmicHomepage__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  const $globalActions = useGlobalActions?.();
+
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
-        path: "modal.open",
-        type: "private",
-        variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
-      },
-      {
-        path: "modal2.open",
+        path: "formModal.open",
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
@@ -217,10 +213,10 @@ function PlasmicHomepage__RenderFunc(props: {
         onMutate: generateOnMutateForSpec("isSubmitting", FormWrapper_Helpers)
       },
       {
-        path: "modal3.isOpen",
+        path: "menuModal.isOpen",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
       }
     ],
     [$props, $ctx, $refs]
@@ -268,11 +264,59 @@ function PlasmicHomepage__RenderFunc(props: {
             className={classNames(projectcss.all, sty.navSection)}
           >
             <div className={classNames(projectcss.all, sty.freeBox__elpz9)}>
-              <MenuSvgIcon
-                className={classNames(projectcss.all, sty.svg__t1WBv)}
-                role={"img"}
-              />
+              <PlasmicLink__
+                className={classNames(
+                  projectcss.all,
+                  projectcss.a,
+                  sty.link___2BygW
+                )}
+                component={Link}
+                onClick={async event => {
+                  const $steps = {};
 
+                  $steps["updateMenuModalIsOpen"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          variable: {
+                            objRoot: $state,
+                            variablePath: ["menuModal", "isOpen"]
+                          },
+                          operation: 0,
+                          value: true
+                        };
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+
+                          $stateSet(objRoot, variablePath, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateMenuModalIsOpen"] != null &&
+                    typeof $steps["updateMenuModalIsOpen"] === "object" &&
+                    typeof $steps["updateMenuModalIsOpen"].then === "function"
+                  ) {
+                    $steps["updateMenuModalIsOpen"] = await $steps[
+                      "updateMenuModalIsOpen"
+                    ];
+                  }
+                }}
+                platform={"nextjs"}
+              >
+                <MenuSvgIcon
+                  className={classNames(projectcss.all, sty.svg__t1WBv)}
+                  role={"img"}
+                />
+              </PlasmicLink__>
               <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__mn83Y)}
@@ -314,6 +358,45 @@ function PlasmicHomepage__RenderFunc(props: {
                     {"Let's work together"}
                   </div>
                 }
+                onClick={async event => {
+                  const $steps = {};
+
+                  $steps["updateFormModalOpen"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          variable: {
+                            objRoot: $state,
+                            variablePath: ["formModal", "open"]
+                          },
+                          operation: 0,
+                          value: true
+                        };
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+
+                          $stateSet(objRoot, variablePath, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateFormModalOpen"] != null &&
+                    typeof $steps["updateFormModalOpen"] === "object" &&
+                    typeof $steps["updateFormModalOpen"].then === "function"
+                  ) {
+                    $steps["updateFormModalOpen"] = await $steps[
+                      "updateFormModalOpen"
+                    ];
+                  }
+                }}
                 roundedFull={true}
                 start={
                   <EmailIconSvgIcon
@@ -2812,6 +2895,31 @@ function PlasmicHomepage__RenderFunc(props: {
                               )}
                               component={Link}
                               href={""}
+                              onClick={async event => {
+                                const $steps = {};
+
+                                $steps["invokeGlobalAction"] = true
+                                  ? (() => {
+                                      const actionArgs = {
+                                        args: ["success", "wow", "er"]
+                                      };
+                                      return $globalActions[
+                                        "plasmic-antd5-config-provider.showNotification"
+                                      ]?.apply(null, [...actionArgs.args]);
+                                    })()
+                                  : undefined;
+                                if (
+                                  $steps["invokeGlobalAction"] != null &&
+                                  typeof $steps["invokeGlobalAction"] ===
+                                    "object" &&
+                                  typeof $steps["invokeGlobalAction"].then ===
+                                    "function"
+                                ) {
+                                  $steps["invokeGlobalAction"] = await $steps[
+                                    "invokeGlobalAction"
+                                  ];
+                                }
+                              }}
                               platform={"nextjs"}
                             >
                               <React.Fragment>
@@ -2947,58 +3055,379 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
             </Stack__>
           </section>
-          <AntdModal
-            data-plasmic-name={"modal"}
-            data-plasmic-override={overrides.modal}
-            className={classNames("__wab_instance", sty.modal)}
-            defaultStylesClassName={classNames(
-              projectcss.root_reset,
-              projectcss.plasmic_default_styles,
-              projectcss.plasmic_mixins,
-              projectcss.plasmic_tokens,
-              plasmic_antd_5_hostless_css.plasmic_tokens
-            )}
-            modalScopeClassName={sty["modal__modal"]}
+          <Modal
+            data-plasmic-name={"menuModal"}
+            data-plasmic-override={overrides.menuModal}
+            content={
+              <Stack__
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__zg8Gq)}
+              >
+                <PlasmicLink__
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.link__hiTtt
+                  )}
+                  component={Link}
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["updateMenuModalIsOpen"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            variable: {
+                              objRoot: $state,
+                              variablePath: ["menuModal", "isOpen"]
+                            },
+                            operation: 0,
+                            value: false
+                          };
+                          return (({
+                            variable,
+                            value,
+                            startIndex,
+                            deleteCount
+                          }) => {
+                            if (!variable) {
+                              return;
+                            }
+                            const { objRoot, variablePath } = variable;
+
+                            $stateSet(objRoot, variablePath, value);
+                            return value;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["updateMenuModalIsOpen"] != null &&
+                      typeof $steps["updateMenuModalIsOpen"] === "object" &&
+                      typeof $steps["updateMenuModalIsOpen"].then === "function"
+                    ) {
+                      $steps["updateMenuModalIsOpen"] = await $steps[
+                        "updateMenuModalIsOpen"
+                      ];
+                    }
+                  }}
+                  platform={"nextjs"}
+                >
+                  <CloseIcon
+                    className={classNames(projectcss.all, sty.svg__kfVb1)}
+                    role={"img"}
+                  />
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__nmyXj
+                    )}
+                  >
+                    {"Menu"}
+                  </div>
+                </PlasmicLink__>
+                <PlasmicLink__
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    projectcss.__wab_text,
+                    sty.link___8Cjp
+                  )}
+                  component={Link}
+                  href={`/`}
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["updateMenuModalIsOpen"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            variable: {
+                              objRoot: $state,
+                              variablePath: ["menuModal", "isOpen"]
+                            },
+                            operation: 0,
+                            value: false
+                          };
+                          return (({
+                            variable,
+                            value,
+                            startIndex,
+                            deleteCount
+                          }) => {
+                            if (!variable) {
+                              return;
+                            }
+                            const { objRoot, variablePath } = variable;
+
+                            $stateSet(objRoot, variablePath, value);
+                            return value;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["updateMenuModalIsOpen"] != null &&
+                      typeof $steps["updateMenuModalIsOpen"] === "object" &&
+                      typeof $steps["updateMenuModalIsOpen"].then === "function"
+                    ) {
+                      $steps["updateMenuModalIsOpen"] = await $steps[
+                        "updateMenuModalIsOpen"
+                      ];
+                    }
+                  }}
+                  platform={"nextjs"}
+                >
+                  <React.Fragment>
+                    <React.Fragment>{""}</React.Fragment>
+                    {
+                      <h3
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h3,
+                          projectcss.__wab_text,
+                          sty.h3__loG1Y
+                        )}
+                      >
+                        {"HOME"}
+                      </h3>
+                    }
+                    <React.Fragment>{""}</React.Fragment>
+                  </React.Fragment>
+                </PlasmicLink__>
+                <PlasmicLink__
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    projectcss.__wab_text,
+                    sty.link__grscR
+                  )}
+                  component={Link}
+                  href={"#about-me"}
+                  platform={"nextjs"}
+                >
+                  <React.Fragment>
+                    <React.Fragment>{""}</React.Fragment>
+                    {
+                      <h3
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h3,
+                          projectcss.__wab_text,
+                          sty.h3__zxzrE
+                        )}
+                      >
+                        {"ABOUT ME"}
+                      </h3>
+                    }
+                    <React.Fragment>{""}</React.Fragment>
+                  </React.Fragment>
+                </PlasmicLink__>
+                <PlasmicLink__
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    projectcss.__wab_text,
+                    sty.link__stZ7R
+                  )}
+                  component={Link}
+                  href={"#portfolio"}
+                  platform={"nextjs"}
+                >
+                  <React.Fragment>
+                    <React.Fragment>{""}</React.Fragment>
+                    {
+                      <h3
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h3,
+                          projectcss.__wab_text,
+                          sty.h3__rXyC
+                        )}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ color: "var(--token-YgWl7Z_Ys_1v)" }}
+                          >
+                            {"PORTFOLIO"}
+                          </span>
+                        </React.Fragment>
+                      </h3>
+                    }
+                    <React.Fragment>{""}</React.Fragment>
+                  </React.Fragment>
+                </PlasmicLink__>
+                <PlasmicLink__
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    projectcss.__wab_text,
+                    sty.link___73Kz5
+                  )}
+                  component={Link}
+                  href={"#services"}
+                  platform={"nextjs"}
+                >
+                  <React.Fragment>
+                    <React.Fragment>{""}</React.Fragment>
+                    {
+                      <h3
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h3,
+                          projectcss.__wab_text,
+                          sty.h3___6IZy
+                        )}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ color: "var(--token-YgWl7Z_Ys_1v)" }}
+                          >
+                            {"SERVICES"}
+                          </span>
+                        </React.Fragment>
+                      </h3>
+                    }
+                    <React.Fragment>{""}</React.Fragment>
+                  </React.Fragment>
+                </PlasmicLink__>
+                <PlasmicLink__
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    projectcss.__wab_text,
+                    sty.link__cfRec
+                  )}
+                  component={Link}
+                  href={"#press"}
+                  platform={"nextjs"}
+                >
+                  <React.Fragment>
+                    <React.Fragment>{""}</React.Fragment>
+                    {
+                      <h3
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h3,
+                          projectcss.__wab_text,
+                          sty.h3___2FgDs
+                        )}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ color: "#FFFFFF" }}
+                          >
+                            {"PRESS"}
+                          </span>
+                        </React.Fragment>
+                      </h3>
+                    }
+                    <React.Fragment>{""}</React.Fragment>
+                  </React.Fragment>
+                </PlasmicLink__>
+                <PlasmicLink__
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    projectcss.__wab_text,
+                    sty.link___270JC
+                  )}
+                  component={Link}
+                  href={"#contact"}
+                  platform={"nextjs"}
+                >
+                  <React.Fragment>
+                    <React.Fragment>{""}</React.Fragment>
+                    {
+                      <h3
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h3,
+                          projectcss.__wab_text,
+                          sty.h3__gWb1N
+                        )}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ color: "var(--token-YgWl7Z_Ys_1v)" }}
+                          >
+                            {"CONTACT"}
+                          </span>
+                        </React.Fragment>
+                      </h3>
+                    }
+                    <React.Fragment>{""}</React.Fragment>
+                  </React.Fragment>
+                </PlasmicLink__>
+                <PlasmicLink__
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.link__g23Om
+                  )}
+                  component={Link}
+                  href={"https://instagram.com/cocktails__king/"}
+                  platform={"nextjs"}
+                  target={"_blank"}
+                >
+                  <InstagramLogoIcon
+                    className={classNames(projectcss.all, sty.svg__sdTiV)}
+                    role={"img"}
+                  />
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__azZa
+                    )}
+                  >
+                    <React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ color: "var(--token-00hQVsY5huLW)" }}
+                      >
+                        {"@cocktails__king"}
+                      </span>
+                    </React.Fragment>
+                  </div>
+                </PlasmicLink__>
+              </Stack__>
+            }
+            isOpen={generateStateValueProp($state, ["menuModal", "isOpen"])}
+            noTrigger={true}
             onOpenChange={async (...eventArgs: any) => {
-              generateStateOnChangeProp($state, ["modal", "open"]).apply(
+              generateStateOnChangeProp($state, ["menuModal", "isOpen"]).apply(
                 null,
                 eventArgs
               );
+
+              if (
+                eventArgs.length > 1 &&
+                eventArgs[1] &&
+                eventArgs[1]._plasmic_state_init_
+              ) {
+                return;
+              }
             }}
-            open={generateStateValueProp($state, ["modal", "open"])}
-            title={"Modal title"}
-            trigger={
-              <AntdButton
-                className={classNames("__wab_instance", sty.button__wbuhD)}
-              >
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__a5Ova
-                  )}
-                >
-                  {"Show modal"}
-                </div>
-              </AntdButton>
-            }
-          >
-            <div className={classNames(projectcss.all, sty.freeBox__lH9I3)}>
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__fq2G2
-                )}
-              >
-                {"Modal content"}
-              </div>
-            </div>
-          </AntdModal>
+            showHeader={false}
+          />
+
           <AntdModal
-            data-plasmic-name={"modal2"}
-            data-plasmic-override={overrides.modal2}
-            className={classNames("__wab_instance", sty.modal2)}
+            data-plasmic-name={"formModal"}
+            data-plasmic-override={overrides.formModal}
+            className={classNames("__wab_instance", sty.formModal)}
             defaultStylesClassName={classNames(
               projectcss.root_reset,
               projectcss.plasmic_default_styles,
@@ -3007,52 +3436,16 @@ function PlasmicHomepage__RenderFunc(props: {
               plasmic_antd_5_hostless_css.plasmic_tokens
             )}
             hideFooter={true}
-            modalScopeClassName={sty["modal2__modal"]}
+            modalScopeClassName={sty["formModal__modal"]}
             onOpenChange={async (...eventArgs: any) => {
-              generateStateOnChangeProp($state, ["modal2", "open"]).apply(
+              generateStateOnChangeProp($state, ["formModal", "open"]).apply(
                 null,
                 eventArgs
               );
             }}
-            open={generateStateValueProp($state, ["modal2", "open"])}
+            open={generateStateValueProp($state, ["formModal", "open"])}
             title={"Modal title"}
-            trigger={
-              <React.Fragment>
-                <AntdButton
-                  className={classNames("__wab_instance", sty.button__hYaG)}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__mBnm
-                    )}
-                  >
-                    {"Show modal"}
-                  </div>
-                </AntdButton>
-                <Modal
-                  data-plasmic-name={"modal3"}
-                  data-plasmic-override={overrides.modal3}
-                  className={classNames("__wab_instance", sty.modal3)}
-                  isOpen={generateStateValueProp($state, ["modal3", "isOpen"])}
-                  onOpenChange={async (...eventArgs: any) => {
-                    generateStateOnChangeProp($state, [
-                      "modal3",
-                      "isOpen"
-                    ]).apply(null, eventArgs);
-
-                    if (
-                      eventArgs.length > 1 &&
-                      eventArgs[1] &&
-                      eventArgs[1]._plasmic_state_init_
-                    ) {
-                      return;
-                    }
-                  }}
-                />
-              </React.Fragment>
-            }
+            trigger={null}
           >
             {(() => {
               const child$Props = {
@@ -3108,7 +3501,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__jjjS3
+                      sty.formField__kCvMt
                     )}
                     label={"Name"}
                     name={"name"}
@@ -3120,7 +3513,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField___1Vnpq
+                      sty.formField__sw1R
                     )}
                     label={"Message"}
                     name={"message"}
@@ -3130,7 +3523,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     />
                   </FormItemWrapper>
                   <AntdButton
-                    className={classNames("__wab_instance", sty.button__xKhxl)}
+                    className={classNames("__wab_instance", sty.button__pqsI0)}
                     submitsForm={true}
                     type={"primary"}
                   >
@@ -3138,7 +3531,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__ybjOt
+                        sty.text__mIyTu
                       )}
                     >
                       {"Submit"}
@@ -3189,12 +3582,11 @@ const PlasmicDescendants = {
     "testimonialsSection",
     "_",
     "footer",
-    "modal",
-    "modal2",
+    "menuModal",
+    "formModal",
     "form",
     "input",
-    "textArea",
-    "modal3"
+    "textArea"
   ],
   navSection: ["navSection"],
   headerSection: ["headerSection", "h1"],
@@ -3253,12 +3645,11 @@ const PlasmicDescendants = {
   testimonialsSection: ["testimonialsSection", "_"],
   _: ["_"],
   footer: ["footer"],
-  modal: ["modal"],
-  modal2: ["modal2", "form", "input", "textArea", "modal3"],
+  menuModal: ["menuModal"],
+  formModal: ["formModal", "form", "input", "textArea"],
   form: ["form", "input", "textArea"],
   input: ["input"],
-  textArea: ["textArea"],
-  modal3: ["modal3"]
+  textArea: ["textArea"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -3297,12 +3688,11 @@ type NodeDefaultElementType = {
   testimonialsSection: "section";
   _: "div";
   footer: "section";
-  modal: typeof AntdModal;
-  modal2: typeof AntdModal;
+  menuModal: typeof Modal;
+  formModal: typeof AntdModal;
   form: typeof FormWrapper;
   input: typeof AntdInput;
   textArea: typeof AntdTextArea;
-  modal3: typeof Modal;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -3399,12 +3789,11 @@ export const PlasmicHomepage = Object.assign(
     testimonialsSection: makeNodeComponent("testimonialsSection"),
     _: makeNodeComponent("_"),
     footer: makeNodeComponent("footer"),
-    modal: makeNodeComponent("modal"),
-    modal2: makeNodeComponent("modal2"),
+    menuModal: makeNodeComponent("menuModal"),
+    formModal: makeNodeComponent("formModal"),
     form: makeNodeComponent("form"),
     input: makeNodeComponent("input"),
     textArea: makeNodeComponent("textArea"),
-    modal3: makeNodeComponent("modal3"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

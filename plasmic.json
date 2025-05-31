@@ -336,6 +336,11 @@
           "id": "u1EK1ushqS6H",
           "name": "ContactEmailIcon",
           "moduleFilePath": "plasmic/blank_website_mobile_first/icons/PlasmicIcon__ContactEmail.tsx"
+        },
+        {
+          "id": "mT9OwePIsVqk",
+          "name": "CloseIcon",
+          "moduleFilePath": "plasmic/blank_website_mobile_first/icons/PlasmicIcon__Close.tsx"
         }
       ],
       "images": [
@@ -902,7 +907,8 @@
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerBreadcrumb"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     }
   ],
   "globalVariants": {
