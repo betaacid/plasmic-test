@@ -70,6 +70,7 @@ import sty from "./PlasmicHomepage.module.css"; // plasmic-import: t6bbWH5XZ4fm/
 
 import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: k4ujBvekGioO/icon
 import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: H5Yxuv6_n5vq/icon
+import CrownHaloIcon from "./icons/PlasmicIcon__CrownHalo"; // plasmic-import: QESqRHbH-Tr7/icon
 
 createPlasmicElementProxy;
 
@@ -85,7 +86,12 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
   headerSection?: Flex__<"section">;
+  h1?: Flex__<"h1">;
   button?: Flex__<typeof Button>;
+  aboutMeSection?: Flex__<"section">;
+  h4?: Flex__<"h4">;
+  svg?: Flex__<"svg">;
+  ul?: Flex__<"ul">;
 };
 
 export interface DefaultHomepageProps {}
@@ -158,16 +164,6 @@ function PlasmicHomepage__RenderFunc(props: {
             sty.root
           )}
         >
-          <h1
-            className={classNames(
-              projectcss.all,
-              projectcss.h1,
-              projectcss.__wab_text,
-              sty.h1__r3AkG
-            )}
-          >
-            {"You won't believe what happens next."}
-          </h1>
           <section
             data-plasmic-name={"headerSection"}
             data-plasmic-override={overrides.headerSection}
@@ -239,11 +235,13 @@ function PlasmicHomepage__RenderFunc(props: {
                     <React.Fragment>{""}</React.Fragment>
                     {
                       <h1
+                        data-plasmic-name={"h1"}
+                        data-plasmic-override={overrides.h1}
                         className={classNames(
                           projectcss.all,
                           projectcss.h1,
                           projectcss.__wab_text,
-                          sty.h1__lb5Wz
+                          sty.h1
                         )}
                       >
                         {"KING"}
@@ -369,6 +367,184 @@ function PlasmicHomepage__RenderFunc(props: {
               />
             </div>
           </section>
+          <section
+            data-plasmic-name={"aboutMeSection"}
+            data-plasmic-override={overrides.aboutMeSection}
+            className={classNames(projectcss.all, sty.aboutMeSection)}
+            id={"about-me"}
+          >
+            <Stack__
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__ekNw6)}
+            >
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img___3Ol6L)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"559px"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"auto"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/blank_website_mobile_first/images/profilePic.png",
+                  fullWidth: 1110,
+                  fullHeight: 1466,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <div className={classNames(projectcss.all, sty.freeBox___6VpK3)}>
+                <Stack__
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox__pAg8Q)}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___1ApTq
+                    )}
+                  >
+                    <React.Fragment>
+                      <React.Fragment>{""}</React.Fragment>
+                      {
+                        <h4
+                          data-plasmic-name={"h4"}
+                          data-plasmic-override={overrides.h4}
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h4,
+                            projectcss.__wab_text,
+                            sty.h4
+                          )}
+                        >
+                          <React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
+                              style={{ color: "var(--token-vKYvxi3wkDsp)" }}
+                            >
+                              {"ABOUT ME."}
+                            </span>
+                          </React.Fragment>
+                        </h4>
+                      }
+                      <React.Fragment>{""}</React.Fragment>
+                    </React.Fragment>
+                  </div>
+                  <CrownHaloIcon
+                    data-plasmic-name={"svg"}
+                    data-plasmic-override={overrides.svg}
+                    className={classNames(projectcss.all, sty.svg)}
+                    role={"img"}
+                  />
+                </Stack__>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__fY8QO
+                  )}
+                >
+                  {
+                    "I'm an award-winning beverage consultant working globally to help brands, bars, and product developers bring their visions to life. My background spans cocktail development, production consulting, staff training, and menu design."
+                  }
+                </div>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___8ADKo
+                  )}
+                >
+                  <React.Fragment>
+                    <React.Fragment>{""}</React.Fragment>
+                    {
+                      <ul
+                        data-plasmic-name={"ul"}
+                        data-plasmic-override={overrides.ul}
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.ul,
+                          sty.ul
+                        )}
+                      >
+                        <li
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.li,
+                            projectcss.__wab_text,
+                            sty.li__z2Cdn
+                          )}
+                        >
+                          {"Ingredient-driven"}
+                        </li>
+                        <li
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.li,
+                            projectcss.__wab_text,
+                            sty.li__yxGVr
+                          )}
+                        >
+                          {"Technically precise\n"}
+                        </li>
+                        <li
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.li,
+                            projectcss.__wab_text,
+                            sty.li__cdzBj
+                          )}
+                        >
+                          {"Thoughtfully creative"}
+                        </li>
+                        <li
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.li,
+                            projectcss.__wab_text,
+                            sty.li__d86Ak
+                          )}
+                        >
+                          {"Comforting yet sophisticated"}
+                        </li>
+                        <li
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.li,
+                            projectcss.__wab_text,
+                            sty.li___7DTs6
+                          )}
+                        >
+                          {
+                            "Always clean and minimal in design and presentation"
+                          }
+                        </li>
+                      </ul>
+                    }
+                    <React.Fragment>{""}</React.Fragment>
+                  </React.Fragment>
+                </div>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__rj3O
+                  )}
+                >
+                  {
+                    "I've collaborated with companies ranging from boutique producers to large-scale manufacturers, always tailoring solutions that balance form, function, and flavor."
+                  }
+                </div>
+              </div>
+            </Stack__>
+          </section>
         </div>
       </div>
     </React.Fragment>
@@ -376,9 +552,23 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "headerSection", "button"],
-  headerSection: ["headerSection", "button"],
-  button: ["button"]
+  root: [
+    "root",
+    "headerSection",
+    "h1",
+    "button",
+    "aboutMeSection",
+    "h4",
+    "svg",
+    "ul"
+  ],
+  headerSection: ["headerSection", "h1", "button"],
+  h1: ["h1"],
+  button: ["button"],
+  aboutMeSection: ["aboutMeSection", "h4", "svg", "ul"],
+  h4: ["h4"],
+  svg: ["svg"],
+  ul: ["ul"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -386,7 +576,12 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   headerSection: "section";
+  h1: "h1";
   button: typeof Button;
+  aboutMeSection: "section";
+  h4: "h4";
+  svg: "svg";
+  ul: "ul";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -450,7 +645,12 @@ export const PlasmicHomepage = Object.assign(
   {
     // Helper components rendering sub-elements
     headerSection: makeNodeComponent("headerSection"),
+    h1: makeNodeComponent("h1"),
     button: makeNodeComponent("button"),
+    aboutMeSection: makeNodeComponent("aboutMeSection"),
+    h4: makeNodeComponent("h4"),
+    svg: makeNodeComponent("svg"),
+    ul: makeNodeComponent("ul"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

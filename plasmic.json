@@ -285,6 +285,11 @@
           "id": "k4ujBvekGioO",
           "name": "CircleIcon",
           "moduleFilePath": "plasmic/blank_website_mobile_first/icons/PlasmicIcon__Circle.tsx"
+        },
+        {
+          "id": "QESqRHbH-Tr7",
+          "name": "CrownHaloIcon",
+          "moduleFilePath": "plasmic/blank_website_mobile_first/icons/PlasmicIcon__CrownHalo.tsx"
         }
       ],
       "images": [
@@ -302,6 +307,11 @@
           "id": "dYOS4hEH_rh4",
           "name": "cocktail-with-lemon",
           "filePath": "../public/plasmic/blank_website_mobile_first/images/cocktailWithLemon.png"
+        },
+        {
+          "id": "OyvPsNb22kKu",
+          "name": "profile-pic",
+          "filePath": "../public/plasmic/blank_website_mobile_first/images/profilePic.png"
         }
       ],
       "indirect": false,
