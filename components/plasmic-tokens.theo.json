@@ -121,6 +121,16 @@
       }
     },
     {
+      "name": "Gold-200",
+      "type": "color",
+      "value": "#F9F2E9",
+      "category": "color",
+      "meta": {
+        "projectId": "i9knz7EXdrcBWswQTuKKjX",
+        "id": "SkTuGeCN40KD"
+      }
+    },
+    {
       "name": "Gold-500",
       "type": "color",
       "value": "#D7A564",
@@ -128,6 +138,16 @@
       "meta": {
         "projectId": "i9knz7EXdrcBWswQTuKKjX",
         "id": "aRsrMLdPve6a"
+      }
+    },
+    {
+      "name": "Gold-700",
+      "type": "color",
+      "value": "#A87A3E",
+      "category": "color",
+      "meta": {
+        "projectId": "i9knz7EXdrcBWswQTuKKjX",
+        "id": "C1KoRoqN5nk_"
       }
     },
     {

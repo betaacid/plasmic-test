@@ -290,6 +290,11 @@
           "id": "QESqRHbH-Tr7",
           "name": "CrownHaloIcon",
           "moduleFilePath": "plasmic/blank_website_mobile_first/icons/PlasmicIcon__CrownHalo.tsx"
+        },
+        {
+          "id": "OaJD_NBb6Nrq",
+          "name": "LineBreakIcon",
+          "moduleFilePath": "plasmic/blank_website_mobile_first/icons/PlasmicIcon__LineBreak.tsx"
         }
       ],
       "images": [
@@ -342,6 +347,26 @@
           "id": "v2xTdA9UhSR2",
           "name": "unstacked-cans",
           "filePath": "../public/plasmic/blank_website_mobile_first/images/unstackedCans.png"
+        },
+        {
+          "id": "u6_upDx-Q_eG",
+          "name": "rocks-glass",
+          "filePath": "../public/plasmic/blank_website_mobile_first/images/rocksGlass.png"
+        },
+        {
+          "id": "J7-LNyu1QaGM",
+          "name": "bars-and-tables-round",
+          "filePath": "../public/plasmic/blank_website_mobile_first/images/barsAndTablesRound.png"
+        },
+        {
+          "id": "jgk4F_JinAjP",
+          "name": "cocktail-with-leaves",
+          "filePath": "../public/plasmic/blank_website_mobile_first/images/cocktailWithLeaves.png"
+        },
+        {
+          "id": "NJFrkaVjmzrL",
+          "name": "bottles",
+          "filePath": "../public/plasmic/blank_website_mobile_first/images/bottles.png"
         }
       ],
       "indirect": false,

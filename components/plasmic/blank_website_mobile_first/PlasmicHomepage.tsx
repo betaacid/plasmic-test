@@ -71,6 +71,7 @@ import sty from "./PlasmicHomepage.module.css"; // plasmic-import: t6bbWH5XZ4fm/
 import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: k4ujBvekGioO/icon
 import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: H5Yxuv6_n5vq/icon
 import CrownHaloIcon from "./icons/PlasmicIcon__CrownHalo"; // plasmic-import: QESqRHbH-Tr7/icon
+import LineBreakIcon from "./icons/PlasmicIcon__LineBreak"; // plasmic-import: OaJD_NBb6Nrq/icon
 
 createPlasmicElementProxy;
 
@@ -90,7 +91,6 @@ export type PlasmicHomepage__OverridesType = {
   button?: Flex__<typeof Button>;
   aboutMeSection?: Flex__<"section">;
   h4?: Flex__<"h4">;
-  svg?: Flex__<"svg">;
   portfolioSection?: Flex__<"section">;
   h6?: Flex__<"h6">;
   libertineBlendsProject?: Flex__<"div">;
@@ -99,6 +99,15 @@ export type PlasmicHomepage__OverridesType = {
   whiskeriaProject?: Flex__<"div">;
   twoSchmukcs?: Flex__<"div">;
   creativeColabsProject?: Flex__<"div">;
+  servicesSection?: Flex__<"section">;
+  service1?: Flex__<"div">;
+  rtdProductDevelopment?: Flex__<"div">;
+  service2?: Flex__<"div">;
+  rtdProductDevelopment2?: Flex__<"div">;
+  service3?: Flex__<"div">;
+  rtdProductDevelopment3?: Flex__<"div">;
+  service4?: Flex__<"div">;
+  rtdProductDevelopment4?: Flex__<"div">;
 };
 
 export interface DefaultHomepageProps {}
@@ -445,9 +454,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     </React.Fragment>
                   </div>
                   <CrownHaloIcon
-                    data-plasmic-name={"svg"}
-                    data-plasmic-override={overrides.svg}
-                    className={classNames(projectcss.all, sty.svg)}
+                    className={classNames(projectcss.all, sty.svg__nxJdj)}
                     role={"img"}
                   />
                 </Stack__>
@@ -1264,6 +1271,533 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
             </div>
           </section>
+          <section
+            data-plasmic-name={"servicesSection"}
+            data-plasmic-override={overrides.servicesSection}
+            className={classNames(projectcss.all, sty.servicesSection)}
+            id={"services"}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__mj14Y
+              )}
+            >
+              <React.Fragment>
+                <React.Fragment>{""}</React.Fragment>
+                {
+                  <h5
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h5,
+                      projectcss.__wab_text,
+                      sty.h5___9FxNk
+                    )}
+                  >
+                    {"Services"}
+                  </h5>
+                }
+                <React.Fragment>{""}</React.Fragment>
+              </React.Fragment>
+            </div>
+            <div className={classNames(projectcss.all, sty.freeBox__xPeC3)}>
+              <div
+                data-plasmic-name={"service1"}
+                data-plasmic-override={overrides.service1}
+                className={classNames(projectcss.all, sty.service1)}
+              >
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__h7OxU)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={
+                    hasVariant(globalVariants, "screen", "desktopOnly")
+                      ? "329px"
+                      : "271px"
+                  }
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/blank_website_mobile_first/images/rocksGlass.png",
+                    fullWidth: 658,
+                    fullHeight: 466,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <Stack__
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox__dB1Oa)}
+                >
+                  <div
+                    data-plasmic-name={"rtdProductDevelopment"}
+                    data-plasmic-override={overrides.rtdProductDevelopment}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.rtdProductDevelopment
+                    )}
+                  >
+                    <React.Fragment>
+                      <React.Fragment>{""}</React.Fragment>
+                      {
+                        <h5
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h5,
+                            projectcss.__wab_text,
+                            sty.h5___8Iewq
+                          )}
+                        >
+                          {"RTD PRODUCT DEVELOPMENT"}
+                        </h5>
+                      }
+                      <React.Fragment>{""}</React.Fragment>
+                    </React.Fragment>
+                  </div>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__g7CNt
+                    )}
+                  >
+                    <React.Fragment>
+                      <React.Fragment>{""}</React.Fragment>
+                      {
+                        <ul
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.ul,
+                            sty.ul__fpw3Y
+                          )}
+                        >
+                          <li
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.li,
+                              projectcss.__wab_text,
+                              sty.li__eeX4
+                            )}
+                          >
+                            {"Concept ideation to full formulation"}
+                          </li>
+                          <li
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.li,
+                              projectcss.__wab_text,
+                              sty.li__wb3Ss
+                            )}
+                          >
+                            {
+                              "Ingredient sourcing, flavor development, and recipe creation"
+                            }
+                          </li>
+                          <li
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.li,
+                              projectcss.__wab_text,
+                              sty.li__u0WTy
+                            )}
+                          >
+                            {
+                              "Scaling up from test kitchen to production facility"
+                            }
+                          </li>
+                        </ul>
+                      }
+                      <React.Fragment>{""}</React.Fragment>
+                    </React.Fragment>
+                  </div>
+                  <LineBreakIcon
+                    className={classNames(projectcss.all, sty.svg__j2GYc)}
+                    role={"img"}
+                  />
+                </Stack__>
+              </div>
+              <div
+                data-plasmic-name={"service2"}
+                data-plasmic-override={overrides.service2}
+                className={classNames(projectcss.all, sty.service2)}
+              >
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__mCU7)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={
+                    hasVariant(globalVariants, "screen", "desktopOnly")
+                      ? "329px"
+                      : "271px"
+                  }
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/blank_website_mobile_first/images/barsAndTablesRound.png",
+                    fullWidth: 657,
+                    fullHeight: 466,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <Stack__
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox__hn71T)}
+                >
+                  <div
+                    data-plasmic-name={"rtdProductDevelopment2"}
+                    data-plasmic-override={overrides.rtdProductDevelopment2}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.rtdProductDevelopment2
+                    )}
+                  >
+                    <React.Fragment>
+                      <React.Fragment>{""}</React.Fragment>
+                      {
+                        <h5
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h5,
+                            projectcss.__wab_text,
+                            sty.h5___7KDF
+                          )}
+                        >
+                          {"BAR PROGRAM CONSULTING"}
+                        </h5>
+                      }
+                      <React.Fragment>{""}</React.Fragment>
+                    </React.Fragment>
+                  </div>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__j7OBc
+                    )}
+                  >
+                    <React.Fragment>
+                      <React.Fragment>{""}</React.Fragment>
+                      {
+                        <ul
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.ul,
+                            sty.ul__d8Vjv
+                          )}
+                        >
+                          <li
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.li,
+                              projectcss.__wab_text,
+                              sty.li__dqOu6
+                            )}
+                          >
+                            {"Concept creation"}
+                          </li>
+                          <li
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.li,
+                              projectcss.__wab_text,
+                              sty.li__slm8A
+                            )}
+                          >
+                            {"Menu development and costing"}
+                          </li>
+                          <li
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.li,
+                              projectcss.__wab_text,
+                              sty.li__sveei
+                            )}
+                          >
+                            {"Signature drinks"}
+                          </li>
+                          <li
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.li,
+                              projectcss.__wab_text,
+                              sty.li___3DcUx
+                            )}
+                          >
+                            {"Draft, bottled, and canned cocktail solutions"}
+                          </li>
+                          <li
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.li,
+                              projectcss.__wab_text,
+                              sty.li__f5Hsg
+                            )}
+                          >
+                            {"Staff training"}
+                          </li>
+                          <li
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.li,
+                              projectcss.__wab_text,
+                              sty.li__nkhOj
+                            )}
+                          >
+                            {"SOP creation and operational consulting"}
+                          </li>
+                        </ul>
+                      }
+                      <React.Fragment>{""}</React.Fragment>
+                    </React.Fragment>
+                  </div>
+                  <LineBreakIcon
+                    className={classNames(projectcss.all, sty.svg__lmffA)}
+                    role={"img"}
+                  />
+                </Stack__>
+              </div>
+              <div
+                data-plasmic-name={"service3"}
+                data-plasmic-override={overrides.service3}
+                className={classNames(projectcss.all, sty.service3)}
+              >
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__exN01)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={
+                    hasVariant(globalVariants, "screen", "desktopOnly")
+                      ? "329px"
+                      : "271px"
+                  }
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/blank_website_mobile_first/images/cocktailWithLeaves.png",
+                    fullWidth: 658,
+                    fullHeight: 466,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <Stack__
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox___4Usfl)}
+                >
+                  <div
+                    data-plasmic-name={"rtdProductDevelopment3"}
+                    data-plasmic-override={overrides.rtdProductDevelopment3}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.rtdProductDevelopment3
+                    )}
+                  >
+                    <React.Fragment>
+                      <React.Fragment>{""}</React.Fragment>
+                      {
+                        <h5
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h5,
+                            projectcss.__wab_text,
+                            sty.h5__unVvz
+                          )}
+                        >
+                          {"MENU CREATION"}
+                        </h5>
+                      }
+                      <React.Fragment>{""}</React.Fragment>
+                    </React.Fragment>
+                  </div>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__rmjsM
+                    )}
+                  >
+                    <React.Fragment>
+                      <React.Fragment>{""}</React.Fragment>
+                      {
+                        <ul
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.ul,
+                            sty.ul__v107B
+                          )}
+                        >
+                          <li
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.li,
+                              projectcss.__wab_text,
+                              sty.li__pyJsk
+                            )}
+                          >
+                            {"Seasonal cocktail menus"}
+                          </li>
+                          <li
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.li,
+                              projectcss.__wab_text,
+                              sty.li__z3Y5T
+                            )}
+                          >
+                            {"Signature drinks"}
+                          </li>
+                          <li
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.li,
+                              projectcss.__wab_text,
+                              sty.li__gv5K3
+                            )}
+                          >
+                            {"Branded or collaboration menus"}
+                          </li>
+                        </ul>
+                      }
+                      <React.Fragment>{""}</React.Fragment>
+                    </React.Fragment>
+                  </div>
+                  <LineBreakIcon
+                    className={classNames(projectcss.all, sty.svg__tnB4I)}
+                    role={"img"}
+                  />
+                </Stack__>
+              </div>
+              <div
+                data-plasmic-name={"service4"}
+                data-plasmic-override={overrides.service4}
+                className={classNames(projectcss.all, sty.service4)}
+              >
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__uFqoz)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={
+                    hasVariant(globalVariants, "screen", "desktopOnly")
+                      ? "329px"
+                      : "271px"
+                  }
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/blank_website_mobile_first/images/bottles.png",
+                    fullWidth: 658,
+                    fullHeight: 466,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <Stack__
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox__wBuCn)}
+                >
+                  <div
+                    data-plasmic-name={"rtdProductDevelopment4"}
+                    data-plasmic-override={overrides.rtdProductDevelopment4}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.rtdProductDevelopment4
+                    )}
+                  >
+                    <React.Fragment>
+                      <React.Fragment>{""}</React.Fragment>
+                      {
+                        <h5
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h5,
+                            projectcss.__wab_text,
+                            sty.h5__zC0Z
+                          )}
+                        >
+                          {"CREATIVE COLLABORATION"}
+                        </h5>
+                      }
+                      <React.Fragment>{""}</React.Fragment>
+                    </React.Fragment>
+                  </div>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__eqc3E
+                    )}
+                  >
+                    <React.Fragment>
+                      <React.Fragment>{""}</React.Fragment>
+                      {
+                        <ul
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.ul,
+                            sty.ul__eq7JU
+                          )}
+                        >
+                          <li
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.li,
+                              projectcss.__wab_text,
+                              sty.li__qYn8B
+                            )}
+                          >
+                            {"Brand activations and pop-ups\n"}
+                          </li>
+                          <li
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.li,
+                              projectcss.__wab_text,
+                              sty.li___2KhkC
+                            )}
+                          >
+                            {"Customized cocktail creation"}
+                          </li>
+                          <li
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.li,
+                              projectcss.__wab_text,
+                              sty.li__ai435
+                            )}
+                          >
+                            {"Private or immersive cocktail experiences"}
+                          </li>
+                        </ul>
+                      }
+                      <React.Fragment>{""}</React.Fragment>
+                    </React.Fragment>
+                  </div>
+                </Stack__>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </React.Fragment>
@@ -1278,7 +1812,6 @@ const PlasmicDescendants = {
     "button",
     "aboutMeSection",
     "h4",
-    "svg",
     "portfolioSection",
     "h6",
     "libertineBlendsProject",
@@ -1286,14 +1819,22 @@ const PlasmicDescendants = {
     "tiberiProject",
     "whiskeriaProject",
     "twoSchmukcs",
-    "creativeColabsProject"
+    "creativeColabsProject",
+    "servicesSection",
+    "service1",
+    "rtdProductDevelopment",
+    "service2",
+    "rtdProductDevelopment2",
+    "service3",
+    "rtdProductDevelopment3",
+    "service4",
+    "rtdProductDevelopment4"
   ],
   headerSection: ["headerSection", "h1", "button"],
   h1: ["h1"],
   button: ["button"],
-  aboutMeSection: ["aboutMeSection", "h4", "svg"],
+  aboutMeSection: ["aboutMeSection", "h4"],
   h4: ["h4"],
-  svg: ["svg"],
   portfolioSection: [
     "portfolioSection",
     "h6",
@@ -1310,7 +1851,26 @@ const PlasmicDescendants = {
   tiberiProject: ["tiberiProject"],
   whiskeriaProject: ["whiskeriaProject"],
   twoSchmukcs: ["twoSchmukcs"],
-  creativeColabsProject: ["creativeColabsProject"]
+  creativeColabsProject: ["creativeColabsProject"],
+  servicesSection: [
+    "servicesSection",
+    "service1",
+    "rtdProductDevelopment",
+    "service2",
+    "rtdProductDevelopment2",
+    "service3",
+    "rtdProductDevelopment3",
+    "service4",
+    "rtdProductDevelopment4"
+  ],
+  service1: ["service1", "rtdProductDevelopment"],
+  rtdProductDevelopment: ["rtdProductDevelopment"],
+  service2: ["service2", "rtdProductDevelopment2"],
+  rtdProductDevelopment2: ["rtdProductDevelopment2"],
+  service3: ["service3", "rtdProductDevelopment3"],
+  rtdProductDevelopment3: ["rtdProductDevelopment3"],
+  service4: ["service4", "rtdProductDevelopment4"],
+  rtdProductDevelopment4: ["rtdProductDevelopment4"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -1322,7 +1882,6 @@ type NodeDefaultElementType = {
   button: typeof Button;
   aboutMeSection: "section";
   h4: "h4";
-  svg: "svg";
   portfolioSection: "section";
   h6: "h6";
   libertineBlendsProject: "div";
@@ -1331,6 +1890,15 @@ type NodeDefaultElementType = {
   whiskeriaProject: "div";
   twoSchmukcs: "div";
   creativeColabsProject: "div";
+  servicesSection: "section";
+  service1: "div";
+  rtdProductDevelopment: "div";
+  service2: "div";
+  rtdProductDevelopment2: "div";
+  service3: "div";
+  rtdProductDevelopment3: "div";
+  service4: "div";
+  rtdProductDevelopment4: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -1398,7 +1966,6 @@ export const PlasmicHomepage = Object.assign(
     button: makeNodeComponent("button"),
     aboutMeSection: makeNodeComponent("aboutMeSection"),
     h4: makeNodeComponent("h4"),
-    svg: makeNodeComponent("svg"),
     portfolioSection: makeNodeComponent("portfolioSection"),
     h6: makeNodeComponent("h6"),
     libertineBlendsProject: makeNodeComponent("libertineBlendsProject"),
@@ -1409,6 +1976,15 @@ export const PlasmicHomepage = Object.assign(
     whiskeriaProject: makeNodeComponent("whiskeriaProject"),
     twoSchmukcs: makeNodeComponent("twoSchmukcs"),
     creativeColabsProject: makeNodeComponent("creativeColabsProject"),
+    servicesSection: makeNodeComponent("servicesSection"),
+    service1: makeNodeComponent("service1"),
+    rtdProductDevelopment: makeNodeComponent("rtdProductDevelopment"),
+    service2: makeNodeComponent("service2"),
+    rtdProductDevelopment2: makeNodeComponent("rtdProductDevelopment2"),
+    service3: makeNodeComponent("service3"),
+    rtdProductDevelopment3: makeNodeComponent("rtdProductDevelopment3"),
+    service4: makeNodeComponent("service4"),
+    rtdProductDevelopment4: makeNodeComponent("rtdProductDevelopment4"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

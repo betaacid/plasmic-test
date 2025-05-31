@@ -105,6 +105,10 @@
   --plasmic-token-stone-600: var(--token-FY8xQgIqhrmL);
   --token-aRsrMLdPve6a: #d7a564;
   --plasmic-token-gold-500: var(--token-aRsrMLdPve6a);
+  --token-SkTuGeCN40KD: #f9f2e9;
+  --plasmic-token-gold-200: var(--token-SkTuGeCN40KD);
+  --token-C1KoRoqN5nk_: #a87a3e;
+  --plasmic-token-gold-700: var(--token-C1KoRoqN5nk_);
 }
 
 .plasmic_tokens {
