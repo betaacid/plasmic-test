@@ -238,42 +238,6 @@ function PlasmicHomepage__RenderFunc(props: {
                 component={Link}
                 onClick={async event => {
                   const $steps = {};
-
-                  $steps["updateMenuModalIsOpen"] = true
-                    ? (() => {
-                        const actionArgs = {
-                          variable: {
-                            objRoot: $state,
-                            variablePath: ["menuModal", "isOpen"]
-                          },
-                          operation: 0,
-                          value: true
-                        };
-                        return (({
-                          variable,
-                          value,
-                          startIndex,
-                          deleteCount
-                        }) => {
-                          if (!variable) {
-                            return;
-                          }
-                          const { objRoot, variablePath } = variable;
-
-                          $stateSet(objRoot, variablePath, value);
-                          return value;
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                  if (
-                    $steps["updateMenuModalIsOpen"] != null &&
-                    typeof $steps["updateMenuModalIsOpen"] === "object" &&
-                    typeof $steps["updateMenuModalIsOpen"].then === "function"
-                  ) {
-                    $steps["updateMenuModalIsOpen"] = await $steps[
-                      "updateMenuModalIsOpen"
-                    ];
-                  }
                 }}
                 platform={"nextjs"}
               >
@@ -323,46 +287,6 @@ function PlasmicHomepage__RenderFunc(props: {
                     {"Let's work together"}
                   </div>
                 }
-                onClick={async event => {
-                  const $steps = {};
-
-                  $steps["updateContactModalIsOpen"] = true
-                    ? (() => {
-                        const actionArgs = {
-                          variable: {
-                            objRoot: $state,
-                            variablePath: ["contactModal", "isOpen"]
-                          },
-                          operation: 0,
-                          value: true
-                        };
-                        return (({
-                          variable,
-                          value,
-                          startIndex,
-                          deleteCount
-                        }) => {
-                          if (!variable) {
-                            return;
-                          }
-                          const { objRoot, variablePath } = variable;
-
-                          $stateSet(objRoot, variablePath, value);
-                          return value;
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                  if (
-                    $steps["updateContactModalIsOpen"] != null &&
-                    typeof $steps["updateContactModalIsOpen"] === "object" &&
-                    typeof $steps["updateContactModalIsOpen"].then ===
-                      "function"
-                  ) {
-                    $steps["updateContactModalIsOpen"] = await $steps[
-                      "updateContactModalIsOpen"
-                    ];
-                  }
-                }}
                 roundedFull={true}
                 start={
                   <EmailIconSvgIcon
