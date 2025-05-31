@@ -73,6 +73,8 @@ import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-impor
 import CrownHaloIcon from "./icons/PlasmicIcon__CrownHalo"; // plasmic-import: QESqRHbH-Tr7/icon
 import LineBreakIcon from "./icons/PlasmicIcon__LineBreak"; // plasmic-import: OaJD_NBb6Nrq/icon
 import InstagramLogoIcon from "./icons/PlasmicIcon__InstagramLogo"; // plasmic-import: LCLxgt2Kqs7i/icon
+import SpeechBubbleIcon from "./icons/PlasmicIcon__SpeechBubble"; // plasmic-import: s311iITGUFs6/icon
+import ContactEmailIcon from "./icons/PlasmicIcon__ContactEmail"; // plasmic-import: u1EK1ushqS6H/icon
 
 createPlasmicElementProxy;
 
@@ -91,9 +93,7 @@ export type PlasmicHomepage__OverridesType = {
   h1?: Flex__<"h1">;
   button?: Flex__<typeof Button>;
   aboutMeSection?: Flex__<"section">;
-  h4?: Flex__<"h4">;
   portfolioSection?: Flex__<"section">;
-  h6?: Flex__<"h6">;
   libertineBlendsProject?: Flex__<"div">;
   libertineCocktailBarProject?: Flex__<"div">;
   tiberiProject?: Flex__<"div">;
@@ -118,6 +118,9 @@ export type PlasmicHomepage__OverridesType = {
   post2?: Flex__<"div">;
   post3?: Flex__<"div">;
   post4?: Flex__<"div">;
+  testimonialsSection?: Flex__<"section">;
+  _?: Flex__<"div">;
+  footer?: Flex__<"section">;
 };
 
 export interface DefaultHomepageProps {}
@@ -439,13 +442,11 @@ function PlasmicHomepage__RenderFunc(props: {
                       <React.Fragment>{""}</React.Fragment>
                       {
                         <h4
-                          data-plasmic-name={"h4"}
-                          data-plasmic-override={overrides.h4}
                           className={classNames(
                             projectcss.all,
                             projectcss.h4,
                             projectcss.__wab_text,
-                            sty.h4
+                            sty.h4___3Hg24
                           )}
                         >
                           <React.Fragment>
@@ -584,13 +585,11 @@ function PlasmicHomepage__RenderFunc(props: {
                 <React.Fragment>{""}</React.Fragment>
                 {
                   <h6
-                    data-plasmic-name={"h6"}
-                    data-plasmic-override={overrides.h6}
                     className={classNames(
                       projectcss.all,
                       projectcss.h6,
                       projectcss.__wab_text,
-                      sty.h6
+                      sty.h6__tw7I5
                     )}
                   >
                     {"PORTFOLIO / RECENT"}
@@ -2460,6 +2459,365 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
             </Stack__>
           </section>
+          <section
+            data-plasmic-name={"testimonialsSection"}
+            data-plasmic-override={overrides.testimonialsSection}
+            className={classNames(projectcss.all, sty.testimonialsSection)}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__bjSp3
+              )}
+            >
+              {"\u201c"}
+            </div>
+            <div className={classNames(projectcss.all, sty.freeBox__pfRk)}>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text___67SKu
+                )}
+              >
+                <React.Fragment>
+                  <React.Fragment>{""}</React.Fragment>
+                  {
+                    <h4
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h4,
+                        projectcss.__wab_text,
+                        sty.h4__fKuWl
+                      )}
+                    >
+                      {"TESTIMONIALS"}
+                    </h4>
+                  }
+                  <React.Fragment>{""}</React.Fragment>
+                </React.Fragment>
+              </div>
+              <SpeechBubbleIcon
+                className={classNames(projectcss.all, sty.svg__hlwiR)}
+                role={"img"}
+              />
+            </div>
+            <div className={classNames(projectcss.all, sty.freeBox__rWKmW)}>
+              <Stack__
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__wvh3C)}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___0VSh
+                  )}
+                >
+                  {
+                    "Stephenson\u2019s passion for experimentation is evident in both his work ethic and the product; he spends hours poring over cookbooks, flavor bibles and classic cocktail recipes before tasting, balancing and perfecting new cocktails with his team."
+                  }
+                </div>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__osRz
+                  )}
+                >
+                  {"LuxuryInsider.Co"}
+                </div>
+              </Stack__>
+              <Stack__
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__jzbSc)}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__dcLgb
+                  )}
+                >
+                  {
+                    "Libertine Blends is redefining the ready-to-drink (RTD) cocktail market, bringing sophistication and quality from behind the bar to a can in your hand."
+                  }
+                </div>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__dEbb
+                  )}
+                >
+                  {"Travel & Lust"}
+                </div>
+              </Stack__>
+              <Stack__
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__t05E1)}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___2Gz5Y
+                  )}
+                >
+                  {
+                    "Globetrotting American bar consultant Eric Stephenson understands the way Barcelona\u2019s cosmopolitan cocktail community wants to drink"
+                  }
+                </div>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___4QWcm
+                  )}
+                >
+                  {"World's 50 Best Bars"}
+                </div>
+              </Stack__>
+              <Stack__
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__jkr16)}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__bQ4Be
+                  )}
+                >
+                  {
+                    "Libertine Blends revolutionizes cocktails with stylish and flavorful ready-to-drink cocktails that combine sophistication, sustainability and taste to be enjoyed anywhere."
+                  }
+                </div>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__fveHv
+                  )}
+                >
+                  {"BCN Fashion"}
+                </div>
+              </Stack__>
+            </div>
+            <div
+              data-plasmic-name={"_"}
+              data-plasmic-override={overrides._}
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty._
+              )}
+            >
+              {"\u201d"}
+            </div>
+          </section>
+          <section
+            data-plasmic-name={"footer"}
+            data-plasmic-override={overrides.footer}
+            className={classNames(projectcss.all, sty.footer)}
+            id={"contact"}
+          >
+            <Stack__
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__rSInS)}
+            >
+              <div className={classNames(projectcss.all, sty.freeBox___3Csml)}>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__yZqsf
+                  )}
+                >
+                  {"Let's work together"}
+                </div>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__l4TR0
+                  )}
+                >
+                  <React.Fragment>
+                    <React.Fragment>{""}</React.Fragment>
+                    {
+                      <h6
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h6,
+                          projectcss.__wab_text,
+                          sty.h6___0ZNhS
+                        )}
+                      >
+                        <React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ color: "var(--token-00hQVsY5huLW)" }}
+                          >
+                            {
+                              "For project inquiries, collaboration proposals, or press\u2014"
+                            }
+                          </span>
+                          <React.Fragment>{""}</React.Fragment>
+                          {
+                            <PlasmicLink__
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.a,
+                                projectcss.__wab_text,
+                                projectcss.plasmic_default__inline,
+                                sty.link__jaie
+                              )}
+                              component={Link}
+                              href={""}
+                              platform={"nextjs"}
+                            >
+                              <React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ color: "var(--token-18leZVsOXWhv)" }}
+                                >
+                                  {"reach out and let's talk"}
+                                </span>
+                              </React.Fragment>
+                            </PlasmicLink__>
+                          }
+                          <React.Fragment>{""}</React.Fragment>
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ color: "var(--token-18leZVsOXWhv)" }}
+                          >
+                            {"."}
+                          </span>
+                        </React.Fragment>
+                      </h6>
+                    }
+                    <React.Fragment>{""}</React.Fragment>
+                  </React.Fragment>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__erSYd)}>
+                  <PlasmicLink__
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.a,
+                      sty.link__e4CU7
+                    )}
+                    component={Link}
+                    href={"https://www.instagram.com/cocktails__king/"}
+                    platform={"nextjs"}
+                  >
+                    <InstagramLogoIcon
+                      className={classNames(projectcss.all, sty.svg__o9Crh)}
+                      role={"img"}
+                    />
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__kaooQ
+                      )}
+                    >
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "var(--token-00hQVsY5huLW)" }}
+                        >
+                          {"@cocktails__king"}
+                        </span>
+                      </React.Fragment>
+                    </div>
+                  </PlasmicLink__>
+                  <PlasmicLink__
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.a,
+                      sty.link___7YtFz
+                    )}
+                    component={Link}
+                    href={"mailto:hello@cocktailsking.com"}
+                    platform={"nextjs"}
+                  >
+                    <ContactEmailIcon
+                      className={classNames(projectcss.all, sty.svg__xwy4K)}
+                      role={"img"}
+                    />
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___3FxJj
+                      )}
+                    >
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "var(--token-00hQVsY5huLW)" }}
+                        >
+                          {"hello@cocktailsking.com"}
+                        </span>
+                      </React.Fragment>
+                    </div>
+                  </PlasmicLink__>
+                </div>
+              </div>
+              <div className={classNames(projectcss.all, sty.freeBox__eg7L4)}>
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__adh4O)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={
+                    hasVariant(globalVariants, "screen", "desktopOnly")
+                      ? "151px"
+                      : "auto"
+                  }
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/blank_website_mobile_first/images/logo22.png",
+                    fullWidth: 127,
+                    fullHeight: 10,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___5LBSc
+                  )}
+                >
+                  {"2025 Copyright"}
+                </div>
+              </div>
+            </Stack__>
+          </section>
         </div>
       </div>
     </React.Fragment>
@@ -2473,9 +2831,7 @@ const PlasmicDescendants = {
     "h1",
     "button",
     "aboutMeSection",
-    "h4",
     "portfolioSection",
-    "h6",
     "libertineBlendsProject",
     "libertineCocktailBarProject",
     "tiberiProject",
@@ -2499,16 +2855,17 @@ const PlasmicDescendants = {
     "post1",
     "post2",
     "post3",
-    "post4"
+    "post4",
+    "testimonialsSection",
+    "_",
+    "footer"
   ],
   headerSection: ["headerSection", "h1", "button"],
   h1: ["h1"],
   button: ["button"],
-  aboutMeSection: ["aboutMeSection", "h4"],
-  h4: ["h4"],
+  aboutMeSection: ["aboutMeSection"],
   portfolioSection: [
     "portfolioSection",
-    "h6",
     "libertineBlendsProject",
     "libertineCocktailBarProject",
     "tiberiProject",
@@ -2516,7 +2873,6 @@ const PlasmicDescendants = {
     "twoSchmukcs",
     "creativeColabsProject"
   ],
-  h6: ["h6"],
   libertineBlendsProject: ["libertineBlendsProject"],
   libertineCocktailBarProject: ["libertineCocktailBarProject"],
   tiberiProject: ["tiberiProject"],
@@ -2557,7 +2913,10 @@ const PlasmicDescendants = {
   post1: ["post1"],
   post2: ["post2"],
   post3: ["post3"],
-  post4: ["post4"]
+  post4: ["post4"],
+  testimonialsSection: ["testimonialsSection", "_"],
+  _: ["_"],
+  footer: ["footer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -2568,9 +2927,7 @@ type NodeDefaultElementType = {
   h1: "h1";
   button: typeof Button;
   aboutMeSection: "section";
-  h4: "h4";
   portfolioSection: "section";
-  h6: "h6";
   libertineBlendsProject: "div";
   libertineCocktailBarProject: "div";
   tiberiProject: "div";
@@ -2595,6 +2952,9 @@ type NodeDefaultElementType = {
   post2: "div";
   post3: "div";
   post4: "div";
+  testimonialsSection: "section";
+  _: "div";
+  footer: "section";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -2661,9 +3021,7 @@ export const PlasmicHomepage = Object.assign(
     h1: makeNodeComponent("h1"),
     button: makeNodeComponent("button"),
     aboutMeSection: makeNodeComponent("aboutMeSection"),
-    h4: makeNodeComponent("h4"),
     portfolioSection: makeNodeComponent("portfolioSection"),
-    h6: makeNodeComponent("h6"),
     libertineBlendsProject: makeNodeComponent("libertineBlendsProject"),
     libertineCocktailBarProject: makeNodeComponent(
       "libertineCocktailBarProject"
@@ -2690,6 +3048,9 @@ export const PlasmicHomepage = Object.assign(
     post2: makeNodeComponent("post2"),
     post3: makeNodeComponent("post3"),
     post4: makeNodeComponent("post4"),
+    testimonialsSection: makeNodeComponent("testimonialsSection"),
+    _: makeNodeComponent("_"),
+    footer: makeNodeComponent("footer"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

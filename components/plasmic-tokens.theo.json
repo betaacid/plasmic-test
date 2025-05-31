@@ -151,6 +151,16 @@
       }
     },
     {
+      "name": "Gold-600",
+      "type": "color",
+      "value": "#C3955A",
+      "category": "color",
+      "meta": {
+        "projectId": "i9knz7EXdrcBWswQTuKKjX",
+        "id": "qMs7Y6GABuPq"
+      }
+    },
+    {
       "name": "Gold-700",
       "type": "color",
       "value": "#A87A3E",
@@ -281,6 +291,16 @@
       }
     },
     {
+      "name": "Neutral-300",
+      "type": "color",
+      "value": "#BDBDBD",
+      "category": "color",
+      "meta": {
+        "projectId": "i9knz7EXdrcBWswQTuKKjX",
+        "id": "7_3u4At6HfW_"
+      }
+    },
+    {
       "name": "Neutral/Neutral",
       "type": "color",
       "value": "#374151",
@@ -408,6 +428,16 @@
       "meta": {
         "projectId": "i9knz7EXdrcBWswQTuKKjX",
         "id": "fL_mRu4Bd1K7"
+      }
+    },
+    {
+      "name": "Stone-200",
+      "type": "color",
+      "value": "#F4EFE9",
+      "category": "color",
+      "meta": {
+        "projectId": "i9knz7EXdrcBWswQTuKKjX",
+        "id": "JX2So3edATvE"
       }
     },
     {

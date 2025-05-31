@@ -300,6 +300,16 @@
           "id": "LCLxgt2Kqs7i",
           "name": "InstagramLogoIcon",
           "moduleFilePath": "plasmic/blank_website_mobile_first/icons/PlasmicIcon__InstagramLogo.tsx"
+        },
+        {
+          "id": "s311iITGUFs6",
+          "name": "SpeechBubbleIcon",
+          "moduleFilePath": "plasmic/blank_website_mobile_first/icons/PlasmicIcon__SpeechBubble.tsx"
+        },
+        {
+          "id": "u1EK1ushqS6H",
+          "name": "ContactEmailIcon",
+          "moduleFilePath": "plasmic/blank_website_mobile_first/icons/PlasmicIcon__ContactEmail.tsx"
         }
       ],
       "images": [
@@ -442,6 +452,11 @@
           "id": "ww8Ll5c2bf4t",
           "name": "cocktail-with-clover-stirrer",
           "filePath": "../public/plasmic/blank_website_mobile_first/images/cocktailWithCloverStirrer.png"
+        },
+        {
+          "id": "yUJb-zRHLifg",
+          "name": "logo2 2",
+          "filePath": "../public/plasmic/blank_website_mobile_first/images/logo22.png"
         }
       ],
       "indirect": false,

@@ -111,6 +111,12 @@
   --plasmic-token-gold-700: var(--token-C1KoRoqN5nk_);
   --token-5Fd7Ld29XUJq: #dab98d;
   --plasmic-token-gold-400: var(--token-5Fd7Ld29XUJq);
+  --token-JX2So3edATvE: #f4efe9;
+  --plasmic-token-stone-200: var(--token-JX2So3edATvE);
+  --token-qMs7Y6GABuPq: #c3955a;
+  --plasmic-token-gold-600: var(--token-qMs7Y6GABuPq);
+  --token-7_3u4At6HfW_: #bdbdbd;
+  --plasmic-token-neutral-300: var(--token-7_3u4At6HfW_);
 }
 
 .plasmic_tokens {
