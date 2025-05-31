@@ -62,15 +62,6 @@ import {
 import Button from "../../Button"; // plasmic-import: 7v6YGoE2Zo0o/component
 import Modal from "../../Modal"; // plasmic-import: 5SZcaRjHDDZd/component
 import Button2 from "../../Button2"; // plasmic-import: PVKK-xU6-q6G/component
-import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal";
-import { FormWrapper } from "@plasmicpkgs/antd5/skinny/Form";
-import { formHelpers as FormWrapper_Helpers } from "@plasmicpkgs/antd5/skinny/Form";
-import { FormItemWrapper } from "@plasmicpkgs/antd5/skinny/FormItem";
-import { AntdInput } from "@plasmicpkgs/antd5/skinny/registerInput";
-import { inputHelpers as AntdInput_Helpers } from "@plasmicpkgs/antd5/skinny/registerInput";
-import { AntdTextArea } from "@plasmicpkgs/antd5/skinny/registerInput";
-import { inputHelpers as AntdTextArea_Helpers } from "@plasmicpkgs/antd5/skinny/registerInput";
-import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton";
 
 import { useScreenVariants as useScreenVariantsajVfn3Ya69H5 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: AJVfn3Ya69h5/globalVariant
 
@@ -137,10 +128,6 @@ export type PlasmicHomepage__OverridesType = {
   _?: Flex__<"div">;
   footer?: Flex__<"section">;
   menuModal?: Flex__<typeof Modal>;
-  formModal?: Flex__<typeof AntdModal>;
-  form?: Flex__<typeof FormWrapper>;
-  input?: Flex__<typeof AntdInput>;
-  textArea?: Flex__<typeof AntdTextArea>;
 };
 
 export interface DefaultHomepageProps {}
@@ -188,30 +175,6 @@ function PlasmicHomepage__RenderFunc(props: {
 
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
-      {
-        path: "formModal.open",
-        type: "private",
-        variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
-      },
-      {
-        path: "form.value",
-        type: "private",
-        variableType: "object",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
-
-        refName: "form",
-        onMutate: generateOnMutateForSpec("value", FormWrapper_Helpers)
-      },
-      {
-        path: "form.isSubmitting",
-        type: "private",
-        variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => false,
-
-        refName: "form",
-        onMutate: generateOnMutateForSpec("isSubmitting", FormWrapper_Helpers)
-      },
       {
         path: "menuModal.isOpen",
         type: "private",
@@ -358,45 +321,6 @@ function PlasmicHomepage__RenderFunc(props: {
                     {"Let's work together"}
                   </div>
                 }
-                onClick={async event => {
-                  const $steps = {};
-
-                  $steps["updateFormModalOpen"] = true
-                    ? (() => {
-                        const actionArgs = {
-                          variable: {
-                            objRoot: $state,
-                            variablePath: ["formModal", "open"]
-                          },
-                          operation: 0,
-                          value: true
-                        };
-                        return (({
-                          variable,
-                          value,
-                          startIndex,
-                          deleteCount
-                        }) => {
-                          if (!variable) {
-                            return;
-                          }
-                          const { objRoot, variablePath } = variable;
-
-                          $stateSet(objRoot, variablePath, value);
-                          return value;
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                  if (
-                    $steps["updateFormModalOpen"] != null &&
-                    typeof $steps["updateFormModalOpen"] === "object" &&
-                    typeof $steps["updateFormModalOpen"].then === "function"
-                  ) {
-                    $steps["updateFormModalOpen"] = await $steps[
-                      "updateFormModalOpen"
-                    ];
-                  }
-                }}
                 roundedFull={true}
                 start={
                   <EmailIconSvgIcon
@@ -3423,124 +3347,6 @@ function PlasmicHomepage__RenderFunc(props: {
             }}
             showHeader={false}
           />
-
-          <AntdModal
-            data-plasmic-name={"formModal"}
-            data-plasmic-override={overrides.formModal}
-            className={classNames("__wab_instance", sty.formModal)}
-            defaultStylesClassName={classNames(
-              projectcss.root_reset,
-              projectcss.plasmic_default_styles,
-              projectcss.plasmic_mixins,
-              projectcss.plasmic_tokens,
-              plasmic_antd_5_hostless_css.plasmic_tokens
-            )}
-            hideFooter={true}
-            modalScopeClassName={sty["formModal__modal"]}
-            onOpenChange={async (...eventArgs: any) => {
-              generateStateOnChangeProp($state, ["formModal", "open"]).apply(
-                null,
-                eventArgs
-              );
-            }}
-            open={generateStateValueProp($state, ["formModal", "open"])}
-            title={"Modal title"}
-            trigger={null}
-          >
-            {(() => {
-              const child$Props = {
-                className: classNames("__wab_instance", sty.form),
-                extendedOnValuesChange: async (...eventArgs: any) => {
-                  generateStateOnChangePropForCodeComponents(
-                    $state,
-                    "value",
-                    ["form", "value"],
-                    FormWrapper_Helpers
-                  ).apply(null, eventArgs);
-                },
-                formItems: undefined,
-                labelCol: { span: 8, horizontalOnly: true },
-                layout: "vertical",
-                mode: undefined,
-                onIsSubmittingChange: async (...eventArgs: any) => {
-                  generateStateOnChangePropForCodeComponents(
-                    $state,
-                    "isSubmitting",
-                    ["form", "isSubmitting"],
-                    FormWrapper_Helpers
-                  ).apply(null, eventArgs);
-                },
-                ref: ref => {
-                  $refs["form"] = ref;
-                },
-                wrapperCol: { span: 16, horizontalOnly: true }
-              };
-              initializeCodeComponentStates(
-                $state,
-                [
-                  {
-                    name: "value",
-                    plasmicStateName: "form.value"
-                  },
-                  {
-                    name: "isSubmitting",
-                    plasmicStateName: "form.isSubmitting"
-                  }
-                ],
-                [],
-                FormWrapper_Helpers ?? {},
-                child$Props
-              );
-
-              return (
-                <FormWrapper
-                  data-plasmic-name={"form"}
-                  data-plasmic-override={overrides.form}
-                  {...child$Props}
-                >
-                  <FormItemWrapper
-                    className={classNames(
-                      "__wab_instance",
-                      sty.formField__kCvMt
-                    )}
-                    label={"Name"}
-                    name={"name"}
-                  >
-                    <AntdInput
-                      className={classNames("__wab_instance", sty.input)}
-                    />
-                  </FormItemWrapper>
-                  <FormItemWrapper
-                    className={classNames(
-                      "__wab_instance",
-                      sty.formField__sw1R
-                    )}
-                    label={"Message"}
-                    name={"message"}
-                  >
-                    <AntdTextArea
-                      className={classNames("__wab_instance", sty.textArea)}
-                    />
-                  </FormItemWrapper>
-                  <AntdButton
-                    className={classNames("__wab_instance", sty.button__pqsI0)}
-                    submitsForm={true}
-                    type={"primary"}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__mIyTu
-                      )}
-                    >
-                      {"Submit"}
-                    </div>
-                  </AntdButton>
-                </FormWrapper>
-              );
-            })()}
-          </AntdModal>
         </div>
       </div>
     </React.Fragment>
@@ -3582,11 +3388,7 @@ const PlasmicDescendants = {
     "testimonialsSection",
     "_",
     "footer",
-    "menuModal",
-    "formModal",
-    "form",
-    "input",
-    "textArea"
+    "menuModal"
   ],
   navSection: ["navSection"],
   headerSection: ["headerSection", "h1"],
@@ -3645,11 +3447,7 @@ const PlasmicDescendants = {
   testimonialsSection: ["testimonialsSection", "_"],
   _: ["_"],
   footer: ["footer"],
-  menuModal: ["menuModal"],
-  formModal: ["formModal", "form", "input", "textArea"],
-  form: ["form", "input", "textArea"],
-  input: ["input"],
-  textArea: ["textArea"]
+  menuModal: ["menuModal"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -3689,10 +3487,6 @@ type NodeDefaultElementType = {
   _: "div";
   footer: "section";
   menuModal: typeof Modal;
-  formModal: typeof AntdModal;
-  form: typeof FormWrapper;
-  input: typeof AntdInput;
-  textArea: typeof AntdTextArea;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -3790,10 +3584,6 @@ export const PlasmicHomepage = Object.assign(
     _: makeNodeComponent("_"),
     footer: makeNodeComponent("footer"),
     menuModal: makeNodeComponent("menuModal"),
-    formModal: makeNodeComponent("formModal"),
-    form: makeNodeComponent("form"),
-    input: makeNodeComponent("input"),
-    textArea: makeNodeComponent("textArea"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
