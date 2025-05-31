@@ -80,10 +80,10 @@ import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css";
 import projectcss from "./plasmic.module.css"; // plasmic-import: i9knz7EXdrcBWswQTuKKjX/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: t6bbWH5XZ4fm/css
 
-import MenuSvgIcon from "./icons/PlasmicIcon__MenuSvg"; // plasmic-import: m6be-c-hP_JG/icon
-import EmailIconSvgIcon from "./icons/PlasmicIcon__EmailIconSvg"; // plasmic-import: zIXVq3DAAel6/icon
-import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: H5Yxuv6_n5vq/icon
 import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: k4ujBvekGioO/icon
+import MenuSvgIcon from "./icons/PlasmicIcon__MenuSvg"; // plasmic-import: m6be-c-hP_JG/icon
+import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: H5Yxuv6_n5vq/icon
+import EmailIconSvgIcon from "./icons/PlasmicIcon__EmailIconSvg"; // plasmic-import: zIXVq3DAAel6/icon
 import CrownHaloIcon from "./icons/PlasmicIcon__CrownHalo"; // plasmic-import: QESqRHbH-Tr7/icon
 import LineBreakIcon from "./icons/PlasmicIcon__LineBreak"; // plasmic-import: OaJD_NBb6Nrq/icon
 import InstagramLogoIcon from "./icons/PlasmicIcon__InstagramLogo"; // plasmic-import: LCLxgt2Kqs7i/icon
@@ -261,9 +261,53 @@ function PlasmicHomepage__RenderFunc(props: {
             className={classNames(projectcss.all, sty.navSection)}
           >
             <div className={classNames(projectcss.all, sty.freeBox__elpz9)}>
-              <MenuSvgIcon
-                className={classNames(projectcss.all, sty.svg__t1WBv)}
-                role={"img"}
+              <Button
+                className={classNames("__wab_instance", sty.button__kR0U)}
+                label={
+                  <MenuSvgIcon
+                    className={classNames(projectcss.all, sty.svg__sj8Mc)}
+                    role={"img"}
+                  />
+                }
+                onClick={async event => {
+                  const $steps = {};
+
+                  $steps["updateMenuModalIsOpen"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          variable: {
+                            objRoot: $state,
+                            variablePath: ["menuModal", "isOpen"]
+                          },
+                          operation: 0,
+                          value: true
+                        };
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+
+                          $stateSet(objRoot, variablePath, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateMenuModalIsOpen"] != null &&
+                    typeof $steps["updateMenuModalIsOpen"] === "object" &&
+                    typeof $steps["updateMenuModalIsOpen"].then === "function"
+                  ) {
+                    $steps["updateMenuModalIsOpen"] = await $steps[
+                      "updateMenuModalIsOpen"
+                    ];
+                  }
+                }}
               />
 
               <PlasmicImg__
@@ -3091,7 +3135,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField___2V1O6
+                      sty.formField__gxCv
                     )}
                     label={"Name"}
                     name={"name"}
@@ -3103,7 +3147,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__bmtaJ
+                      sty.formField__mv9Ah
                     )}
                     label={"Message"}
                     name={"message"}
@@ -3113,7 +3157,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     />
                   </FormItemWrapper>
                   <AntdButton
-                    className={classNames("__wab_instance", sty.button___5VEi8)}
+                    className={classNames("__wab_instance", sty.button__bhzv)}
                     submitsForm={true}
                     type={"primary"}
                   >
@@ -3121,7 +3165,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text___9Giqr
+                        sty.text__tx6Aa
                       )}
                     >
                       {"Submit"}
