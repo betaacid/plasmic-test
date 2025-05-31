@@ -263,32 +263,6 @@
           "cssFilePath": "plasmic/blank_website_mobile_first/PlasmicButton.module.css",
           "scheme": "blackbox",
           "componentType": "component"
-        },
-        {
-          "id": "PmMcfy4rIU7X",
-          "name": "Button2",
-          "type": "managed",
-          "projectId": "i9knz7EXdrcBWswQTuKKjX",
-          "renderModuleFilePath": "plasmic/blank_website_mobile_first/PlasmicButton2.tsx",
-          "importSpec": {
-            "modulePath": "Button2.tsx"
-          },
-          "cssFilePath": "plasmic/blank_website_mobile_first/PlasmicButton2.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
-          "id": "pwrU8-lOfcyk",
-          "name": "Modal",
-          "type": "managed",
-          "projectId": "i9knz7EXdrcBWswQTuKKjX",
-          "renderModuleFilePath": "plasmic/blank_website_mobile_first/PlasmicModal.tsx",
-          "importSpec": {
-            "modulePath": "Modal.tsx"
-          },
-          "cssFilePath": "plasmic/blank_website_mobile_first/PlasmicModal.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
         }
       ],
       "icons": [

@@ -60,8 +60,6 @@ import {
 } from "@plasmicapp/react-web/lib/host";
 
 import Button from "../../Button"; // plasmic-import: 7v6YGoE2Zo0o/component
-import Modal from "../../Modal"; // plasmic-import: pwrU8-lOfcyk/component
-import Button2 from "../../Button2"; // plasmic-import: PmMcfy4rIU7X/component
 
 import { useScreenVariants as useScreenVariantsajVfn3Ya69H5 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: AJVfn3Ya69h5/globalVariant
 
@@ -125,7 +123,6 @@ export type PlasmicHomepage__OverridesType = {
   testimonialsSection?: Flex__<"section">;
   _?: Flex__<"div">;
   footer?: Flex__<"section">;
-  modal?: Flex__<typeof Modal>;
 };
 
 export interface DefaultHomepageProps {}
@@ -169,24 +166,6 @@ function PlasmicHomepage__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
-    () => [
-      {
-        path: "modal.isOpen",
-        type: "private",
-        variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
-      }
-    ],
-    [$props, $ctx, $refs]
-  );
-  const $state = useDollarState(stateSpecs, {
-    $props,
-    $ctx,
-    $queries: {},
-    $refs
-  });
-
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsajVfn3Ya69H5()
   });
@@ -222,23 +201,11 @@ function PlasmicHomepage__RenderFunc(props: {
             className={classNames(projectcss.all, sty.navSection)}
           >
             <div className={classNames(projectcss.all, sty.freeBox__elpz9)}>
-              <PlasmicLink__
-                className={classNames(
-                  projectcss.all,
-                  projectcss.a,
-                  sty.link__fZahv
-                )}
-                component={Link}
-                onClick={async event => {
-                  const $steps = {};
-                }}
-                platform={"nextjs"}
-              >
-                <MenuSvgIcon
-                  className={classNames(projectcss.all, sty.svg__t1WBv)}
-                  role={"img"}
-                />
-              </PlasmicLink__>
+              <MenuSvgIcon
+                className={classNames(projectcss.all, sty.svg__t1WBv)}
+                role={"img"}
+              />
+
               <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__mn83Y)}
@@ -2760,7 +2727,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             className={
                               "plasmic_default__all plasmic_default__span"
                             }
-                            style={{ color: "var(--token-00hQVsY5huLW)" }}
+                            style={{ color: "#FFFFFF" }}
                           >
                             {
                               "For project inquiries, collaboration proposals, or press\u2014"
@@ -2912,26 +2879,6 @@ function PlasmicHomepage__RenderFunc(props: {
                 </div>
               </div>
             </Stack__>
-            <Modal
-              data-plasmic-name={"modal"}
-              data-plasmic-override={overrides.modal}
-              className={classNames("__wab_instance", sty.modal)}
-              isOpen={generateStateValueProp($state, ["modal", "isOpen"])}
-              onOpenChange={async (...eventArgs: any) => {
-                generateStateOnChangeProp($state, ["modal", "isOpen"]).apply(
-                  null,
-                  eventArgs
-                );
-
-                if (
-                  eventArgs.length > 1 &&
-                  eventArgs[1] &&
-                  eventArgs[1]._plasmic_state_init_
-                ) {
-                  return;
-                }
-              }}
-            />
           </section>
         </div>
       </div>
@@ -2973,8 +2920,7 @@ const PlasmicDescendants = {
     "post4",
     "testimonialsSection",
     "_",
-    "footer",
-    "modal"
+    "footer"
   ],
   navSection: ["navSection"],
   headerSection: ["headerSection", "h1"],
@@ -3032,8 +2978,7 @@ const PlasmicDescendants = {
   post4: ["post4"],
   testimonialsSection: ["testimonialsSection", "_"],
   _: ["_"],
-  footer: ["footer", "modal"],
-  modal: ["modal"]
+  footer: ["footer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -3072,7 +3017,6 @@ type NodeDefaultElementType = {
   testimonialsSection: "section";
   _: "div";
   footer: "section";
-  modal: typeof Modal;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -3169,7 +3113,6 @@ export const PlasmicHomepage = Object.assign(
     testimonialsSection: makeNodeComponent("testimonialsSection"),
     _: makeNodeComponent("_"),
     footer: makeNodeComponent("footer"),
-    modal: makeNodeComponent("modal"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
