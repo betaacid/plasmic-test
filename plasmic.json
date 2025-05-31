@@ -312,6 +312,36 @@
           "id": "OyvPsNb22kKu",
           "name": "profile-pic",
           "filePath": "../public/plasmic/blank_website_mobile_first/images/profilePic.png"
+        },
+        {
+          "id": "qks6epiykq4T",
+          "name": "stacked-cans",
+          "filePath": "../public/plasmic/blank_website_mobile_first/images/stackedCans.png"
+        },
+        {
+          "id": "ZR-x_ITHWyPA",
+          "name": "bar-and-tables",
+          "filePath": "../public/plasmic/blank_website_mobile_first/images/barAndTables.png"
+        },
+        {
+          "id": "m6C1FfnbOZY8",
+          "name": "white-bar",
+          "filePath": "../public/plasmic/blank_website_mobile_first/images/whiteBar.png"
+        },
+        {
+          "id": "v25pjZAHYU9C",
+          "name": "dark-bar",
+          "filePath": "../public/plasmic/blank_website_mobile_first/images/darkBar.png"
+        },
+        {
+          "id": "w_PbYMP1ENfZ",
+          "name": "stone-bar",
+          "filePath": "../public/plasmic/blank_website_mobile_first/images/stoneBar.png"
+        },
+        {
+          "id": "v2xTdA9UhSR2",
+          "name": "unstacked-cans",
+          "filePath": "../public/plasmic/blank_website_mobile_first/images/unstackedCans.png"
         }
       ],
       "indirect": false,

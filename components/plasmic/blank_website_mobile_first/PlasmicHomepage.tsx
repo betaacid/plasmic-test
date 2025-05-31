@@ -91,7 +91,14 @@ export type PlasmicHomepage__OverridesType = {
   aboutMeSection?: Flex__<"section">;
   h4?: Flex__<"h4">;
   svg?: Flex__<"svg">;
-  ul?: Flex__<"ul">;
+  portfolioSection?: Flex__<"section">;
+  h6?: Flex__<"h6">;
+  libertineBlendsProject?: Flex__<"div">;
+  libertineCocktailBarProject?: Flex__<"div">;
+  tiberiProject?: Flex__<"div">;
+  whiskeriaProject?: Flex__<"div">;
+  twoSchmukcs?: Flex__<"div">;
+  creativeColabsProject?: Flex__<"div">;
 };
 
 export interface DefaultHomepageProps {}
@@ -466,12 +473,10 @@ function PlasmicHomepage__RenderFunc(props: {
                     <React.Fragment>{""}</React.Fragment>
                     {
                       <ul
-                        data-plasmic-name={"ul"}
-                        data-plasmic-override={overrides.ul}
                         className={classNames(
                           projectcss.all,
                           projectcss.ul,
-                          sty.ul
+                          sty.ul___4Eiz8
                         )}
                       >
                         <li
@@ -545,6 +550,720 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
             </Stack__>
           </section>
+          <section
+            data-plasmic-name={"portfolioSection"}
+            data-plasmic-override={overrides.portfolioSection}
+            className={classNames(projectcss.all, sty.portfolioSection)}
+            id={"portfolio"}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__wfw4L
+              )}
+            >
+              <React.Fragment>
+                <React.Fragment>{""}</React.Fragment>
+                {
+                  <h6
+                    data-plasmic-name={"h6"}
+                    data-plasmic-override={overrides.h6}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h6,
+                      projectcss.__wab_text,
+                      sty.h6
+                    )}
+                  >
+                    {"PORTFOLIO / RECENT"}
+                  </h6>
+                }
+                <React.Fragment>{""}</React.Fragment>
+              </React.Fragment>
+            </div>
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__gzkOn
+              )}
+            >
+              <React.Fragment>
+                <React.Fragment>{""}</React.Fragment>
+                {
+                  <h3
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h3,
+                      projectcss.__wab_text,
+                      sty.h3__brndw
+                    )}
+                  >
+                    {"PROJECTS"}
+                  </h3>
+                }
+                <React.Fragment>{""}</React.Fragment>
+              </React.Fragment>
+            </div>
+            <div className={classNames(projectcss.all, sty.freeBox__zcNq5)}>
+              <div
+                data-plasmic-name={"libertineBlendsProject"}
+                data-plasmic-override={overrides.libertineBlendsProject}
+                className={classNames(
+                  projectcss.all,
+                  sty.libertineBlendsProject
+                )}
+              >
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__nWh6E)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/blank_website_mobile_first/images/stackedCans.png",
+                    fullWidth: 632,
+                    fullHeight: 388,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <div className={classNames(projectcss.all, sty.freeBox__kBwyl)}>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__cmr7P
+                    )}
+                  >
+                    {"RTD Cocktail Development"}
+                  </div>
+                </div>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__lSzin
+                  )}
+                >
+                  {"Creative Collaborations"}
+                </div>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__flAd
+                  )}
+                >
+                  <React.Fragment>
+                    <React.Fragment>{""}</React.Fragment>
+                    {
+                      <ul
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.ul,
+                          sty.ul__rOGr9
+                        )}
+                      >
+                        <li
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.li,
+                            projectcss.__wab_text,
+                            sty.li__hbZDo
+                          )}
+                        >
+                          {"Concept Creation"}
+                        </li>
+                        <li
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.li,
+                            projectcss.__wab_text,
+                            sty.li__qn6K1
+                          )}
+                        >
+                          {"Recipe Creation"}
+                        </li>
+                        <li
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.li,
+                            projectcss.__wab_text,
+                            sty.li__qYqzs
+                          )}
+                        >
+                          {"Recipe Scaling"}
+                        </li>
+                        <li
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.li,
+                            projectcss.__wab_text,
+                            sty.li__sFk6
+                          )}
+                        >
+                          {"Production"}
+                        </li>
+                      </ul>
+                    }
+                    <React.Fragment>{""}</React.Fragment>
+                  </React.Fragment>
+                </div>
+              </div>
+              <div
+                data-plasmic-name={"libertineCocktailBarProject"}
+                data-plasmic-override={overrides.libertineCocktailBarProject}
+                className={classNames(
+                  projectcss.all,
+                  sty.libertineCocktailBarProject
+                )}
+              >
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__cd0Z0)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/blank_website_mobile_first/images/barAndTables.png",
+                    fullWidth: 632,
+                    fullHeight: 388,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <Stack__
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox___8AWe)}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__xXDx0
+                    )}
+                  >
+                    {"Bar Programs"}
+                  </div>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__j7X7F
+                    )}
+                  >
+                    {"RTD Cocktail Development"}
+                  </div>
+                </Stack__>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___8ShBo
+                  )}
+                >
+                  {"Libertine Cocktail Bar, Barcelona"}
+                </div>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__jwi92
+                  )}
+                >
+                  <React.Fragment>
+                    <React.Fragment>{""}</React.Fragment>
+                    {
+                      <ul
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.ul,
+                          sty.ul__kqpDx
+                        )}
+                      >
+                        <li
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.li,
+                            projectcss.__wab_text,
+                            sty.li__rvxFh
+                          )}
+                        >
+                          {"Bar concept creation"}
+                        </li>
+                        <li
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.li,
+                            projectcss.__wab_text,
+                            sty.li__xh1T9
+                          )}
+                        >
+                          {"Menu creation & curation"}
+                        </li>
+                        <li
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.li,
+                            projectcss.__wab_text,
+                            sty.li__onuck
+                          )}
+                        >
+                          {
+                            "Draft, bottled, and canned cocktail program creation"
+                          }
+                        </li>
+                        <li
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.li,
+                            projectcss.__wab_text,
+                            sty.li___59RLr
+                          )}
+                        >
+                          {"Team training"}
+                        </li>
+                      </ul>
+                    }
+                    <React.Fragment>{""}</React.Fragment>
+                  </React.Fragment>
+                </div>
+              </div>
+              <div
+                data-plasmic-name={"tiberiProject"}
+                data-plasmic-override={overrides.tiberiProject}
+                className={classNames(projectcss.all, sty.tiberiProject)}
+              >
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__gsWX)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/blank_website_mobile_first/images/whiteBar.png",
+                    fullWidth: 632,
+                    fullHeight: 388,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <Stack__
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox__ief9L)}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__saGc1
+                    )}
+                  >
+                    {"Bar Programs"}
+                  </div>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___4VU0T
+                    )}
+                  >
+                    {"RTD Cocktail Development"}
+                  </div>
+                </Stack__>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__sgFWe
+                  )}
+                >
+                  {"Tiberi, Barcelona"}
+                </div>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__lPlHq
+                  )}
+                >
+                  <React.Fragment>
+                    <React.Fragment>{""}</React.Fragment>
+                    {
+                      <ul
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.ul,
+                          sty.ul__ghaym
+                        )}
+                      >
+                        <li
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.li,
+                            projectcss.__wab_text,
+                            sty.li__mgloE
+                          )}
+                        >
+                          {"Draft cocktail program"}
+                        </li>
+                        <li
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.li,
+                            projectcss.__wab_text,
+                            sty.li__zXhEw
+                          )}
+                        >
+                          {"Sourcing of materials"}
+                        </li>
+                        <li
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.li,
+                            projectcss.__wab_text,
+                            sty.li__t1KRh
+                          )}
+                        >
+                          {"Installation oversight"}
+                        </li>
+                      </ul>
+                    }
+                    <React.Fragment>{""}</React.Fragment>
+                  </React.Fragment>
+                </div>
+              </div>
+              <div
+                data-plasmic-name={"whiskeriaProject"}
+                data-plasmic-override={overrides.whiskeriaProject}
+                className={classNames(projectcss.all, sty.whiskeriaProject)}
+              >
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__qCRw0)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/blank_website_mobile_first/images/darkBar.png",
+                    fullWidth: 634,
+                    fullHeight: 388,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <Stack__
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox___6RlZy)}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__xy0XH
+                    )}
+                  >
+                    {"Bar Programs"}
+                  </div>
+                </Stack__>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__mtSKl
+                  )}
+                >
+                  {"La Whiskeria, Barcelona"}
+                </div>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__tdQf
+                  )}
+                >
+                  <React.Fragment>
+                    <React.Fragment>{""}</React.Fragment>
+                    {
+                      <ul
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.ul,
+                          sty.ul__iJcOb
+                        )}
+                      >
+                        <li
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.li,
+                            projectcss.__wab_text,
+                            sty.li__mcRfm
+                          )}
+                        >
+                          {"Cocktail menu development & curation"}
+                        </li>
+                        <li
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.li,
+                            projectcss.__wab_text,
+                            sty.li__eBdc
+                          )}
+                        >
+                          {"Standard operating procedure"}
+                        </li>
+                        <li
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.li,
+                            projectcss.__wab_text,
+                            sty.li___1Iwwe
+                          )}
+                        >
+                          {"Team training"}
+                        </li>
+                      </ul>
+                    }
+                    <React.Fragment>{""}</React.Fragment>
+                  </React.Fragment>
+                </div>
+              </div>
+              <div
+                data-plasmic-name={"twoSchmukcs"}
+                data-plasmic-override={overrides.twoSchmukcs}
+                className={classNames(projectcss.all, sty.twoSchmukcs)}
+              >
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__oj81H)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/blank_website_mobile_first/images/stoneBar.png",
+                    fullWidth: 632,
+                    fullHeight: 388,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <Stack__
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox__qdgKm)}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__dwEa
+                    )}
+                  >
+                    {"Bar Programs"}
+                  </div>
+                </Stack__>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__tNpZ1
+                  )}
+                >
+                  {"Two Schmucks, Barcelona"}
+                </div>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___4Re97
+                  )}
+                >
+                  <React.Fragment>
+                    <React.Fragment>{""}</React.Fragment>
+                    {
+                      <ul
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.ul,
+                          sty.ul__mqYv
+                        )}
+                      >
+                        <li
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.li,
+                            projectcss.__wab_text,
+                            sty.li__tzOMj
+                          )}
+                        >
+                          {"Draft cocktail program"}
+                        </li>
+                        <li
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.li,
+                            projectcss.__wab_text,
+                            sty.li___76GMo
+                          )}
+                        >
+                          {"Standard operating procedure"}
+                        </li>
+                        <li
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.li,
+                            projectcss.__wab_text,
+                            sty.li__a67Tl
+                          )}
+                        >
+                          {"Team training"}
+                        </li>
+                      </ul>
+                    }
+                    <React.Fragment>{""}</React.Fragment>
+                  </React.Fragment>
+                </div>
+              </div>
+              <div
+                data-plasmic-name={"creativeColabsProject"}
+                data-plasmic-override={overrides.creativeColabsProject}
+                className={classNames(
+                  projectcss.all,
+                  sty.creativeColabsProject
+                )}
+              >
+                <PlasmicImg__
+                  alt={""}
+                  className={classNames(sty.img__eCpI0)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/blank_website_mobile_first/images/unstackedCans.png",
+                    fullWidth: 632,
+                    fullHeight: 388,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <Stack__
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox__fbXj3)}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___2C8BR
+                    )}
+                  >
+                    {"RTD Cocktail Development"}
+                  </div>
+                </Stack__>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__ot37W
+                  )}
+                >
+                  {"Creative Collaborations"}
+                </div>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___0GEbh
+                  )}
+                >
+                  <React.Fragment>
+                    <React.Fragment>{""}</React.Fragment>
+                    {
+                      <ul
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.ul,
+                          sty.ul___3Hz84
+                        )}
+                      >
+                        <li
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.li,
+                            projectcss.__wab_text,
+                            sty.li__ftRwZ
+                          )}
+                        >
+                          {"Hotel Casa Bonay"}
+                        </li>
+                        <li
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.li,
+                            projectcss.__wab_text,
+                            sty.li__aBeL1
+                          )}
+                        >
+                          {"Asia's 50 Best Bars"}
+                        </li>
+                        <li
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.li,
+                            projectcss.__wab_text,
+                            sty.li__kv4X
+                          )}
+                        >
+                          {"Wozere Studio"}
+                        </li>
+                        <li
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.li,
+                            projectcss.__wab_text,
+                            sty.li__xEj6W
+                          )}
+                        >
+                          {"Michter's Whiskey"}
+                        </li>
+                      </ul>
+                    }
+                    <React.Fragment>{""}</React.Fragment>
+                  </React.Fragment>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </React.Fragment>
@@ -560,15 +1279,38 @@ const PlasmicDescendants = {
     "aboutMeSection",
     "h4",
     "svg",
-    "ul"
+    "portfolioSection",
+    "h6",
+    "libertineBlendsProject",
+    "libertineCocktailBarProject",
+    "tiberiProject",
+    "whiskeriaProject",
+    "twoSchmukcs",
+    "creativeColabsProject"
   ],
   headerSection: ["headerSection", "h1", "button"],
   h1: ["h1"],
   button: ["button"],
-  aboutMeSection: ["aboutMeSection", "h4", "svg", "ul"],
+  aboutMeSection: ["aboutMeSection", "h4", "svg"],
   h4: ["h4"],
   svg: ["svg"],
-  ul: ["ul"]
+  portfolioSection: [
+    "portfolioSection",
+    "h6",
+    "libertineBlendsProject",
+    "libertineCocktailBarProject",
+    "tiberiProject",
+    "whiskeriaProject",
+    "twoSchmukcs",
+    "creativeColabsProject"
+  ],
+  h6: ["h6"],
+  libertineBlendsProject: ["libertineBlendsProject"],
+  libertineCocktailBarProject: ["libertineCocktailBarProject"],
+  tiberiProject: ["tiberiProject"],
+  whiskeriaProject: ["whiskeriaProject"],
+  twoSchmukcs: ["twoSchmukcs"],
+  creativeColabsProject: ["creativeColabsProject"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -581,7 +1323,14 @@ type NodeDefaultElementType = {
   aboutMeSection: "section";
   h4: "h4";
   svg: "svg";
-  ul: "ul";
+  portfolioSection: "section";
+  h6: "h6";
+  libertineBlendsProject: "div";
+  libertineCocktailBarProject: "div";
+  tiberiProject: "div";
+  whiskeriaProject: "div";
+  twoSchmukcs: "div";
+  creativeColabsProject: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -650,7 +1399,16 @@ export const PlasmicHomepage = Object.assign(
     aboutMeSection: makeNodeComponent("aboutMeSection"),
     h4: makeNodeComponent("h4"),
     svg: makeNodeComponent("svg"),
-    ul: makeNodeComponent("ul"),
+    portfolioSection: makeNodeComponent("portfolioSection"),
+    h6: makeNodeComponent("h6"),
+    libertineBlendsProject: makeNodeComponent("libertineBlendsProject"),
+    libertineCocktailBarProject: makeNodeComponent(
+      "libertineCocktailBarProject"
+    ),
+    tiberiProject: makeNodeComponent("tiberiProject"),
+    whiskeriaProject: makeNodeComponent("whiskeriaProject"),
+    twoSchmukcs: makeNodeComponent("twoSchmukcs"),
+    creativeColabsProject: makeNodeComponent("creativeColabsProject"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
