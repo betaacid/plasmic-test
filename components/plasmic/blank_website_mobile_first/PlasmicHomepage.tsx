@@ -264,10 +264,22 @@ function PlasmicHomepage__RenderFunc(props: {
               <Button
                 className={classNames("__wab_instance", sty.button__kR0U)}
                 label={
-                  <MenuSvgIcon
-                    className={classNames(projectcss.all, sty.svg__sj8Mc)}
-                    role={"img"}
-                  />
+                  <React.Fragment>
+                    <MenuSvgIcon
+                      className={classNames(projectcss.all, sty.svg__sj8Mc)}
+                      role={"img"}
+                    />
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___0VLey
+                      )}
+                    >
+                      {"Menu"}
+                    </div>
+                  </React.Fragment>
                 }
                 onClick={async event => {
                   const $steps = {};
@@ -3136,7 +3148,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__vMgiz
+                      sty.formField__tJyH
                     )}
                     label={"Name"}
                     name={"name"}
@@ -3148,7 +3160,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__bgim1
+                      sty.formField__mKvR5
                     )}
                     label={"Message"}
                     name={"message"}
@@ -3158,7 +3170,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     />
                   </FormItemWrapper>
                   <AntdButton
-                    className={classNames("__wab_instance", sty.button__sWoOz)}
+                    className={classNames("__wab_instance", sty.button__btGu)}
                     submitsForm={true}
                     type={"primary"}
                   >
@@ -3166,7 +3178,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__dtZca
+                        sty.text__cmucp
                       )}
                     >
                       {"Submit"}
