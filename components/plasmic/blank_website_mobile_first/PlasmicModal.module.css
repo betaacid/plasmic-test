@@ -10,10 +10,10 @@
   height: 1em;
 }
 .ariaModal:global(.__wab_instance) {
-  background: var(--token-OpsAqN-5bUxj);
+  background: var(--token-bZeWi1PxbxAK);
   display: block;
-  color: var(--token-FJiSlnEcq2Et);
-  font-family: var(--token-Zrmj6r2X_BMR);
+  color: var(--token-OpsAqN-5bUxj);
+  font-family: "Fraunces", serif;
   font-size: var(--token-VXoG_TjhCM2Q);
   line-height: var(--token-AxGvilwbMKE5);
   outline-style: none;
