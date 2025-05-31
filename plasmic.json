@@ -367,6 +367,21 @@
           "id": "NJFrkaVjmzrL",
           "name": "bottles",
           "filePath": "../public/plasmic/blank_website_mobile_first/images/bottles.png"
+        },
+        {
+          "id": "MUpY0YnUhak7",
+          "name": "bowtie",
+          "filePath": "../public/plasmic/blank_website_mobile_first/images/bowtie.png"
+        },
+        {
+          "id": "trOiGmxzFFWu",
+          "name": "cocktail-with-grape",
+          "filePath": "../public/plasmic/blank_website_mobile_first/images/cocktailWithGrape.png"
+        },
+        {
+          "id": "DDNjnqbqthIO",
+          "name": "press banner",
+          "filePath": "../public/plasmic/blank_website_mobile_first/images/pressBanner.png"
         }
       ],
       "indirect": false,

@@ -108,6 +108,7 @@ export type PlasmicHomepage__OverridesType = {
   rtdProductDevelopment3?: Flex__<"div">;
   service4?: Flex__<"div">;
   rtdProductDevelopment4?: Flex__<"div">;
+  photosSection?: Flex__<"section">;
 };
 
 export interface DefaultHomepageProps {}
@@ -1798,6 +1799,82 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
             </div>
           </section>
+          <section
+            data-plasmic-name={"photosSection"}
+            data-plasmic-override={overrides.photosSection}
+            className={classNames(projectcss.all, sty.photosSection)}
+          >
+            <Stack__
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__qIdN)}
+            >
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img___8IwMf)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={
+                  hasVariant(globalVariants, "screen", "desktopOnly")
+                    ? "auto"
+                    : "310px"
+                }
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/blank_website_mobile_first/images/bowtie.png",
+                  fullWidth: 598,
+                  fullHeight: 818,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__s39VH)}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={
+                  hasVariant(globalVariants, "screen", "desktopOnly")
+                    ? "auto"
+                    : "199px"
+                }
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/blank_website_mobile_first/images/cocktailWithGrape.png",
+                  fullWidth: 399,
+                  fullHeight: 566,
+                  aspectRatio: undefined
+                }}
+              />
+            </Stack__>
+          </section>
+          <PlasmicImg__
+            alt={""}
+            className={classNames(sty.img__huMB)}
+            displayHeight={
+              hasVariant(globalVariants, "screen", "desktopOnly")
+                ? "217px"
+                : "126px"
+            }
+            displayMaxHeight={"none"}
+            displayMaxWidth={"100%"}
+            displayMinHeight={"0"}
+            displayMinWidth={"0"}
+            displayWidth={"100%"}
+            loading={"lazy"}
+            src={{
+              src: "/plasmic/blank_website_mobile_first/images/pressBanner.png",
+              fullWidth: 1536,
+              fullHeight: 435,
+              aspectRatio: undefined
+            }}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -1828,7 +1905,8 @@ const PlasmicDescendants = {
     "service3",
     "rtdProductDevelopment3",
     "service4",
-    "rtdProductDevelopment4"
+    "rtdProductDevelopment4",
+    "photosSection"
   ],
   headerSection: ["headerSection", "h1", "button"],
   h1: ["h1"],
@@ -1870,7 +1948,8 @@ const PlasmicDescendants = {
   service3: ["service3", "rtdProductDevelopment3"],
   rtdProductDevelopment3: ["rtdProductDevelopment3"],
   service4: ["service4", "rtdProductDevelopment4"],
-  rtdProductDevelopment4: ["rtdProductDevelopment4"]
+  rtdProductDevelopment4: ["rtdProductDevelopment4"],
+  photosSection: ["photosSection"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -1899,6 +1978,7 @@ type NodeDefaultElementType = {
   rtdProductDevelopment3: "div";
   service4: "div";
   rtdProductDevelopment4: "div";
+  photosSection: "section";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -1985,6 +2065,7 @@ export const PlasmicHomepage = Object.assign(
     rtdProductDevelopment3: makeNodeComponent("rtdProductDevelopment3"),
     service4: makeNodeComponent("service4"),
     rtdProductDevelopment4: makeNodeComponent("rtdProductDevelopment4"),
+    photosSection: makeNodeComponent("photosSection"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
