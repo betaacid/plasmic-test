@@ -261,59 +261,11 @@ function PlasmicHomepage__RenderFunc(props: {
             className={classNames(projectcss.all, sty.navSection)}
           >
             <div className={classNames(projectcss.all, sty.freeBox__elpz9)}>
-              <PlasmicLink__
-                className={classNames(
-                  projectcss.all,
-                  projectcss.a,
-                  sty.link__s281N
-                )}
-                component={Link}
-                onClick={async event => {
-                  const $steps = {};
+              <MenuSvgIcon
+                className={classNames(projectcss.all, sty.svg__t1WBv)}
+                role={"img"}
+              />
 
-                  $steps["updateMenuModalIsOpen"] = true
-                    ? (() => {
-                        const actionArgs = {
-                          variable: {
-                            objRoot: $state,
-                            variablePath: ["menuModal", "isOpen"]
-                          },
-                          operation: 0,
-                          value: true
-                        };
-                        return (({
-                          variable,
-                          value,
-                          startIndex,
-                          deleteCount
-                        }) => {
-                          if (!variable) {
-                            return;
-                          }
-                          const { objRoot, variablePath } = variable;
-
-                          $stateSet(objRoot, variablePath, value);
-                          return value;
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                  if (
-                    $steps["updateMenuModalIsOpen"] != null &&
-                    typeof $steps["updateMenuModalIsOpen"] === "object" &&
-                    typeof $steps["updateMenuModalIsOpen"].then === "function"
-                  ) {
-                    $steps["updateMenuModalIsOpen"] = await $steps[
-                      "updateMenuModalIsOpen"
-                    ];
-                  }
-                }}
-                platform={"nextjs"}
-              >
-                <MenuSvgIcon
-                  className={classNames(projectcss.all, sty.svg__t1WBv)}
-                  role={"img"}
-                />
-              </PlasmicLink__>
               <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__mn83Y)}
@@ -355,45 +307,6 @@ function PlasmicHomepage__RenderFunc(props: {
                     {"Let's work together"}
                   </div>
                 }
-                onClick={async event => {
-                  const $steps = {};
-
-                  $steps["updateFormModalOpen"] = true
-                    ? (() => {
-                        const actionArgs = {
-                          variable: {
-                            objRoot: $state,
-                            variablePath: ["formModal", "open"]
-                          },
-                          operation: 0,
-                          value: true
-                        };
-                        return (({
-                          variable,
-                          value,
-                          startIndex,
-                          deleteCount
-                        }) => {
-                          if (!variable) {
-                            return;
-                          }
-                          const { objRoot, variablePath } = variable;
-
-                          $stateSet(objRoot, variablePath, value);
-                          return value;
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                  if (
-                    $steps["updateFormModalOpen"] != null &&
-                    typeof $steps["updateFormModalOpen"] === "object" &&
-                    typeof $steps["updateFormModalOpen"].then === "function"
-                  ) {
-                    $steps["updateFormModalOpen"] = await $steps[
-                      "updateFormModalOpen"
-                    ];
-                  }
-                }}
                 roundedFull={true}
                 start={
                   <EmailIconSvgIcon
@@ -3046,8 +2959,6 @@ function PlasmicHomepage__RenderFunc(props: {
                 return;
               }
             }}
-            showFooter={false}
-            showHeader={false}
           />
 
           <AntdModal
@@ -3141,7 +3052,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__olnC9
+                      sty.formField__xl5R
                     )}
                     label={"Name"}
                     name={"name"}
@@ -3153,7 +3064,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__k6Bh
+                      sty.formField__iAzAz
                     )}
                     label={"Message"}
                     name={"message"}
@@ -3163,7 +3074,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     />
                   </FormItemWrapper>
                   <AntdButton
-                    className={classNames("__wab_instance", sty.button__qhz7U)}
+                    className={classNames("__wab_instance", sty.button__pu9L0)}
                     submitsForm={true}
                     type={"primary"}
                   >
@@ -3171,7 +3082,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__cqLca
+                        sty.text___0S9Jf
                       )}
                     >
                       {"Submit"}
