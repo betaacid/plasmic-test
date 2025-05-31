@@ -125,8 +125,7 @@ export type PlasmicHomepage__OverridesType = {
   testimonialsSection?: Flex__<"section">;
   _?: Flex__<"div">;
   footer?: Flex__<"section">;
-  menuModal?: Flex__<typeof Modal>;
-  contactModal?: Flex__<typeof Modal>;
+  modal?: Flex__<typeof Modal>;
 };
 
 export interface DefaultHomepageProps {}
@@ -173,13 +172,7 @@ function PlasmicHomepage__RenderFunc(props: {
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
-        path: "menuModal.isOpen",
-        type: "private",
-        variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
-      },
-      {
-        path: "contactModal.isOpen",
+        path: "modal.isOpen",
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
@@ -2919,63 +2912,27 @@ function PlasmicHomepage__RenderFunc(props: {
                 </div>
               </div>
             </Stack__>
+            <Modal
+              data-plasmic-name={"modal"}
+              data-plasmic-override={overrides.modal}
+              className={classNames("__wab_instance", sty.modal)}
+              isOpen={generateStateValueProp($state, ["modal", "isOpen"])}
+              onOpenChange={async (...eventArgs: any) => {
+                generateStateOnChangeProp($state, ["modal", "isOpen"]).apply(
+                  null,
+                  eventArgs
+                );
+
+                if (
+                  eventArgs.length > 1 &&
+                  eventArgs[1] &&
+                  eventArgs[1]._plasmic_state_init_
+                ) {
+                  return;
+                }
+              }}
+            />
           </section>
-          <Modal
-            data-plasmic-name={"menuModal"}
-            data-plasmic-override={overrides.menuModal}
-            className={classNames("__wab_instance", sty.menuModal)}
-            isKeyboardDismissDisabled={false}
-            isOpen={generateStateValueProp($state, ["menuModal", "isOpen"])}
-            onOpenChange={async (...eventArgs: any) => {
-              generateStateOnChangeProp($state, ["menuModal", "isOpen"]).apply(
-                null,
-                eventArgs
-              );
-
-              if (
-                eventArgs.length > 1 &&
-                eventArgs[1] &&
-                eventArgs[1]._plasmic_state_init_
-              ) {
-                return;
-              }
-            }}
-            trigger={null}
-          />
-
-          <Modal
-            data-plasmic-name={"contactModal"}
-            data-plasmic-override={overrides.contactModal}
-            className={classNames("__wab_instance", sty.contactModal)}
-            heading={
-              <h3
-                className={classNames(
-                  projectcss.all,
-                  projectcss.h3,
-                  projectcss.__wab_text,
-                  sty.h3___2Hu72
-                )}
-              >
-                {"Email Modal"}
-              </h3>
-            }
-            isOpen={generateStateValueProp($state, ["contactModal", "isOpen"])}
-            onOpenChange={async (...eventArgs: any) => {
-              generateStateOnChangeProp($state, [
-                "contactModal",
-                "isOpen"
-              ]).apply(null, eventArgs);
-
-              if (
-                eventArgs.length > 1 &&
-                eventArgs[1] &&
-                eventArgs[1]._plasmic_state_init_
-              ) {
-                return;
-              }
-            }}
-            trigger={null}
-          />
         </div>
       </div>
     </React.Fragment>
@@ -3017,8 +2974,7 @@ const PlasmicDescendants = {
     "testimonialsSection",
     "_",
     "footer",
-    "menuModal",
-    "contactModal"
+    "modal"
   ],
   navSection: ["navSection"],
   headerSection: ["headerSection", "h1"],
@@ -3076,9 +3032,8 @@ const PlasmicDescendants = {
   post4: ["post4"],
   testimonialsSection: ["testimonialsSection", "_"],
   _: ["_"],
-  footer: ["footer"],
-  menuModal: ["menuModal"],
-  contactModal: ["contactModal"]
+  footer: ["footer", "modal"],
+  modal: ["modal"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -3117,8 +3072,7 @@ type NodeDefaultElementType = {
   testimonialsSection: "section";
   _: "div";
   footer: "section";
-  menuModal: typeof Modal;
-  contactModal: typeof Modal;
+  modal: typeof Modal;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -3215,8 +3169,7 @@ export const PlasmicHomepage = Object.assign(
     testimonialsSection: makeNodeComponent("testimonialsSection"),
     _: makeNodeComponent("_"),
     footer: makeNodeComponent("footer"),
-    menuModal: makeNodeComponent("menuModal"),
-    contactModal: makeNodeComponent("contactModal"),
+    modal: makeNodeComponent("modal"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
