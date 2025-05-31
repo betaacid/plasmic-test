@@ -60,11 +60,23 @@ import {
 } from "@plasmicapp/react-web/lib/host";
 
 import Button from "../../Button"; // plasmic-import: 7v6YGoE2Zo0o/component
+import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal";
+import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton";
+import { FormWrapper } from "@plasmicpkgs/antd5/skinny/Form";
+import { formHelpers as FormWrapper_Helpers } from "@plasmicpkgs/antd5/skinny/Form";
+import { FormItemWrapper } from "@plasmicpkgs/antd5/skinny/FormItem";
+import { AntdInput } from "@plasmicpkgs/antd5/skinny/registerInput";
+import { inputHelpers as AntdInput_Helpers } from "@plasmicpkgs/antd5/skinny/registerInput";
+import { AntdTextArea } from "@plasmicpkgs/antd5/skinny/registerInput";
+import { inputHelpers as AntdTextArea_Helpers } from "@plasmicpkgs/antd5/skinny/registerInput";
+import Modal from "../../Modal"; // plasmic-import: 5SZcaRjHDDZd/component
+import Button2 from "../../Button2"; // plasmic-import: PVKK-xU6-q6G/component
 
 import { useScreenVariants as useScreenVariantsajVfn3Ya69H5 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: AJVfn3Ya69h5/globalVariant
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
+import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: i9knz7EXdrcBWswQTuKKjX/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: t6bbWH5XZ4fm/css
 
@@ -123,6 +135,12 @@ export type PlasmicHomepage__OverridesType = {
   testimonialsSection?: Flex__<"section">;
   _?: Flex__<"div">;
   footer?: Flex__<"section">;
+  modal?: Flex__<typeof AntdModal>;
+  modal2?: Flex__<typeof AntdModal>;
+  form?: Flex__<typeof FormWrapper>;
+  input?: Flex__<typeof AntdInput>;
+  textArea?: Flex__<typeof AntdTextArea>;
+  modal3?: Flex__<typeof Modal>;
 };
 
 export interface DefaultHomepageProps {}
@@ -166,6 +184,54 @@ function PlasmicHomepage__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
+    () => [
+      {
+        path: "modal.open",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "modal2.open",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      },
+      {
+        path: "form.value",
+        type: "private",
+        variableType: "object",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+
+        refName: "form",
+        onMutate: generateOnMutateForSpec("value", FormWrapper_Helpers)
+      },
+      {
+        path: "form.isSubmitting",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false,
+
+        refName: "form",
+        onMutate: generateOnMutateForSpec("isSubmitting", FormWrapper_Helpers)
+      },
+      {
+        path: "modal3.isOpen",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+      }
+    ],
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: {},
+    $refs
+  });
+
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsajVfn3Ya69H5()
   });
@@ -192,6 +258,7 @@ function PlasmicHomepage__RenderFunc(props: {
             projectcss.plasmic_default_styles,
             projectcss.plasmic_mixins,
             projectcss.plasmic_tokens,
+            plasmic_antd_5_hostless_css.plasmic_tokens,
             sty.root
           )}
         >
@@ -2880,6 +2947,207 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
             </Stack__>
           </section>
+          <AntdModal
+            data-plasmic-name={"modal"}
+            data-plasmic-override={overrides.modal}
+            className={classNames("__wab_instance", sty.modal)}
+            defaultStylesClassName={classNames(
+              projectcss.root_reset,
+              projectcss.plasmic_default_styles,
+              projectcss.plasmic_mixins,
+              projectcss.plasmic_tokens,
+              plasmic_antd_5_hostless_css.plasmic_tokens
+            )}
+            modalScopeClassName={sty["modal__modal"]}
+            onOpenChange={async (...eventArgs: any) => {
+              generateStateOnChangeProp($state, ["modal", "open"]).apply(
+                null,
+                eventArgs
+              );
+            }}
+            open={generateStateValueProp($state, ["modal", "open"])}
+            title={"Modal title"}
+            trigger={
+              <AntdButton
+                className={classNames("__wab_instance", sty.button__wbuhD)}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__a5Ova
+                  )}
+                >
+                  {"Show modal"}
+                </div>
+              </AntdButton>
+            }
+          >
+            <div className={classNames(projectcss.all, sty.freeBox__lH9I3)}>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__fq2G2
+                )}
+              >
+                {"Modal content"}
+              </div>
+            </div>
+          </AntdModal>
+          <AntdModal
+            data-plasmic-name={"modal2"}
+            data-plasmic-override={overrides.modal2}
+            className={classNames("__wab_instance", sty.modal2)}
+            defaultStylesClassName={classNames(
+              projectcss.root_reset,
+              projectcss.plasmic_default_styles,
+              projectcss.plasmic_mixins,
+              projectcss.plasmic_tokens,
+              plasmic_antd_5_hostless_css.plasmic_tokens
+            )}
+            hideFooter={true}
+            modalScopeClassName={sty["modal2__modal"]}
+            onOpenChange={async (...eventArgs: any) => {
+              generateStateOnChangeProp($state, ["modal2", "open"]).apply(
+                null,
+                eventArgs
+              );
+            }}
+            open={generateStateValueProp($state, ["modal2", "open"])}
+            title={"Modal title"}
+            trigger={
+              <React.Fragment>
+                <AntdButton
+                  className={classNames("__wab_instance", sty.button__hYaG)}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__mBnm
+                    )}
+                  >
+                    {"Show modal"}
+                  </div>
+                </AntdButton>
+                <Modal
+                  data-plasmic-name={"modal3"}
+                  data-plasmic-override={overrides.modal3}
+                  className={classNames("__wab_instance", sty.modal3)}
+                  isOpen={generateStateValueProp($state, ["modal3", "isOpen"])}
+                  onOpenChange={async (...eventArgs: any) => {
+                    generateStateOnChangeProp($state, [
+                      "modal3",
+                      "isOpen"
+                    ]).apply(null, eventArgs);
+
+                    if (
+                      eventArgs.length > 1 &&
+                      eventArgs[1] &&
+                      eventArgs[1]._plasmic_state_init_
+                    ) {
+                      return;
+                    }
+                  }}
+                />
+              </React.Fragment>
+            }
+          >
+            {(() => {
+              const child$Props = {
+                className: classNames("__wab_instance", sty.form),
+                extendedOnValuesChange: async (...eventArgs: any) => {
+                  generateStateOnChangePropForCodeComponents(
+                    $state,
+                    "value",
+                    ["form", "value"],
+                    FormWrapper_Helpers
+                  ).apply(null, eventArgs);
+                },
+                formItems: undefined,
+                labelCol: { span: 8, horizontalOnly: true },
+                layout: "vertical",
+                mode: undefined,
+                onIsSubmittingChange: async (...eventArgs: any) => {
+                  generateStateOnChangePropForCodeComponents(
+                    $state,
+                    "isSubmitting",
+                    ["form", "isSubmitting"],
+                    FormWrapper_Helpers
+                  ).apply(null, eventArgs);
+                },
+                ref: ref => {
+                  $refs["form"] = ref;
+                },
+                wrapperCol: { span: 16, horizontalOnly: true }
+              };
+              initializeCodeComponentStates(
+                $state,
+                [
+                  {
+                    name: "value",
+                    plasmicStateName: "form.value"
+                  },
+                  {
+                    name: "isSubmitting",
+                    plasmicStateName: "form.isSubmitting"
+                  }
+                ],
+                [],
+                FormWrapper_Helpers ?? {},
+                child$Props
+              );
+
+              return (
+                <FormWrapper
+                  data-plasmic-name={"form"}
+                  data-plasmic-override={overrides.form}
+                  {...child$Props}
+                >
+                  <FormItemWrapper
+                    className={classNames(
+                      "__wab_instance",
+                      sty.formField__jjjS3
+                    )}
+                    label={"Name"}
+                    name={"name"}
+                  >
+                    <AntdInput
+                      className={classNames("__wab_instance", sty.input)}
+                    />
+                  </FormItemWrapper>
+                  <FormItemWrapper
+                    className={classNames(
+                      "__wab_instance",
+                      sty.formField___1Vnpq
+                    )}
+                    label={"Message"}
+                    name={"message"}
+                  >
+                    <AntdTextArea
+                      className={classNames("__wab_instance", sty.textArea)}
+                    />
+                  </FormItemWrapper>
+                  <AntdButton
+                    className={classNames("__wab_instance", sty.button__xKhxl)}
+                    submitsForm={true}
+                    type={"primary"}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__ybjOt
+                      )}
+                    >
+                      {"Submit"}
+                    </div>
+                  </AntdButton>
+                </FormWrapper>
+              );
+            })()}
+          </AntdModal>
         </div>
       </div>
     </React.Fragment>
@@ -2920,7 +3188,13 @@ const PlasmicDescendants = {
     "post4",
     "testimonialsSection",
     "_",
-    "footer"
+    "footer",
+    "modal",
+    "modal2",
+    "form",
+    "input",
+    "textArea",
+    "modal3"
   ],
   navSection: ["navSection"],
   headerSection: ["headerSection", "h1"],
@@ -2978,7 +3252,13 @@ const PlasmicDescendants = {
   post4: ["post4"],
   testimonialsSection: ["testimonialsSection", "_"],
   _: ["_"],
-  footer: ["footer"]
+  footer: ["footer"],
+  modal: ["modal"],
+  modal2: ["modal2", "form", "input", "textArea", "modal3"],
+  form: ["form", "input", "textArea"],
+  input: ["input"],
+  textArea: ["textArea"],
+  modal3: ["modal3"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -3017,6 +3297,12 @@ type NodeDefaultElementType = {
   testimonialsSection: "section";
   _: "div";
   footer: "section";
+  modal: typeof AntdModal;
+  modal2: typeof AntdModal;
+  form: typeof FormWrapper;
+  input: typeof AntdInput;
+  textArea: typeof AntdTextArea;
+  modal3: typeof Modal;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -3113,6 +3399,12 @@ export const PlasmicHomepage = Object.assign(
     testimonialsSection: makeNodeComponent("testimonialsSection"),
     _: makeNodeComponent("_"),
     footer: makeNodeComponent("footer"),
+    modal: makeNodeComponent("modal"),
+    modal2: makeNodeComponent("modal2"),
+    form: makeNodeComponent("form"),
+    input: makeNodeComponent("input"),
+    textArea: makeNodeComponent("textArea"),
+    modal3: makeNodeComponent("modal3"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
