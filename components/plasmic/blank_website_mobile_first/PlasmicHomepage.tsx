@@ -105,6 +105,7 @@ export type PlasmicHomepage__OverridesType = {
   h1?: Flex__<"h1">;
   aboutMeSection?: Flex__<"section">;
   portfolioSection?: Flex__<"section">;
+  h2?: Flex__<"h2">;
   libertineBlendsProject?: Flex__<"div">;
   libertineCocktailBarProject?: Flex__<"div">;
   tiberiProject?: Flex__<"div">;
@@ -132,6 +133,7 @@ export type PlasmicHomepage__OverridesType = {
   testimonialsSection?: Flex__<"section">;
   _?: Flex__<"div">;
   footer?: Flex__<"section">;
+  h6?: Flex__<"h6">;
   menuModal?: Flex__<typeof Modal>;
   links?: Flex__<"div">;
   formModal?: Flex__<typeof Modal>;
@@ -705,10 +707,14 @@ function PlasmicHomepage__RenderFunc(props: {
                 className={classNames(sty.img___3Ol6L)}
                 displayHeight={"auto"}
                 displayMaxHeight={"none"}
-                displayMaxWidth={"50vw"}
+                displayMaxWidth={
+                  hasVariant(globalVariants, "screen", "tablet")
+                    ? "40vw"
+                    : "none"
+                }
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
-                displayWidth={"auto"}
+                displayWidth={"100%"}
                 loading={"lazy"}
                 src={{
                   src: "/plasmic/blank_website_mobile_first/images/profilePic.png",
@@ -877,16 +883,16 @@ function PlasmicHomepage__RenderFunc(props: {
               <React.Fragment>
                 <React.Fragment>{""}</React.Fragment>
                 {
-                  <h6
+                  <h5
                     className={classNames(
                       projectcss.all,
-                      projectcss.h6,
+                      projectcss.h5,
                       projectcss.__wab_text,
-                      sty.h6__tw7I5
+                      sty.h5___2ODj
                     )}
                   >
                     {"PORTFOLIO / RECENT"}
-                  </h6>
+                  </h5>
                 }
                 <React.Fragment>{""}</React.Fragment>
               </React.Fragment>
@@ -901,16 +907,18 @@ function PlasmicHomepage__RenderFunc(props: {
               <React.Fragment>
                 <React.Fragment>{""}</React.Fragment>
                 {
-                  <h3
+                  <h2
+                    data-plasmic-name={"h2"}
+                    data-plasmic-override={overrides.h2}
                     className={classNames(
                       projectcss.all,
-                      projectcss.h3,
+                      projectcss.h2,
                       projectcss.__wab_text,
-                      sty.h3__brndw
+                      sty.h2
                     )}
                   >
                     {"PROJECTS"}
-                  </h3>
+                  </h2>
                 }
                 <React.Fragment>{""}</React.Fragment>
               </React.Fragment>
@@ -2944,11 +2952,13 @@ function PlasmicHomepage__RenderFunc(props: {
                     <React.Fragment>{""}</React.Fragment>
                     {
                       <h6
+                        data-plasmic-name={"h6"}
+                        data-plasmic-override={overrides.h6}
                         className={classNames(
                           projectcss.all,
                           projectcss.h6,
                           projectcss.__wab_text,
-                          sty.h6___0ZNhS
+                          sty.h6
                         )}
                       >
                         <React.Fragment>
@@ -4223,6 +4233,7 @@ const PlasmicDescendants = {
     "h1",
     "aboutMeSection",
     "portfolioSection",
+    "h2",
     "libertineBlendsProject",
     "libertineCocktailBarProject",
     "tiberiProject",
@@ -4250,6 +4261,7 @@ const PlasmicDescendants = {
     "testimonialsSection",
     "_",
     "footer",
+    "h6",
     "menuModal",
     "links",
     "formModal",
@@ -4271,6 +4283,7 @@ const PlasmicDescendants = {
   aboutMeSection: ["aboutMeSection"],
   portfolioSection: [
     "portfolioSection",
+    "h2",
     "libertineBlendsProject",
     "libertineCocktailBarProject",
     "tiberiProject",
@@ -4278,6 +4291,7 @@ const PlasmicDescendants = {
     "twoSchmukcs",
     "creativeColabsProject"
   ],
+  h2: ["h2"],
   libertineBlendsProject: ["libertineBlendsProject"],
   libertineCocktailBarProject: ["libertineCocktailBarProject"],
   tiberiProject: ["tiberiProject"],
@@ -4321,7 +4335,8 @@ const PlasmicDescendants = {
   post4: ["post4"],
   testimonialsSection: ["testimonialsSection", "_"],
   _: ["_"],
-  footer: ["footer"],
+  footer: ["footer", "h6"],
+  h6: ["h6"],
   menuModal: ["menuModal", "links"],
   links: ["links"],
   formModal: [
@@ -4371,6 +4386,7 @@ type NodeDefaultElementType = {
   h1: "h1";
   aboutMeSection: "section";
   portfolioSection: "section";
+  h2: "h2";
   libertineBlendsProject: "div";
   libertineCocktailBarProject: "div";
   tiberiProject: "div";
@@ -4398,6 +4414,7 @@ type NodeDefaultElementType = {
   testimonialsSection: "section";
   _: "div";
   footer: "section";
+  h6: "h6";
   menuModal: typeof Modal;
   links: "div";
   formModal: typeof Modal;
@@ -4479,6 +4496,7 @@ export const PlasmicHomepage = Object.assign(
     h1: makeNodeComponent("h1"),
     aboutMeSection: makeNodeComponent("aboutMeSection"),
     portfolioSection: makeNodeComponent("portfolioSection"),
+    h2: makeNodeComponent("h2"),
     libertineBlendsProject: makeNodeComponent("libertineBlendsProject"),
     libertineCocktailBarProject: makeNodeComponent(
       "libertineCocktailBarProject"
@@ -4508,6 +4526,7 @@ export const PlasmicHomepage = Object.assign(
     testimonialsSection: makeNodeComponent("testimonialsSection"),
     _: makeNodeComponent("_"),
     footer: makeNodeComponent("footer"),
+    h6: makeNodeComponent("h6"),
     menuModal: makeNodeComponent("menuModal"),
     links: makeNodeComponent("links"),
     formModal: makeNodeComponent("formModal"),
