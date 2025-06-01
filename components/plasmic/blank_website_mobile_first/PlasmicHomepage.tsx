@@ -495,7 +495,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.h3__s8CyR
                       )}
                     >
-                      {"COCKTAIL"}
+                      {"COCKTAILS"}
                     </h3>
                   }
                   <React.Fragment>{""}</React.Fragment>
@@ -621,6 +621,45 @@ function PlasmicHomepage__RenderFunc(props: {
                       {"Let\u2019s work together"}
                     </div>
                   }
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["updateFormModalIsOpen"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            variable: {
+                              objRoot: $state,
+                              variablePath: ["formModal", "isOpen"]
+                            },
+                            operation: 0,
+                            value: true
+                          };
+                          return (({
+                            variable,
+                            value,
+                            startIndex,
+                            deleteCount
+                          }) => {
+                            if (!variable) {
+                              return;
+                            }
+                            const { objRoot, variablePath } = variable;
+
+                            $stateSet(objRoot, variablePath, value);
+                            return value;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["updateFormModalIsOpen"] != null &&
+                      typeof $steps["updateFormModalIsOpen"] === "object" &&
+                      typeof $steps["updateFormModalIsOpen"].then === "function"
+                    ) {
+                      $steps["updateFormModalIsOpen"] = await $steps[
+                        "updateFormModalIsOpen"
+                      ];
+                    }
+                  }}
                 />
               </div>
               <PlasmicImg__

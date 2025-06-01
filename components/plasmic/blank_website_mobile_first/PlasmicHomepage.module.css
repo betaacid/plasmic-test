@@ -4054,7 +4054,7 @@
       calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
     )
     minmax(0, var(--plsmc-wide-chunk)) 1fr var(--plsmc-viewport-gap);
-  padding: 126px 0 105px;
+  padding: 126px 8px 105px;
 }
 .testimonialsSection > * {
   grid-column: 4;
@@ -4180,7 +4180,6 @@
   grid-row-gap: 12px;
   grid-column-gap: 120px;
   min-width: 0;
-  padding: 8px;
 }
 @media (min-width: 768px) {
   .freeBox__rWKmW {
