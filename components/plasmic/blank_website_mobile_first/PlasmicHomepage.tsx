@@ -76,10 +76,10 @@ import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css";
 import projectcss from "./plasmic.module.css"; // plasmic-import: i9knz7EXdrcBWswQTuKKjX/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: t6bbWH5XZ4fm/css
 
-import MenuSvgIcon from "./icons/PlasmicIcon__MenuSvg"; // plasmic-import: m6be-c-hP_JG/icon
-import EmailIconSvgIcon from "./icons/PlasmicIcon__EmailIconSvg"; // plasmic-import: zIXVq3DAAel6/icon
-import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: H5Yxuv6_n5vq/icon
 import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: k4ujBvekGioO/icon
+import MenuSvgIcon from "./icons/PlasmicIcon__MenuSvg"; // plasmic-import: m6be-c-hP_JG/icon
+import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: H5Yxuv6_n5vq/icon
+import EmailIconSvgIcon from "./icons/PlasmicIcon__EmailIconSvg"; // plasmic-import: zIXVq3DAAel6/icon
 import CrownHaloIcon from "./icons/PlasmicIcon__CrownHalo"; // plasmic-import: QESqRHbH-Tr7/icon
 import LineBreakIcon from "./icons/PlasmicIcon__LineBreak"; // plasmic-import: OaJD_NBb6Nrq/icon
 import InstagramLogoIcon from "./icons/PlasmicIcon__InstagramLogo"; // plasmic-import: LCLxgt2Kqs7i/icon
@@ -291,13 +291,26 @@ function PlasmicHomepage__RenderFunc(props: {
             className={classNames(projectcss.all, sty.navSection)}
           >
             <div className={classNames(projectcss.all, sty.freeBox__elpz9)}>
-              <PlasmicLink__
-                className={classNames(
-                  projectcss.all,
-                  projectcss.a,
-                  sty.link___5Cz65
-                )}
-                component={Link}
+              <Button
+                className={classNames("__wab_instance", sty.button__kR0U)}
+                label={
+                  <React.Fragment>
+                    <MenuSvgIcon
+                      className={classNames(projectcss.all, sty.svg__sj8Mc)}
+                      role={"img"}
+                    />
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___0VLey
+                      )}
+                    >
+                      {"Menu"}
+                    </div>
+                  </React.Fragment>
+                }
                 onClick={async event => {
                   const $steps = {};
 
@@ -337,13 +350,8 @@ function PlasmicHomepage__RenderFunc(props: {
                     ];
                   }
                 }}
-                platform={"nextjs"}
-              >
-                <MenuSvgIcon
-                  className={classNames(projectcss.all, sty.svg__e4HUi)}
-                  role={"img"}
-                />
-              </PlasmicLink__>
+              />
+
               <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__mn83Y)}
@@ -485,7 +493,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.h3__s8CyR
                       )}
                     >
-                      {"COCKTAILS"}
+                      {"COCKTAIL"}
                     </h3>
                   }
                   <React.Fragment>{""}</React.Fragment>
@@ -611,45 +619,6 @@ function PlasmicHomepage__RenderFunc(props: {
                       {"Let\u2019s work together"}
                     </div>
                   }
-                  onClick={async event => {
-                    const $steps = {};
-
-                    $steps["updateFormModalIsOpen"] = true
-                      ? (() => {
-                          const actionArgs = {
-                            variable: {
-                              objRoot: $state,
-                              variablePath: ["formModal", "isOpen"]
-                            },
-                            operation: 0,
-                            value: true
-                          };
-                          return (({
-                            variable,
-                            value,
-                            startIndex,
-                            deleteCount
-                          }) => {
-                            if (!variable) {
-                              return;
-                            }
-                            const { objRoot, variablePath } = variable;
-
-                            $stateSet(objRoot, variablePath, value);
-                            return value;
-                          })?.apply(null, [actionArgs]);
-                        })()
-                      : undefined;
-                    if (
-                      $steps["updateFormModalIsOpen"] != null &&
-                      typeof $steps["updateFormModalIsOpen"] === "object" &&
-                      typeof $steps["updateFormModalIsOpen"].then === "function"
-                    ) {
-                      $steps["updateFormModalIsOpen"] = await $steps[
-                        "updateFormModalIsOpen"
-                      ];
-                    }
-                  }}
                 />
               </div>
               <PlasmicImg__

@@ -182,8 +182,7 @@
   --mixin-XbtNCthIKDBa_font-weight: 600;
   --mixin-XbtNCthIKDBa_line-height: 1.5;
   --mixin-XbtNCthIKDBa_white-space: pre-wrap;
-  --mixin-9qZ6Fz9wVIls_color: var(--token-bZeWi1PxbxAK);
-  --mixin-9qZ6Fz9wVIls_cursor: default;
+  --mixin-9qZ6Fz9wVIls_color: #0070f3;
   --mixin-9qZ6Fz9wVIls_white-space: pre-wrap;
   --mixin-Kk0VFBINeHOI_border-left-color: #dddddd;
   --mixin-Kk0VFBINeHOI_border-left-style: solid;
@@ -272,8 +271,7 @@
   --mixin-dXwoOOtlIGEq_position: relative;
   --mixin-dXwoOOtlIGEq_list-style-type: disc;
   --mixin-dXwoOOtlIGEq_white-space: pre-wrap;
-  --mixin-0tFDYzc3RmNt_color: var(--token-FY8xQgIqhrmL);
-  --mixin-0tFDYzc3RmNt_cursor: pointer;
+  --mixin-0tFDYzc3RmNt_color: #3291ff;
   --mixin-0tFDYzc3RmNt_white-space: pre-wrap;
 }
 
@@ -645,7 +643,6 @@ a:where(.root_reset.a),
 :where(.root_reset_tags) a,
 a:where(.root_reset_tags) {
   color: var(--mixin-9qZ6Fz9wVIls_color);
-  cursor: var(--mixin-9qZ6Fz9wVIls_cursor);
 }
 
 :where(.root_reset) blockquote:where(.blockquote),
@@ -791,5 +788,4 @@ a:where(.root_reset.a):hover,
 :where(.root_reset_tags) a:hover,
 a:where(.root_reset_tags):hover {
   color: var(--mixin-0tFDYzc3RmNt_color);
-  cursor: var(--mixin-0tFDYzc3RmNt_cursor);
 }
