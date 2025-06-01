@@ -3377,6 +3377,18 @@
 .img__zywxc > picture > img {
   object-fit: cover;
 }
+.freeBox__sDPcf {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 8px;
+}
 .socialsSection {
   display: grid;
   position: relative;
@@ -4953,12 +4965,52 @@
   position: relative;
   height: 1em;
 }
-.text__qEoiq {
+.links {
+  display: flex;
+  flex-direction: column;
   position: relative;
   width: 100%;
   height: auto;
   max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: calc(101px + var(--token-0MEPnaUn7kG8)) !important;
   min-width: 0;
+}
+.freeBox__aYxPs {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 8px;
+}
+.freeBox__wmk5B {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 8px;
+}
+.svg__lmMf2 {
+  object-fit: cover;
+  max-width: 100%;
+  color: var(--token-5Fd7Ld29XUJq);
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+.text__l8ELi {
+  color: var(--token-OpsAqN-5bUxj);
 }
 .formModal:global(.__wab_instance) {
   max-width: 100%;
@@ -4977,7 +5029,7 @@
   min-width: 0;
   padding: 8px;
 }
-.formField__mrHtp:global(.__wab_instance) {
+.formField__lpT7Q:global(.__wab_instance) {
   width: 100%;
   margin-bottom: 24px;
   min-width: 0;
@@ -4986,7 +5038,7 @@
   max-width: 100%;
   object-fit: cover;
 }
-.formField__eea6:global(.__wab_instance) {
+.formField__zSrHk:global(.__wab_instance) {
   width: 100%;
   margin-bottom: 24px;
   min-width: 0;
@@ -4995,11 +5047,11 @@
   max-width: 100%;
   object-fit: cover;
 }
-.button__eD2S:global(.__wab_instance) {
+.button__cp04Q:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }
-.text__oUcgF {
+.text__jKYx6 {
   position: relative;
   width: 100%;
   height: auto;

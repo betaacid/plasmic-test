@@ -137,6 +137,7 @@ export type PlasmicHomepage__OverridesType = {
   _?: Flex__<"div">;
   footer?: Flex__<"section">;
   menuModal?: Flex__<typeof Modal>;
+  links?: Flex__<"div">;
   formModal?: Flex__<typeof AntdModal>;
   form?: Flex__<typeof FormWrapper>;
   input?: Flex__<typeof AntdInput>;
@@ -2267,6 +2268,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 />
               </Stack__>
             </Stack__>
+            <div className={classNames(projectcss.all, sty.freeBox__sDPcf)} />
           </section>
           <section
             data-plasmic-name={"socialsSection"}
@@ -3109,13 +3111,491 @@ function PlasmicHomepage__RenderFunc(props: {
                 />
 
                 <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__qEoiq
-                  )}
+                  data-plasmic-name={"links"}
+                  data-plasmic-override={overrides.links}
+                  className={classNames(projectcss.all, sty.links)}
                 >
-                  {"HOME"}
+                  <PlasmicLink__
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.a,
+                      projectcss.__wab_text,
+                      sty.link__gFi1F
+                    )}
+                    component={Link}
+                    href={`/`}
+                    onClick={async event => {
+                      const $steps = {};
+
+                      $steps["updateMenuModalIsOpen"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              variable: {
+                                objRoot: $state,
+                                variablePath: ["menuModal", "isOpen"]
+                              },
+                              operation: 0,
+                              value: false
+                            };
+                            return (({
+                              variable,
+                              value,
+                              startIndex,
+                              deleteCount
+                            }) => {
+                              if (!variable) {
+                                return;
+                              }
+                              const { objRoot, variablePath } = variable;
+
+                              $stateSet(objRoot, variablePath, value);
+                              return value;
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["updateMenuModalIsOpen"] != null &&
+                        typeof $steps["updateMenuModalIsOpen"] === "object" &&
+                        typeof $steps["updateMenuModalIsOpen"].then ===
+                          "function"
+                      ) {
+                        $steps["updateMenuModalIsOpen"] = await $steps[
+                          "updateMenuModalIsOpen"
+                        ];
+                      }
+                    }}
+                    platform={"nextjs"}
+                  >
+                    <React.Fragment>
+                      <React.Fragment>{""}</React.Fragment>
+                      {
+                        <h3
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h3,
+                            projectcss.__wab_text,
+                            sty.h3___4M7DZ
+                          )}
+                        >
+                          <React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
+                              style={{ color: "var(--token-OpsAqN-5bUxj)" }}
+                            >
+                              {"HOME"}
+                            </span>
+                          </React.Fragment>
+                        </h3>
+                      }
+                      <React.Fragment>{""}</React.Fragment>
+                    </React.Fragment>
+                  </PlasmicLink__>
+                  <PlasmicLink__
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.a,
+                      projectcss.__wab_text,
+                      sty.link___4SJqw
+                    )}
+                    component={Link}
+                    href={"#about-me"}
+                    onClick={async event => {
+                      const $steps = {};
+
+                      $steps["updateMenuModalIsOpen"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              variable: {
+                                objRoot: $state,
+                                variablePath: ["menuModal", "isOpen"]
+                              },
+                              operation: 0,
+                              value: false
+                            };
+                            return (({
+                              variable,
+                              value,
+                              startIndex,
+                              deleteCount
+                            }) => {
+                              if (!variable) {
+                                return;
+                              }
+                              const { objRoot, variablePath } = variable;
+
+                              $stateSet(objRoot, variablePath, value);
+                              return value;
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["updateMenuModalIsOpen"] != null &&
+                        typeof $steps["updateMenuModalIsOpen"] === "object" &&
+                        typeof $steps["updateMenuModalIsOpen"].then ===
+                          "function"
+                      ) {
+                        $steps["updateMenuModalIsOpen"] = await $steps[
+                          "updateMenuModalIsOpen"
+                        ];
+                      }
+                    }}
+                    platform={"nextjs"}
+                  >
+                    <React.Fragment>
+                      <React.Fragment>{""}</React.Fragment>
+                      {
+                        <h3
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h3,
+                            projectcss.__wab_text,
+                            sty.h3__yFzxG
+                          )}
+                        >
+                          <React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
+                              style={{ color: "var(--token-OpsAqN-5bUxj)" }}
+                            >
+                              {"ABOUT ME"}
+                            </span>
+                          </React.Fragment>
+                        </h3>
+                      }
+                      <React.Fragment>{""}</React.Fragment>
+                    </React.Fragment>
+                  </PlasmicLink__>
+                  <PlasmicLink__
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.a,
+                      projectcss.__wab_text,
+                      sty.link___82ACw
+                    )}
+                    component={Link}
+                    href={"#portfolio"}
+                    onClick={async event => {
+                      const $steps = {};
+
+                      $steps["updateMenuModalIsOpen"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              variable: {
+                                objRoot: $state,
+                                variablePath: ["menuModal", "isOpen"]
+                              },
+                              operation: 0,
+                              value: false
+                            };
+                            return (({
+                              variable,
+                              value,
+                              startIndex,
+                              deleteCount
+                            }) => {
+                              if (!variable) {
+                                return;
+                              }
+                              const { objRoot, variablePath } = variable;
+
+                              $stateSet(objRoot, variablePath, value);
+                              return value;
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["updateMenuModalIsOpen"] != null &&
+                        typeof $steps["updateMenuModalIsOpen"] === "object" &&
+                        typeof $steps["updateMenuModalIsOpen"].then ===
+                          "function"
+                      ) {
+                        $steps["updateMenuModalIsOpen"] = await $steps[
+                          "updateMenuModalIsOpen"
+                        ];
+                      }
+                    }}
+                    platform={"nextjs"}
+                  >
+                    <React.Fragment>
+                      <React.Fragment>{""}</React.Fragment>
+                      {
+                        <h3
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h3,
+                            projectcss.__wab_text,
+                            sty.h3__s6A8D
+                          )}
+                        >
+                          <React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
+                              style={{ color: "var(--token-OpsAqN-5bUxj)" }}
+                            >
+                              {"PORTFOLIO"}
+                            </span>
+                          </React.Fragment>
+                        </h3>
+                      }
+                      <React.Fragment>{""}</React.Fragment>
+                    </React.Fragment>
+                  </PlasmicLink__>
+                  <PlasmicLink__
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.a,
+                      projectcss.__wab_text,
+                      sty.link__oBvNi
+                    )}
+                    component={Link}
+                    href={"#services"}
+                    onClick={async event => {
+                      const $steps = {};
+
+                      $steps["updateMenuModalIsOpen"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              variable: {
+                                objRoot: $state,
+                                variablePath: ["menuModal", "isOpen"]
+                              },
+                              operation: 0,
+                              value: false
+                            };
+                            return (({
+                              variable,
+                              value,
+                              startIndex,
+                              deleteCount
+                            }) => {
+                              if (!variable) {
+                                return;
+                              }
+                              const { objRoot, variablePath } = variable;
+
+                              $stateSet(objRoot, variablePath, value);
+                              return value;
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["updateMenuModalIsOpen"] != null &&
+                        typeof $steps["updateMenuModalIsOpen"] === "object" &&
+                        typeof $steps["updateMenuModalIsOpen"].then ===
+                          "function"
+                      ) {
+                        $steps["updateMenuModalIsOpen"] = await $steps[
+                          "updateMenuModalIsOpen"
+                        ];
+                      }
+                    }}
+                    platform={"nextjs"}
+                  >
+                    <React.Fragment>
+                      <React.Fragment>{""}</React.Fragment>
+                      {
+                        <h3
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h3,
+                            projectcss.__wab_text,
+                            sty.h3__wpji
+                          )}
+                        >
+                          <React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
+                              style={{ color: "var(--token-OpsAqN-5bUxj)" }}
+                            >
+                              {"SERVICES"}
+                            </span>
+                          </React.Fragment>
+                        </h3>
+                      }
+                      <React.Fragment>{""}</React.Fragment>
+                    </React.Fragment>
+                  </PlasmicLink__>
+                  <PlasmicLink__
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.a,
+                      projectcss.__wab_text,
+                      sty.link__ryfvV
+                    )}
+                    component={Link}
+                    href={"#press"}
+                    onClick={async event => {
+                      const $steps = {};
+
+                      $steps["updateMenuModalIsOpen"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              variable: {
+                                objRoot: $state,
+                                variablePath: ["menuModal", "isOpen"]
+                              },
+                              operation: 0,
+                              value: false
+                            };
+                            return (({
+                              variable,
+                              value,
+                              startIndex,
+                              deleteCount
+                            }) => {
+                              if (!variable) {
+                                return;
+                              }
+                              const { objRoot, variablePath } = variable;
+
+                              $stateSet(objRoot, variablePath, value);
+                              return value;
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["updateMenuModalIsOpen"] != null &&
+                        typeof $steps["updateMenuModalIsOpen"] === "object" &&
+                        typeof $steps["updateMenuModalIsOpen"].then ===
+                          "function"
+                      ) {
+                        $steps["updateMenuModalIsOpen"] = await $steps[
+                          "updateMenuModalIsOpen"
+                        ];
+                      }
+                    }}
+                    platform={"nextjs"}
+                  >
+                    <React.Fragment>
+                      <React.Fragment>{""}</React.Fragment>
+                      {
+                        <h3
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h3,
+                            projectcss.__wab_text,
+                            sty.h3__g9Rrx
+                          )}
+                        >
+                          <React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
+                              style={{ color: "var(--token-OpsAqN-5bUxj)" }}
+                            >
+                              {"PRESS"}
+                            </span>
+                          </React.Fragment>
+                        </h3>
+                      }
+                      <React.Fragment>{""}</React.Fragment>
+                    </React.Fragment>
+                  </PlasmicLink__>
+                  <PlasmicLink__
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.a,
+                      projectcss.__wab_text,
+                      sty.link__sZXd
+                    )}
+                    component={Link}
+                    href={"#contact"}
+                    onClick={async event => {
+                      const $steps = {};
+
+                      $steps["updateMenuModalIsOpen"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              variable: {
+                                objRoot: $state,
+                                variablePath: ["menuModal", "isOpen"]
+                              },
+                              operation: 0,
+                              value: false
+                            };
+                            return (({
+                              variable,
+                              value,
+                              startIndex,
+                              deleteCount
+                            }) => {
+                              if (!variable) {
+                                return;
+                              }
+                              const { objRoot, variablePath } = variable;
+
+                              $stateSet(objRoot, variablePath, value);
+                              return value;
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["updateMenuModalIsOpen"] != null &&
+                        typeof $steps["updateMenuModalIsOpen"] === "object" &&
+                        typeof $steps["updateMenuModalIsOpen"].then ===
+                          "function"
+                      ) {
+                        $steps["updateMenuModalIsOpen"] = await $steps[
+                          "updateMenuModalIsOpen"
+                        ];
+                      }
+                    }}
+                    platform={"nextjs"}
+                  >
+                    <React.Fragment>
+                      <React.Fragment>{""}</React.Fragment>
+                      {
+                        <h3
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h3,
+                            projectcss.__wab_text,
+                            sty.h3__pTvn
+                          )}
+                        >
+                          <React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
+                              style={{ color: "var(--token-OpsAqN-5bUxj)" }}
+                            >
+                              {"CONTACT"}
+                            </span>
+                          </React.Fragment>
+                        </h3>
+                      }
+                      <React.Fragment>{""}</React.Fragment>
+                    </React.Fragment>
+                  </PlasmicLink__>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__aYxPs)}
+                  />
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__wmk5B)}>
+                  <InstagramLogoIcon
+                    className={classNames(projectcss.all, sty.svg__lmMf2)}
+                    role={"img"}
+                  />
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__l8ELi
+                    )}
+                  >
+                    {"@cocktails__king"}
+                  </div>
                 </div>
               </Stack__>
             }
@@ -3232,7 +3712,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__mrHtp
+                      sty.formField__lpT7Q
                     )}
                     label={"Name"}
                     name={"name"}
@@ -3244,7 +3724,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__eea6
+                      sty.formField__zSrHk
                     )}
                     label={"Message"}
                     name={"message"}
@@ -3254,7 +3734,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     />
                   </FormItemWrapper>
                   <AntdButton
-                    className={classNames("__wab_instance", sty.button__eD2S)}
+                    className={classNames("__wab_instance", sty.button__cp04Q)}
                     submitsForm={true}
                     type={"primary"}
                   >
@@ -3262,7 +3742,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__oUcgF
+                        sty.text__jKYx6
                       )}
                     >
                       {"Submit"}
@@ -3314,6 +3794,7 @@ const PlasmicDescendants = {
     "_",
     "footer",
     "menuModal",
+    "links",
     "formModal",
     "form",
     "input",
@@ -3376,7 +3857,8 @@ const PlasmicDescendants = {
   testimonialsSection: ["testimonialsSection", "_"],
   _: ["_"],
   footer: ["footer"],
-  menuModal: ["menuModal"],
+  menuModal: ["menuModal", "links"],
+  links: ["links"],
   formModal: ["formModal", "form", "input", "textArea"],
   form: ["form", "input", "textArea"],
   input: ["input"],
@@ -3420,6 +3902,7 @@ type NodeDefaultElementType = {
   _: "div";
   footer: "section";
   menuModal: typeof Modal;
+  links: "div";
   formModal: typeof AntdModal;
   form: typeof FormWrapper;
   input: typeof AntdInput;
@@ -3521,6 +4004,7 @@ export const PlasmicHomepage = Object.assign(
     _: makeNodeComponent("_"),
     footer: makeNodeComponent("footer"),
     menuModal: makeNodeComponent("menuModal"),
+    links: makeNodeComponent("links"),
     formModal: makeNodeComponent("formModal"),
     form: makeNodeComponent("form"),
     input: makeNodeComponent("input"),

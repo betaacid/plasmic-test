@@ -98,7 +98,7 @@ export default function GlobalContextsProvider(
           ? antdConfigProviderProps.themeStyles!
           : true
           ? {
-              fontFamily: "Inter",
+              fontFamily: "Fraunces",
               fontSize: "16px",
               fontWeight: "400",
               lineHeight: "1.5",

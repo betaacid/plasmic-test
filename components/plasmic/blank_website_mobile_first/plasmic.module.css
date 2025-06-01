@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C600%3B0%2C700&family=Inconsolata%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C600%3B0%2C700&family=Fraunces%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C600%3B1%2C700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C600%3B1%2C700&family=Inconsolata%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C600%3B0%2C700&family=Inter%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C600%3B0%2C700&display=swap");
 
 .plasmic_tokens {
   --token-bZeWi1PxbxAK: #44403c;
@@ -144,7 +144,7 @@
 }
 
 .plasmic_default_styles {
-  --mixin-C4AONYcJuMq1_font-family: "Inter", sans-serif;
+  --mixin-C4AONYcJuMq1_font-family: "Fraunces", serif;
   --mixin-C4AONYcJuMq1_font-size: 16px;
   --mixin-C4AONYcJuMq1_font-weight: 400;
   --mixin-C4AONYcJuMq1_font-style: normal;
@@ -194,8 +194,8 @@
   --mixin-bFxtRgjiIkOe_line-height: 1.1;
   --mixin-bFxtRgjiIkOe_letter-spacing: -0.5px;
   --mixin-bFxtRgjiIkOe_white-space: pre-wrap;
-  --mixin-s2UCzKZtzU2o_color: #000000;
-  --mixin-s2UCzKZtzU2o_font-size: 32px;
+  --mixin-s2UCzKZtzU2o_color: var(--token-bZeWi1PxbxAK);
+  --mixin-s2UCzKZtzU2o_font-size: 48px;
   --mixin-s2UCzKZtzU2o_font-weight: 600;
   --mixin-s2UCzKZtzU2o_line-height: 1.2;
   --mixin-s2UCzKZtzU2o_white-space: pre-wrap;
@@ -265,6 +265,13 @@
   --mixin-dXwoOOtlIGEq_white-space: pre-wrap;
   --mixin-0tFDYzc3RmNt_color: #3291ff;
   --mixin-0tFDYzc3RmNt_white-space: pre-wrap;
+}
+
+@media (min-width: 768px) {
+  .plasmic_default_styles {
+    --mixin-s2UCzKZtzU2o_font-size: 143px;
+    --mixin-s2UCzKZtzU2o_white-space: pre-wrap;
+  }
 }
 
 :where(.all) {
