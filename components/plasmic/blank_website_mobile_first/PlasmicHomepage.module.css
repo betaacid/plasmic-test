@@ -60,9 +60,17 @@
   grid-column-end: -1 !important;
   padding: 8px;
 }
-.link__nt36A {
+.link___5Cz65 {
   display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  max-width: 100%;
   color: var(--token-bZeWi1PxbxAK);
+  padding: 8px;
 }
 .svg__e4HUi {
   object-fit: cover;

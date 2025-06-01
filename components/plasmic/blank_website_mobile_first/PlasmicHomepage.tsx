@@ -295,7 +295,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 className={classNames(
                   projectcss.all,
                   projectcss.a,
-                  sty.link__nt36A
+                  sty.link___5Cz65
                 )}
                 component={Link}
                 onClick={async event => {
