@@ -4907,15 +4907,6 @@
   position: relative;
   height: 1em;
 }
-.h3__m9KHr {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  font-weight: 700;
-  font-size: var(--token-c7f_ZdzO1orj);
-  min-width: 0;
-  padding: var(--token-dmLP_HACyfID);
-}
 .freeBox__wWlFd {
   display: flex;
   flex-direction: column;
@@ -4938,29 +4929,36 @@
   > img {
   margin-top: var(--token-0MEPnaUn7kG8);
 }
-.text__ad9Zo {
-  position: relative;
+.button___4PzFs:global(.__wab_instance):global(.__wab_instance) {
+  max-width: 100%;
 }
-.freeBox__yZgxl {
-  display: flex;
-  flex-direction: row;
+.svg__qwoXz {
   position: relative;
-  align-items: center;
-  justify-content: flex-end;
+  height: 1em;
+}
+.svg__cPhon {
+  object-fit: cover;
+  max-width: 100%;
+  color: var(--token-OpsAqN-5bUxj);
+  width: 40px;
+  height: 40px;
+}
+.text__z3Lpw {
+  white-space: pre;
+  padding-bottom: 0px;
+  font-family: "Fraunces", serif;
+  font-size: 18px;
+}
+.svg__qHgrL {
+  position: relative;
+  height: 1em;
+}
+.text__qEoiq {
+  position: relative;
   width: 100%;
+  height: auto;
+  max-width: 100%;
   min-width: 0;
-  padding: var(--token-dmLP_HACyfID);
-}
-.svg__ymUk {
-  position: relative;
-  height: 1em;
-}
-.text__zgWfv {
-  padding-left: 0px;
-}
-.svg__h4FYr {
-  position: relative;
-  height: 1em;
 }
 .formModal:global(.__wab_instance) {
   max-width: 100%;
@@ -4979,7 +4977,7 @@
   min-width: 0;
   padding: 8px;
 }
-.formField___5ESRx:global(.__wab_instance) {
+.formField__mrHtp:global(.__wab_instance) {
   width: 100%;
   margin-bottom: 24px;
   min-width: 0;
@@ -4988,7 +4986,7 @@
   max-width: 100%;
   object-fit: cover;
 }
-.formField__faD:global(.__wab_instance) {
+.formField__eea6:global(.__wab_instance) {
   width: 100%;
   margin-bottom: 24px;
   min-width: 0;
@@ -4997,11 +4995,11 @@
   max-width: 100%;
   object-fit: cover;
 }
-.button__hFfgt:global(.__wab_instance) {
+.button__eD2S:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }
-.text___1ZpF {
+.text__oUcgF {
   position: relative;
   width: 100%;
   height: auto;

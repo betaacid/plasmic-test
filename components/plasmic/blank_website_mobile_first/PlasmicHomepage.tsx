@@ -89,6 +89,7 @@ import LineBreakIcon from "./icons/PlasmicIcon__LineBreak"; // plasmic-import: O
 import InstagramLogoIcon from "./icons/PlasmicIcon__InstagramLogo"; // plasmic-import: LCLxgt2Kqs7i/icon
 import SpeechBubbleIcon from "./icons/PlasmicIcon__SpeechBubble"; // plasmic-import: s311iITGUFs6/icon
 import ContactEmailIcon from "./icons/PlasmicIcon__ContactEmail"; // plasmic-import: u1EK1ushqS6H/icon
+import CloseIconIcon from "./icons/PlasmicIcon__CloseIcon"; // plasmic-import: NxIUoog3Afja/icon
 
 createPlasmicElementProxy;
 
@@ -3040,7 +3041,88 @@ function PlasmicHomepage__RenderFunc(props: {
             data-plasmic-name={"menuModal"}
             data-plasmic-override={overrides.menuModal}
             className={classNames("__wab_instance", sty.menuModal)}
+            content={
+              <Stack__
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__wWlFd)}
+              >
+                <Button
+                  className={classNames("__wab_instance", sty.button___4PzFs)}
+                  label={
+                    <React.Fragment>
+                      <CloseIconIcon
+                        className={classNames(projectcss.all, sty.svg__cPhon)}
+                        role={"img"}
+                      />
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__z3Lpw
+                        )}
+                      >
+                        {"Menu"}
+                      </div>
+                    </React.Fragment>
+                  }
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["updateMenuModalIsOpen"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            variable: {
+                              objRoot: $state,
+                              variablePath: ["menuModal", "isOpen"]
+                            },
+                            operation: 0,
+                            value: false
+                          };
+                          return (({
+                            variable,
+                            value,
+                            startIndex,
+                            deleteCount
+                          }) => {
+                            if (!variable) {
+                              return;
+                            }
+                            const { objRoot, variablePath } = variable;
+
+                            $stateSet(objRoot, variablePath, value);
+                            return value;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["updateMenuModalIsOpen"] != null &&
+                      typeof $steps["updateMenuModalIsOpen"] === "object" &&
+                      typeof $steps["updateMenuModalIsOpen"].then === "function"
+                    ) {
+                      $steps["updateMenuModalIsOpen"] = await $steps[
+                        "updateMenuModalIsOpen"
+                      ];
+                    }
+                  }}
+                />
+
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__qEoiq
+                  )}
+                >
+                  {"HOME"}
+                </div>
+              </Stack__>
+            }
+            footer={null}
+            heading={null}
             isOpen={generateStateValueProp($state, ["menuModal", "isOpen"])}
+            noTrigger={true}
             onOpenChange={async (...eventArgs: any) => {
               generateStateOnChangeProp($state, ["menuModal", "isOpen"]).apply(
                 null,
@@ -3055,6 +3137,8 @@ function PlasmicHomepage__RenderFunc(props: {
                 return;
               }
             }}
+            showFooter={false}
+            showHeader={false}
           />
 
           <AntdModal
@@ -3148,7 +3232,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField___5ESRx
+                      sty.formField__mrHtp
                     )}
                     label={"Name"}
                     name={"name"}
@@ -3158,7 +3242,10 @@ function PlasmicHomepage__RenderFunc(props: {
                     />
                   </FormItemWrapper>
                   <FormItemWrapper
-                    className={classNames("__wab_instance", sty.formField__faD)}
+                    className={classNames(
+                      "__wab_instance",
+                      sty.formField__eea6
+                    )}
                     label={"Message"}
                     name={"message"}
                   >
@@ -3167,7 +3254,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     />
                   </FormItemWrapper>
                   <AntdButton
-                    className={classNames("__wab_instance", sty.button__hFfgt)}
+                    className={classNames("__wab_instance", sty.button__eD2S)}
                     submitsForm={true}
                     type={"primary"}
                   >
@@ -3175,7 +3262,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text___1ZpF
+                        sty.text__oUcgF
                       )}
                     >
                       {"Submit"}
