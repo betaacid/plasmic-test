@@ -44,7 +44,13 @@
   flex-direction: column;
   outline-style: none;
   font-family: "Fraunces", serif;
-  width: 99vw;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background: var(--token-bZeWi1PxbxAK);
 }
 .h3___1Qq37 {
   width: 100%;
@@ -64,6 +70,10 @@
   overflow: auto;
   padding-left: var(--token-dmLP_HACyfID);
   padding-right: var(--token-dmLP_HACyfID);
+  height: 99vh;
+  flex-grow: 1;
+  flex-shrink: 0;
+  background: var(--token-bZeWi1PxbxAK);
 }
 .freeBox___0XR4I {
   display: flex;

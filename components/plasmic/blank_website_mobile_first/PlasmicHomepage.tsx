@@ -3712,7 +3712,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__lpT7Q
+                      sty.formField___5JeIg
                     )}
                     label={"Name"}
                     name={"name"}
@@ -3724,7 +3724,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__zSrHk
+                      sty.formField__vZ3O
                     )}
                     label={"Message"}
                     name={"message"}
@@ -3734,7 +3734,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     />
                   </FormItemWrapper>
                   <AntdButton
-                    className={classNames("__wab_instance", sty.button__cp04Q)}
+                    className={classNames("__wab_instance", sty.button___2Tg8H)}
                     submitsForm={true}
                     type={"primary"}
                   >
@@ -3742,7 +3742,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__jKYx6
+                        sty.text__gVi0E
                       )}
                     >
                       {"Submit"}
