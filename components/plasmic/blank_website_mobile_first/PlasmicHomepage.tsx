@@ -441,7 +441,11 @@ function PlasmicHomepage__RenderFunc(props: {
                     role={"img"}
                   />
                 }
-                type={"icon"}
+                type={
+                  hasVariant(globalVariants, "screen", "tablet")
+                    ? undefined
+                    : "icon"
+                }
               />
             </div>
           </section>
@@ -672,7 +676,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 displayMinWidth={"0"}
                 displayWidth={
                   hasVariant(globalVariants, "screen", "tablet")
-                    ? "398px"
+                    ? "309px"
                     : "239px"
                 }
                 loading={"lazy"}
@@ -701,7 +705,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 className={classNames(sty.img___3Ol6L)}
                 displayHeight={"auto"}
                 displayMaxHeight={"none"}
-                displayMaxWidth={"559px"}
+                displayMaxWidth={"50vw"}
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
                 displayWidth={"auto"}

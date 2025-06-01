@@ -529,7 +529,7 @@
 }
 @media (min-width: 768px) {
   .img__nIRsV {
-    width: 398px;
+    width: 309px;
     flex-shrink: 0;
   }
 }
@@ -607,7 +607,7 @@
 }
 .img___3Ol6L {
   object-fit: cover;
-  max-width: 559px;
+  max-width: 50vw;
 }
 .img___3Ol6L > picture > img {
   object-fit: cover;
@@ -639,7 +639,7 @@
 }
 .freeBox__pAg8Q > :global(.__wab_flex-container) {
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
   justify-content: flex-start;
   margin-left: calc(0px - 11px);
   width: calc(100% + 11px);
@@ -694,7 +694,6 @@
   position: relative;
   width: 100%;
   height: auto;
-  max-width: 100%;
   font-family: "Fraunces", serif;
   font-size: 20px;
   font-weight: 400;
@@ -723,7 +722,7 @@
   font-size: 40px;
   font-weight: 300;
   font-style: normal;
-  color: var(--token-FY8xQgIqhrmL);
+  color: var(--token-qMs7Y6GABuPq);
   text-align: left;
   text-transform: none;
   line-height: 44px;
