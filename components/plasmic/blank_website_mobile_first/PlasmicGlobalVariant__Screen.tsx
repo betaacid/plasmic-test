@@ -6,13 +6,14 @@
 import * as React from "react";
 import { createUseScreenVariants } from "@plasmicapp/react-web";
 
-export type ScreenValue = "desktopOnly";
+export type ScreenValue = "tablet" | "desktop";
 export const ScreenContext = React.createContext<ScreenValue[] | undefined>(
   "PLEASE_RENDER_INSIDE_PROVIDER" as any
 );
 
 export const useScreenVariants = createUseScreenVariants(true, {
-  desktopOnly: "(min-width:768px)",
+  tablet: "(min-width:768px)",
+  desktop: "(min-width:1024px)",
 });
 
 export default ScreenContext;

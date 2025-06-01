@@ -60,18 +60,16 @@ import {
 } from "@plasmicapp/react-web/lib/host";
 
 import { BaseDialogTrigger } from "@plasmicpkgs/react-aria/skinny/registerDialogTrigger";
-import Button2 from "../../Button2"; // plasmic-import: PVKK-xU6-q6G/component
+import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton";
 import { BaseModal } from "@plasmicpkgs/react-aria/skinny/registerModal";
 import { BaseDialog } from "@plasmicpkgs/react-aria/skinny/registerDialog";
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
+import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: i9knz7EXdrcBWswQTuKKjX/projectcss
 import sty from "./PlasmicModal.module.css"; // plasmic-import: 5SZcaRjHDDZd/css
-
-import CircleIcon from "./icons/PlasmicIcon__Circle"; // plasmic-import: k4ujBvekGioO/icon
-import ChevronDownIcon from "./icons/PlasmicIcon__ChevronDown"; // plasmic-import: H5Yxuv6_n5vq/icon
 
 createPlasmicElementProxy;
 
@@ -224,6 +222,7 @@ function PlasmicModal__RenderFunc(props: {
         projectcss.plasmic_mixins,
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
+        plasmic_plasmic_rich_components_css.plasmic_tokens,
         sty.ariaDialogTrigger,
         {
           [sty.ariaDialogTriggernoTrigger]: hasVariant(
@@ -263,7 +262,8 @@ function PlasmicModal__RenderFunc(props: {
             projectcss.plasmic_default_styles,
             projectcss.plasmic_mixins,
             projectcss.plasmic_tokens,
-            plasmic_antd_5_hostless_css.plasmic_tokens
+            plasmic_antd_5_hostless_css.plasmic_tokens,
+            plasmic_plasmic_rich_components_css.plasmic_tokens
           )}
         >
           <BaseDialog
@@ -332,61 +332,8 @@ function PlasmicModal__RenderFunc(props: {
             {renderPlasmicSlot({
               defaultContents: (
                 <div className={classNames(projectcss.all, sty.freeBox__eTbRe)}>
-                  <Button2
-                    color={"muted"}
-                    label={
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__eQfnn
-                        )}
-                      >
-                        {"Close"}
-                      </div>
-                    }
-                    onClick={async event => {
-                      const $steps = {};
-
-                      $steps["updateAriaDialogTriggerIsOpen"] = true
-                        ? (() => {
-                            const actionArgs = {
-                              variable: {
-                                objRoot: $state,
-                                variablePath: ["ariaDialogTrigger", "isOpen"]
-                              },
-                              operation: 0,
-                              value: false
-                            };
-                            return (({
-                              variable,
-                              value,
-                              startIndex,
-                              deleteCount
-                            }) => {
-                              if (!variable) {
-                                return;
-                              }
-                              const { objRoot, variablePath } = variable;
-
-                              $stateSet(objRoot, variablePath, value);
-                              return value;
-                            })?.apply(null, [actionArgs]);
-                          })()
-                        : undefined;
-                      if (
-                        $steps["updateAriaDialogTriggerIsOpen"] != null &&
-                        typeof $steps["updateAriaDialogTriggerIsOpen"] ===
-                          "object" &&
-                        typeof $steps["updateAriaDialogTriggerIsOpen"].then ===
-                          "function"
-                      ) {
-                        $steps["updateAriaDialogTriggerIsOpen"] = await $steps[
-                          "updateAriaDialogTriggerIsOpen"
-                        ];
-                      }
-                    }}
-                    type={"soft"}
+                  <AntdButton
+                    className={classNames("__wab_instance", sty.button___2RvHb)}
                   />
                 </div>
               ),
@@ -405,7 +352,11 @@ function PlasmicModal__RenderFunc(props: {
       trigger={
         (hasVariant($state, "noTrigger", "noTrigger") ? false : true)
           ? renderPlasmicSlot({
-              defaultContents: <Button2 label={"Open Modal"} />,
+              defaultContents: (
+                <AntdButton
+                  className={classNames("__wab_instance", sty.button__kf6Gx)}
+                />
+              ),
 
               value: args.trigger
             })

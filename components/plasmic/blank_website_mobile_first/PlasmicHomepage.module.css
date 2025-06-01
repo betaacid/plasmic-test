@@ -3377,18 +3377,6 @@
 .img__zywxc > picture > img {
   object-fit: cover;
 }
-.freeBox__sDPcf {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  align-items: stretch;
-  justify-content: flex-start;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  min-width: 0;
-  padding: 8px;
-}
 .socialsSection {
   display: grid;
   position: relative;
@@ -4796,7 +4784,7 @@
   font-weight: 300;
   font-family: "Fraunces", serif;
   font-style: normal;
-  color: var(--token-bZeWi1PxbxAK);
+  color: var(--token-OpsAqN-5bUxj);
   text-align: left;
   text-transform: none;
   line-height: 1.5;
@@ -4836,7 +4824,7 @@
   font-weight: 300;
   font-family: "Fraunces", serif;
   font-style: normal;
-  color: var(--token-bZeWi1PxbxAK);
+  color: var(--token-OpsAqN-5bUxj);
   text-align: left;
   text-transform: none;
   line-height: 1.5;
@@ -4910,14 +4898,6 @@
 }
 .menuModal:global(.__wab_instance):global(.__wab_instance) {
   max-width: 100%;
-}
-.svg__a9U3R {
-  position: relative;
-  height: 1em;
-}
-.svg__bywB {
-  position: relative;
-  height: 1em;
 }
 .freeBox__wWlFd {
   display: flex;
@@ -5046,14 +5026,6 @@
 }
 .formModal:global(.__wab_instance):global(.__wab_instance) {
   max-width: 100%;
-}
-.svg__ey1Xt {
-  position: relative;
-  height: 1em;
-}
-.svg__qZOaO {
-  position: relative;
-  height: 1em;
 }
 .freeBox__qNqSd {
   display: flex;

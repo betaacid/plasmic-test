@@ -61,18 +61,18 @@ import {
 
 import Button from "../../Button"; // plasmic-import: 7v6YGoE2Zo0o/component
 import Modal from "../../Modal"; // plasmic-import: 5SZcaRjHDDZd/component
-import Button2 from "../../Button2"; // plasmic-import: PVKK-xU6-q6G/component
+import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton";
 import { FormWrapper } from "@plasmicpkgs/antd5/skinny/Form";
 import { formHelpers as FormWrapper_Helpers } from "@plasmicpkgs/antd5/skinny/Form";
 import { FormItemWrapper } from "@plasmicpkgs/antd5/skinny/FormItem";
 import TextField from "../../TextField"; // plasmic-import: rdfZLaxRGh3N/component
-import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton";
 
 import { useScreenVariants as useScreenVariantsajVfn3Ya69H5 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: AJVfn3Ya69h5/globalVariant
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
+import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: i9knz7EXdrcBWswQTuKKjX/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: t6bbWH5XZ4fm/css
 
@@ -282,6 +282,7 @@ function PlasmicHomepage__RenderFunc(props: {
             projectcss.plasmic_mixins,
             projectcss.plasmic_tokens,
             plasmic_antd_5_hostless_css.plasmic_tokens,
+            plasmic_plasmic_rich_components_css.plasmic_tokens,
             sty.root
           )}
         >
@@ -350,6 +351,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     ];
                   }
                 }}
+                type={"icon"}
               />
 
               <PlasmicImg__
@@ -361,7 +363,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
                 displayWidth={
-                  hasVariant(globalVariants, "screen", "desktopOnly")
+                  hasVariant(globalVariants, "screen", "tablet")
                     ? "202px"
                     : "auto"
                 }
@@ -379,7 +381,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 color={"neutral"}
                 flatSide={[]}
                 iconStart={
-                  hasVariant(globalVariants, "screen", "desktopOnly")
+                  hasVariant(globalVariants, "screen", "tablet")
                     ? undefined
                     : true
                 }
@@ -433,13 +435,13 @@ function PlasmicHomepage__RenderFunc(props: {
                     ];
                   }
                 }}
-                roundedFull={true}
                 start={
                   <EmailIconSvgIcon
                     className={classNames(projectcss.all, sty.svg__gieMo)}
                     role={"img"}
                   />
                 }
+                type={"icon"}
               />
             </div>
           </section>
@@ -462,7 +464,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
                 displayWidth={
-                  hasVariant(globalVariants, "screen", "desktopOnly")
+                  hasVariant(globalVariants, "screen", "tablet")
                     ? "152px"
                     : "82px"
                 }
@@ -630,7 +632,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
                 displayWidth={
-                  hasVariant(globalVariants, "screen", "desktopOnly")
+                  hasVariant(globalVariants, "screen", "tablet")
                     ? "398px"
                     : "239px"
                 }
@@ -1573,7 +1575,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   displayMinHeight={"0"}
                   displayMinWidth={"0"}
                   displayWidth={
-                    hasVariant(globalVariants, "screen", "desktopOnly")
+                    hasVariant(globalVariants, "screen", "tablet")
                       ? "329px"
                       : "271px"
                   }
@@ -1693,7 +1695,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   displayMinHeight={"0"}
                   displayMinWidth={"0"}
                   displayWidth={
-                    hasVariant(globalVariants, "screen", "desktopOnly")
+                    hasVariant(globalVariants, "screen", "tablet")
                       ? "329px"
                       : "271px"
                   }
@@ -1839,7 +1841,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   displayMinHeight={"0"}
                   displayMinWidth={"0"}
                   displayWidth={
-                    hasVariant(globalVariants, "screen", "desktopOnly")
+                    hasVariant(globalVariants, "screen", "tablet")
                       ? "329px"
                       : "271px"
                   }
@@ -1955,7 +1957,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   displayMinHeight={"0"}
                   displayMinWidth={"0"}
                   displayWidth={
-                    hasVariant(globalVariants, "screen", "desktopOnly")
+                    hasVariant(globalVariants, "screen", "tablet")
                       ? "329px"
                       : "271px"
                   }
@@ -2074,7 +2076,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
                 displayWidth={
-                  hasVariant(globalVariants, "screen", "desktopOnly")
+                  hasVariant(globalVariants, "screen", "tablet")
                     ? "auto"
                     : "310px"
                 }
@@ -2096,7 +2098,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
                 displayWidth={
-                  hasVariant(globalVariants, "screen", "desktopOnly")
+                  hasVariant(globalVariants, "screen", "tablet")
                     ? "auto"
                     : "199px"
                 }
@@ -2114,9 +2116,7 @@ function PlasmicHomepage__RenderFunc(props: {
             alt={""}
             className={classNames(sty.img__huMB)}
             displayHeight={
-              hasVariant(globalVariants, "screen", "desktopOnly")
-                ? "217px"
-                : "126px"
+              hasVariant(globalVariants, "screen", "tablet") ? "217px" : "126px"
             }
             displayMaxHeight={"none"}
             displayMaxWidth={"100%"}
@@ -2296,7 +2296,6 @@ function PlasmicHomepage__RenderFunc(props: {
                 />
               </Stack__>
             </Stack__>
-            <div className={classNames(projectcss.all, sty.freeBox__sDPcf)} />
           </section>
           <section
             data-plasmic-name={"socialsSection"}
@@ -3042,7 +3041,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   displayMinHeight={"0"}
                   displayMinWidth={"0"}
                   displayWidth={
-                    hasVariant(globalVariants, "screen", "desktopOnly")
+                    hasVariant(globalVariants, "screen", "tablet")
                       ? "151px"
                       : "auto"
                   }
@@ -3136,6 +3135,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       ];
                     }
                   }}
+                  type={"icon"}
                 />
 
                 <Stack__
@@ -3657,6 +3657,11 @@ function PlasmicHomepage__RenderFunc(props: {
             }}
             showFooter={false}
             showHeader={false}
+            trigger={
+              <AntdButton
+                className={classNames("__wab_instance", sty.button__sPcOp)}
+              />
+            }
           />
 
           <Modal
@@ -3727,6 +3732,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       ];
                     }
                   }}
+                  type={"icon"}
                 />
 
                 <div
@@ -4154,6 +4160,11 @@ function PlasmicHomepage__RenderFunc(props: {
             }}
             showFooter={false}
             showHeader={false}
+            trigger={
+              <AntdButton
+                className={classNames("__wab_instance", sty.button__zpDzR)}
+              />
+            }
           />
         </div>
       </div>

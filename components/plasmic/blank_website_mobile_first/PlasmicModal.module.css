@@ -1,14 +1,6 @@
 .ariaDialogTrigger:global(.__wab_instance) {
   position: relative;
 }
-.svg__i2NXu {
-  position: relative;
-  height: 1em;
-}
-.svg___5Bv4C {
-  position: relative;
-  height: 1em;
-}
 .ariaModal:global(.__wab_instance) {
   background: var(--token-bZeWi1PxbxAK);
   display: block;
@@ -110,15 +102,4 @@
   width: 100%;
   min-width: 0;
   padding: var(--token-dmLP_HACyfID);
-}
-.svg__oB49F {
-  position: relative;
-  height: 1em;
-}
-.text__eQfnn {
-  padding-left: 0px;
-}
-.svg__bYphU {
-  position: relative;
-  height: 1em;
 }
