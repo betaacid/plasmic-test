@@ -3577,11 +3577,12 @@ function PlasmicHomepage__RenderFunc(props: {
                       <React.Fragment>{""}</React.Fragment>
                     </React.Fragment>
                   </PlasmicLink__>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__aYxPs)}
-                  />
                 </div>
-                <div className={classNames(projectcss.all, sty.freeBox__wmk5B)}>
+                <Stack__
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox__wmk5B)}
+                >
                   <InstagramLogoIcon
                     className={classNames(projectcss.all, sty.svg__lmMf2)}
                     role={"img"}
@@ -3596,7 +3597,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   >
                     {"@cocktails__king"}
                   </div>
-                </div>
+                </Stack__>
               </Stack__>
             }
             footer={null}
@@ -3712,7 +3713,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField___5JeIg
+                      sty.formField__weQh0
                     )}
                     label={"Name"}
                     name={"name"}
@@ -3724,7 +3725,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__vZ3O
+                      sty.formField__iIjVx
                     )}
                     label={"Message"}
                     name={"message"}
@@ -3734,7 +3735,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     />
                   </FormItemWrapper>
                   <AntdButton
-                    className={classNames("__wab_instance", sty.button___2Tg8H)}
+                    className={classNames("__wab_instance", sty.button__vgzk7)}
                     submitsForm={true}
                     type={"primary"}
                   >
@@ -3742,7 +3743,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__gVi0E
+                        sty.text__hs53Y
                       )}
                     >
                       {"Submit"}
