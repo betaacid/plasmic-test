@@ -562,6 +562,11 @@
   grid-column: 4;
 }
 @media (min-width: 768px) {
+  .aboutMeSection {
+    padding-bottom: 35px;
+  }
+}
+@media (min-width: 768px) {
   .aboutMeSection > * {
     grid-column: 4;
   }
@@ -588,6 +593,7 @@
     background: #ffffff;
     flex-shrink: 1;
     flex-direction: row;
+    padding-bottom: 40px;
     grid-column-start: 3 !important;
     grid-column-end: -3 !important;
   }
@@ -614,6 +620,11 @@
     > img {
     margin-left: 75px;
     margin-top: 0px;
+  }
+}
+@media (min-width: 1024px) {
+  .freeBox__ekNw6 {
+    padding: 0px;
   }
 }
 .img___3Ol6L {
@@ -961,9 +972,15 @@
 @media (min-width: 768px) {
   .portfolioSection {
     z-index: 33;
+    padding-bottom: 126px;
   }
 }
 @media (min-width: 768px) {
+  .portfolioSection > * {
+    grid-column: 4;
+  }
+}
+@media (min-width: 1024px) {
   .portfolioSection > * {
     grid-column: 4;
   }
