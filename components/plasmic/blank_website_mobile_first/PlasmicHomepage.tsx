@@ -3762,6 +3762,83 @@ function PlasmicHomepage__RenderFunc(props: {
                     labelCol: { span: 8, horizontalOnly: true },
                     layout: "vertical",
                     mode: "advanced",
+                    onFinish: async values => {
+                      const $steps = {};
+
+                      $steps["runCode"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              customFunction: async () => {
+                                return (async () => {
+                                  return (() => {
+                                    event.preventDefault();
+                                    console.log("\u2705 We're in the from!");
+                                    const payload = {
+                                      ...$state.contactForm.value
+                                    };
+                                    console.log(
+                                      "\uD83D\uDCE4 Form payload:",
+                                      payload
+                                    );
+                                    fetch("https://formspree.io/f/xzzrnery", {
+                                      method: "POST",
+                                      headers: {
+                                        "Content-Type": "application/json",
+                                        Accept: "application/json"
+                                      },
+                                      body: JSON.stringify(payload)
+                                    })
+                                      .then(async res => {
+                                        if (res.ok) {
+                                          console.log(
+                                            "\u2705 Email sent via Formspree!"
+                                          );
+                                          $state.formModal.isOpen = false;
+                                          $state.contactForm.value = {
+                                            name: "",
+                                            email: "",
+                                            phone: "",
+                                            message: ""
+                                          };
+                                        } else {
+                                          const err = await res
+                                            .json()
+                                            .catch(() => ({}));
+                                          console.error(
+                                            "\u274C Formspree error:",
+                                            err
+                                          );
+                                          window.alert(
+                                            "Sorry, something went wrong. Please try again."
+                                          );
+                                        }
+                                      })
+                                      .catch(err => {
+                                        console.error(
+                                          "\u274C Network error:",
+                                          err
+                                        );
+                                        window.alert(
+                                          "Network error \u2013 check your connection and try again."
+                                        );
+                                      });
+                                  })();
+                                })();
+                              }
+                            };
+                            return (({ customFunction }) => {
+                              return customFunction();
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["runCode"] != null &&
+                        typeof $steps["runCode"] === "object" &&
+                        typeof $steps["runCode"].then === "function"
+                      ) {
+                        $steps["runCode"] = await $steps["runCode"];
+                      }
+                    },
                     onIsSubmittingChange: async (...eventArgs: any) => {
                       generateStateOnChangePropForCodeComponents(
                         $state,
@@ -3822,6 +3899,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           data-plasmic-override={overrides.textField}
                           ariaLabel={"name"}
                           autoComplete={["name"]}
+                          autoFocus={true}
                           className={classNames(
                             "__wab_instance",
                             sty.textField
