@@ -2906,18 +2906,18 @@ function PlasmicHomepage__RenderFunc(props: {
                 >
                   {"BCN Fashion"}
                 </div>
+                <div
+                  data-plasmic-name={"_"}
+                  data-plasmic-override={overrides._}
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty._
+                  )}
+                >
+                  {"\u201d"}
+                </div>
               </Stack__>
-            </div>
-            <div
-              data-plasmic-name={"_"}
-              data-plasmic-override={overrides._}
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty._
-              )}
-            >
-              {"\u201d"}
             </div>
           </section>
           <section

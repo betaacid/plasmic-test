@@ -4604,15 +4604,13 @@
 }
 ._ {
   position: absolute;
-  width: var(--plsmc-standard-width);
+  width: 100%;
   height: auto;
   max-width: 100%;
   font-size: 327px;
   color: var(--token-JX2So3edATvE);
-  left: auto;
-  top: 931px;
-  bottom: 0;
-  right: -267px;
+  left: 0px;
+  top: 0px;
   font-weight: 300;
   font-family: "Fraunces", serif;
   font-style: normal;
@@ -4628,10 +4626,9 @@
 }
 @media (min-width: 768px) {
   ._ {
-    right: -427px;
     height: auto;
-    top: 1049px;
-    bottom: -309px;
+    top: 196px;
+    left: 220px;
   }
 }
 .footer {
