@@ -31,6 +31,16 @@
       }
     },
     {
+      "name": "Basic/Text-Secondary",
+      "type": "color",
+      "value": "#6B7280",
+      "category": "color",
+      "meta": {
+        "projectId": "i9knz7EXdrcBWswQTuKKjX",
+        "id": "k742_kf7EPOv"
+      }
+    },
+    {
       "name": "Brand/Brand",
       "type": "color",
       "value": "#2563EB",
@@ -271,6 +281,16 @@
       }
     },
     {
+      "name": "Main font",
+      "type": "fontfamily",
+      "value": "Fraunces",
+      "category": "fontfamily",
+      "meta": {
+        "projectId": "i9knz7EXdrcBWswQTuKKjX",
+        "id": "EHi4kNhL2Nl_"
+      }
+    },
+    {
       "name": "Muted/Muted",
       "type": "color",
       "value": "#6B7280",
@@ -318,6 +338,16 @@
       "meta": {
         "projectId": "i9knz7EXdrcBWswQTuKKjX",
         "id": "JsDT8ZXkxGQd"
+      }
+    },
+    {
+      "name": "Muted/Muted-Soft-Hover",
+      "type": "color",
+      "value": "#E5E7EB",
+      "category": "color",
+      "meta": {
+        "projectId": "i9knz7EXdrcBWswQTuKKjX",
+        "id": "UcSCrs2Y6hlI"
       }
     },
     {
@@ -458,6 +488,16 @@
       "meta": {
         "projectId": "i9knz7EXdrcBWswQTuKKjX",
         "id": "dmLP_HACyfID"
+      }
+    },
+    {
+      "name": "Size-32",
+      "type": "spacing",
+      "value": "2rem",
+      "category": "spacing",
+      "meta": {
+        "projectId": "i9knz7EXdrcBWswQTuKKjX",
+        "id": "S58TsNd1a5mW"
       }
     },
     {

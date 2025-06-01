@@ -289,6 +289,71 @@
           "cssFilePath": "plasmic/blank_website_mobile_first/PlasmicModal.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "PE13HXCMYwVe",
+          "name": "Label",
+          "type": "managed",
+          "projectId": "i9knz7EXdrcBWswQTuKKjX",
+          "renderModuleFilePath": "plasmic/blank_website_mobile_first/PlasmicLabel.tsx",
+          "importSpec": {
+            "modulePath": "Label.tsx"
+          },
+          "cssFilePath": "plasmic/blank_website_mobile_first/PlasmicLabel.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "CoV1NJVM_fz7",
+          "name": "TextInput",
+          "type": "managed",
+          "projectId": "i9knz7EXdrcBWswQTuKKjX",
+          "renderModuleFilePath": "plasmic/blank_website_mobile_first/PlasmicTextInput.tsx",
+          "importSpec": {
+            "modulePath": "TextInput.tsx"
+          },
+          "cssFilePath": "plasmic/blank_website_mobile_first/PlasmicTextInput.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "3MbEox0f9O6X",
+          "name": "TextAreaInput",
+          "type": "managed",
+          "projectId": "i9knz7EXdrcBWswQTuKKjX",
+          "renderModuleFilePath": "plasmic/blank_website_mobile_first/PlasmicTextAreaInput.tsx",
+          "importSpec": {
+            "modulePath": "TextAreaInput.tsx"
+          },
+          "cssFilePath": "plasmic/blank_website_mobile_first/PlasmicTextAreaInput.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "BmUz5s-gd2KP",
+          "name": "Description",
+          "type": "managed",
+          "projectId": "i9knz7EXdrcBWswQTuKKjX",
+          "renderModuleFilePath": "plasmic/blank_website_mobile_first/PlasmicDescription.tsx",
+          "importSpec": {
+            "modulePath": "Description.tsx"
+          },
+          "cssFilePath": "plasmic/blank_website_mobile_first/PlasmicDescription.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "rdfZLaxRGh3N",
+          "name": "TextField",
+          "type": "managed",
+          "projectId": "i9knz7EXdrcBWswQTuKKjX",
+          "renderModuleFilePath": "plasmic/blank_website_mobile_first/PlasmicTextField.tsx",
+          "importSpec": {
+            "modulePath": "TextField.tsx"
+          },
+          "cssFilePath": "plasmic/blank_website_mobile_first/PlasmicTextField.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
