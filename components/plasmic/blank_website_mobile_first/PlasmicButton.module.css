@@ -1,6 +1,6 @@
 .root:global(.__wab_instance) {
   position: relative;
-  background: none;
+  background: var(--token-bZeWi1PxbxAK);
   display: flex;
   cursor: pointer;
   box-sizing: border-box;
