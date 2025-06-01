@@ -4,6 +4,8 @@
   box-sizing: border-box;
   width: 100%;
   position: relative;
+  color: var(--token-OpsAqN-5bUxj);
+  background: var(--token-bZeWi1PxbxAK);
   min-width: 0;
   row-gap: var(--token-jE1-oBJ6oaB3);
 }
