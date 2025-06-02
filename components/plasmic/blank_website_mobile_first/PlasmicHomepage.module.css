@@ -1092,7 +1092,7 @@
 }
 .text__cmr7P {
   height: auto;
-  font-size: 14px;
+  font-size: 12px;
   font-family: "Fraunces", serif;
   font-weight: 400;
   font-style: normal;
@@ -1291,7 +1291,7 @@
 }
 .text__xXDx0 {
   height: auto;
-  font-size: 14px;
+  font-size: 12px;
   font-family: "Fraunces", serif;
   font-weight: 400;
   font-style: normal;
@@ -1316,7 +1316,7 @@
 }
 .text__j7X7F {
   height: auto;
-  font-size: 14px;
+  font-size: 12px;
   font-family: "Fraunces", serif;
   font-weight: 400;
   font-style: normal;
@@ -1510,7 +1510,7 @@
 }
 .text__saGc1 {
   height: auto;
-  font-size: 14px;
+  font-size: 12px;
   font-family: "Fraunces", serif;
   font-weight: 400;
   font-style: normal;
@@ -1530,7 +1530,7 @@
 }
 .text___4VU0T {
   height: auto;
-  font-size: 14px;
+  font-size: 12px;
   font-family: "Fraunces", serif;
   font-weight: 400;
   font-style: normal;
@@ -1688,7 +1688,7 @@
 }
 .text__xy0XH {
   height: auto;
-  font-size: 14px;
+  font-size: 12px;
   font-family: "Fraunces", serif;
   font-weight: 400;
   font-style: normal;
@@ -1841,7 +1841,7 @@
 }
 .text__dwEa {
   height: auto;
-  font-size: 14px;
+  font-size: 12px;
   font-family: "Fraunces", serif;
   font-weight: 400;
   font-style: normal;
@@ -1999,7 +1999,7 @@
 }
 .text___2C8BR {
   height: auto;
-  font-size: 14px;
+  font-size: 12px;
   font-family: "Fraunces", serif;
   font-weight: 400;
   font-style: normal;
@@ -4609,8 +4609,8 @@
   max-width: 100%;
   font-size: 327px;
   color: var(--token-JX2So3edATvE);
-  left: 0px;
-  top: 0px;
+  left: auto;
+  top: auto;
   font-weight: 300;
   font-family: "Fraunces", serif;
   font-style: normal;
@@ -4622,6 +4622,8 @@
   user-select: text;
   text-decoration-line: none;
   text-overflow: clip;
+  bottom: -328px;
+  right: -259px;
   min-width: 0;
 }
 @media (min-width: 768px) {
@@ -4793,21 +4795,6 @@
   .h6 {
     line-height: 1.1;
   }
-}
-.link__jaie {
-  font-family: "Fraunces", serif;
-  font-size: 20px;
-  font-weight: 400;
-  font-style: normal;
-  color: var(--token-aRsrMLdPve6a);
-  text-align: left;
-  text-transform: none;
-  line-height: 1.5;
-  letter-spacing: normal;
-  white-space: pre-wrap;
-  user-select: text;
-  text-decoration-line: none;
-  text-overflow: clip;
 }
 .freeBox__erSYd {
   display: flex;

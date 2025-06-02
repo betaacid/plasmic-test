@@ -2969,35 +2969,18 @@ function PlasmicHomepage__RenderFunc(props: {
                             style={{ color: "#FFFFFF" }}
                           >
                             {
-                              "For project inquiries, collaboration proposals, or press\u2014"
+                              "For project inquiries, collaboration proposals, or press\u2014 "
                             }
                           </span>
                           <React.Fragment>{""}</React.Fragment>
-                          {
-                            <PlasmicLink__
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.a,
-                                projectcss.__wab_text,
-                                projectcss.plasmic_default__inline,
-                                sty.link__jaie
-                              )}
-                              component={Link}
-                              href={""}
-                              platform={"nextjs"}
-                            >
-                              <React.Fragment>
-                                <span
-                                  className={
-                                    "plasmic_default__all plasmic_default__span"
-                                  }
-                                  style={{ color: "var(--token-18leZVsOXWhv)" }}
-                                >
-                                  {"reach out and let's talk"}
-                                </span>
-                              </React.Fragment>
-                            </PlasmicLink__>
-                          }
+                          <span
+                            className={
+                              "plasmic_default__all plasmic_default__span"
+                            }
+                            style={{ color: "var(--token-5Fd7Ld29XUJq)" }}
+                          >
+                            {"reach out and lets talk"}
+                          </span>
                           <React.Fragment>{""}</React.Fragment>
                           <span
                             className={
