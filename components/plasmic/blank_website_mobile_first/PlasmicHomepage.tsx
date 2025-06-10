@@ -1751,7 +1751,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   displayWidth={
                     hasVariant(globalVariants, "screen", "tablet")
                       ? "329px"
-                      : "271px"
+                      : "283px"
                   }
                   loading={"lazy"}
                   src={{
@@ -1933,7 +1933,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             sty.h5__unVvz
                           )}
                         >
-                          {"MENU CREATION"}
+                          {"MENU CURATION"}
                         </h5>
                       }
                       <React.Fragment>{""}</React.Fragment>
@@ -2124,7 +2124,7 @@ function PlasmicHomepage__RenderFunc(props: {
               <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img___8IwMf)}
-                displayHeight={"auto"}
+                displayHeight={"409px"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"100%"}
                 displayMinHeight={"0"}
@@ -2146,7 +2146,7 @@ function PlasmicHomepage__RenderFunc(props: {
               <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__s39VH)}
-                displayHeight={"auto"}
+                displayHeight={"283px"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"100%"}
                 displayMinHeight={"0"}
@@ -2229,7 +2229,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     sty.text__oKmD
                   )}
                 >
-                  {"San Francisco International Wine & Spirits Competition"}
+                  {"San Francisco \nInternational Wine & \nSpirits Competition"}
                 </div>
                 <PlasmicImg__
                   alt={""}
@@ -2871,7 +2871,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   )}
                 >
                   {
-                    "Globetrotting American bar consultant Eric Stephenson understands the way Barcelona\u2019s cosmopolitan cocktail community wants to drink"
+                    "Globetrotting American bar consultant Eric Stephenson understands the way Barcelona\u2019s cosmopolitan cocktail community wants to drink."
                   }
                 </div>
                 <div

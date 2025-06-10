@@ -2661,6 +2661,16 @@
       }
     },
     {
+      "name": "Unnamed Style Token",
+      "type": "color",
+      "value": "#000000",
+      "category": "color",
+      "meta": {
+        "projectId": "i9knz7EXdrcBWswQTuKKjX",
+        "id": "LC_T646f0-KG"
+      }
+    },
+    {
       "name": "Warning/Warning",
       "type": "color",
       "value": "#FACC15",
