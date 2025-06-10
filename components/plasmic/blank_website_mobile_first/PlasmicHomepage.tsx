@@ -571,7 +571,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             sty.link___5Zlyj
                           )}
                           component={Link}
-                          href={"https://test.com"}
+                          href={"#services"}
                           platform={"nextjs"}
                         >
                           {"Ready-to-Drink Cocktails"}
@@ -588,7 +588,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             sty.link__sARtq
                           )}
                           component={Link}
-                          href={"https://test.com"}
+                          href={"#services"}
                           platform={"nextjs"}
                         >
                           {"Bar Program Development"}
@@ -605,7 +605,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             sty.link___2Cn6U
                           )}
                           component={Link}
-                          href={"https://test.com"}
+                          href={"#services"}
                           platform={"nextjs"}
                         >
                           {"Menu Curation"}
@@ -2370,7 +2370,17 @@ function PlasmicHomepage__RenderFunc(props: {
               >
                 {"FOLLOW ME"}
               </div>
-              <div className={classNames(projectcss.all, sty.freeBox__gZOrv)}>
+              <PlasmicLink__
+                className={classNames(
+                  projectcss.all,
+                  projectcss.a,
+                  sty.link__gZOrv
+                )}
+                component={Link}
+                href={"https://www.instagram.com/cocktails__king/"}
+                platform={"nextjs"}
+                target={"_blank"}
+              >
                 <InstagramLogoIcon
                   className={classNames(projectcss.all, sty.svg__gqwjj)}
                   role={"img"}
@@ -2385,7 +2395,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 >
                   {"@cocktails__king"}
                 </div>
-              </div>
+              </PlasmicLink__>
             </Stack__>
             <Stack__
               as={"div"}
@@ -2417,7 +2427,17 @@ function PlasmicHomepage__RenderFunc(props: {
                   }}
                 />
 
-                <div className={classNames(projectcss.all, sty.freeBox__iai0U)}>
+                <PlasmicLink__
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.link__iai0U
+                  )}
+                  component={Link}
+                  href={"https://www.instagram.com/cocktails__king/"}
+                  platform={"nextjs"}
+                  target={"_blank"}
+                >
                   <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img__a7MDt)}
@@ -2467,7 +2487,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       </React.Fragment>
                     </div>
                   </div>
-                </div>
+                </PlasmicLink__>
                 <div
                   className={classNames(
                     projectcss.all,
@@ -2503,7 +2523,17 @@ function PlasmicHomepage__RenderFunc(props: {
                   }}
                 />
 
-                <div className={classNames(projectcss.all, sty.freeBox__cvKQs)}>
+                <PlasmicLink__
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.link__cvKQs
+                  )}
+                  component={Link}
+                  href={"https://www.instagram.com/cocktails__king/"}
+                  platform={"nextjs"}
+                  target={"_blank"}
+                >
                   <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img__gYeOo)}
@@ -2553,7 +2583,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       </React.Fragment>
                     </div>
                   </div>
-                </div>
+                </PlasmicLink__>
                 <div
                   className={classNames(
                     projectcss.all,
@@ -2596,7 +2626,17 @@ function PlasmicHomepage__RenderFunc(props: {
                   }}
                 />
 
-                <div className={classNames(projectcss.all, sty.freeBox__mxU1E)}>
+                <PlasmicLink__
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.link__mxU1E
+                  )}
+                  component={Link}
+                  href={"https://www.instagram.com/cocktails__king/"}
+                  platform={"nextjs"}
+                  target={"_blank"}
+                >
                   <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img___3Qed5)}
@@ -2618,15 +2658,20 @@ function PlasmicHomepage__RenderFunc(props: {
                   <div
                     className={classNames(projectcss.all, sty.freeBox__ruFw0)}
                   >
-                    <div
+                    <PlasmicLink__
                       className={classNames(
                         projectcss.all,
+                        projectcss.a,
                         projectcss.__wab_text,
-                        sty.text__tckIr
+                        sty.link__tckIr
                       )}
+                      component={Link}
+                      href={"https://www.instagram.com/cocktails__king/"}
+                      platform={"nextjs"}
+                      target={"_blank"}
                     >
                       {"cocktails__king"}
-                    </div>
+                    </PlasmicLink__>
                     <div
                       className={classNames(
                         projectcss.all,
@@ -2646,7 +2691,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       </React.Fragment>
                     </div>
                   </div>
-                </div>
+                </PlasmicLink__>
                 <div
                   className={classNames(
                     projectcss.all,
@@ -2689,7 +2734,17 @@ function PlasmicHomepage__RenderFunc(props: {
                   }}
                 />
 
-                <div className={classNames(projectcss.all, sty.freeBox__em7Sd)}>
+                <PlasmicLink__
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.link__em7Sd
+                  )}
+                  component={Link}
+                  href={"https://www.instagram.com/cocktails__king/"}
+                  platform={"nextjs"}
+                  target={"_blank"}
+                >
                   <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img___2RgLi)}
@@ -2739,7 +2794,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       </React.Fragment>
                     </div>
                   </div>
-                </div>
+                </PlasmicLink__>
                 <div
                   className={classNames(
                     projectcss.all,
