@@ -107,6 +107,7 @@ export type PlasmicHomepage__OverridesType = {
   portfolioSection?: Flex__<"section">;
   h2?: Flex__<"h2">;
   libertineBlendsProject?: Flex__<"div">;
+  projectListItems?: Flex__<"li">;
   libertineCocktailBarProject?: Flex__<"div">;
   tiberiProject?: Flex__<"div">;
   whiskeriaProject?: Flex__<"div">;
@@ -203,7 +204,7 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "formModal.isOpen",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
       },
       {
         path: "contactForm.value",
@@ -968,7 +969,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     sty.text__lSzin
                   )}
                 >
-                  {"Creative Collaborations"}
+                  {"Libertine Blends"}
                 </div>
                 <div
                   className={classNames(
@@ -988,11 +989,13 @@ function PlasmicHomepage__RenderFunc(props: {
                         )}
                       >
                         <li
+                          data-plasmic-name={"projectListItems"}
+                          data-plasmic-override={overrides.projectListItems}
                           className={classNames(
                             projectcss.all,
                             projectcss.li,
                             projectcss.__wab_text,
-                            sty.li__hbZDo
+                            sty.projectListItems
                           )}
                         >
                           {"Concept Creation"}
@@ -1605,7 +1608,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.h5___9FxNk
                     )}
                   >
-                    {"Services"}
+                    {"SERVICES"}
                   </h5>
                 }
                 <React.Fragment>{""}</React.Fragment>
@@ -3704,6 +3707,7 @@ function PlasmicHomepage__RenderFunc(props: {
             data-plasmic-name={"formModal"}
             data-plasmic-override={overrides.formModal}
             className={classNames("__wab_instance", sty.formModal)}
+            closeOnBackdropClick={true}
             content={
               <Stack__
                 as={"div"}
@@ -4218,6 +4222,7 @@ const PlasmicDescendants = {
     "portfolioSection",
     "h2",
     "libertineBlendsProject",
+    "projectListItems",
     "libertineCocktailBarProject",
     "tiberiProject",
     "whiskeriaProject",
@@ -4268,6 +4273,7 @@ const PlasmicDescendants = {
     "portfolioSection",
     "h2",
     "libertineBlendsProject",
+    "projectListItems",
     "libertineCocktailBarProject",
     "tiberiProject",
     "whiskeriaProject",
@@ -4275,7 +4281,8 @@ const PlasmicDescendants = {
     "creativeColabsProject"
   ],
   h2: ["h2"],
-  libertineBlendsProject: ["libertineBlendsProject"],
+  libertineBlendsProject: ["libertineBlendsProject", "projectListItems"],
+  projectListItems: ["projectListItems"],
   libertineCocktailBarProject: ["libertineCocktailBarProject"],
   tiberiProject: ["tiberiProject"],
   whiskeriaProject: ["whiskeriaProject"],
@@ -4371,6 +4378,7 @@ type NodeDefaultElementType = {
   portfolioSection: "section";
   h2: "h2";
   libertineBlendsProject: "div";
+  projectListItems: "li";
   libertineCocktailBarProject: "div";
   tiberiProject: "div";
   whiskeriaProject: "div";
@@ -4481,6 +4489,7 @@ export const PlasmicHomepage = Object.assign(
     portfolioSection: makeNodeComponent("portfolioSection"),
     h2: makeNodeComponent("h2"),
     libertineBlendsProject: makeNodeComponent("libertineBlendsProject"),
+    projectListItems: makeNodeComponent("projectListItems"),
     libertineCocktailBarProject: makeNodeComponent(
       "libertineCocktailBarProject"
     ),

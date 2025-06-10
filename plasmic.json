@@ -227,13 +227,12 @@
           "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerDialog"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "i9knz7EXdrcBWswQTuKKjX",
       "projectApiToken": "CHpHv1VY9aYJsWJquevjmW0Iw7FH9LLrLlmay5e5xqMRx5QadQ7rkfSl5gVXreYmHShLeohYywPcsY2z7Q",
-      "projectName": "Blank website (mobile-first)",
+      "projectName": "COCKTAILS KING - V2",
       "version": "latest",
       "cssFilePath": "plasmic/blank_website_mobile_first/plasmic.module.css",
       "components": [
@@ -959,8 +958,7 @@
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerBreadcrumb"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "jkU633o1Cz7HrJdwdxhVHk",
@@ -1014,8 +1012,7 @@
           }
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     }
   ],
   "globalVariants": {

@@ -101,7 +101,7 @@
   );
   --token-fL_mRu4Bd1K7: #faf7f3;
   --plasmic-token-stone-100: var(--token-fL_mRu4Bd1K7);
-  --token-FY8xQgIqhrmL: #57534e;
+  --token-FY8xQgIqhrmL: var(--token-bZeWi1PxbxAK);
   --plasmic-token-stone-600: var(--token-FY8xQgIqhrmL);
   --token-aRsrMLdPve6a: #d7a564;
   --plasmic-token-gold-500: var(--token-aRsrMLdPve6a);
