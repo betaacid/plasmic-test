@@ -2,7 +2,7 @@
   position: relative;
 }
 .ariaModal:global(.__wab_instance) {
-  background: var(--token-bZeWi1PxbxAK);
+  background: var(--token-FY8xQgIqhrmL);
   display: block;
   color: var(--token-OpsAqN-5bUxj);
   font-family: "Fraunces", serif;
@@ -65,7 +65,7 @@
   height: 100vh;
   flex-grow: 1;
   flex-shrink: 0;
-  background: var(--token-bZeWi1PxbxAK);
+  background: var(--token-FY8xQgIqhrmL);
   width: 100vw;
 }
 .freeBox___0XR4I {

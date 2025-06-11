@@ -3,12 +3,12 @@
   object-fit: cover;
   position: relative;
   box-shadow: inset 0px 0px 0px 1px var(--token-bZeWi1PxbxAK);
-  font-size: var(--token-VXoG_TjhCM2Q);
+  font-size: 20px;
   line-height: var(--token-AxGvilwbMKE5);
   width: 100%;
   color: var(--token-7_3u4At6HfW_);
   font-family: var(--token-EHi4kNhL2Nl_);
-  background: var(--token-FY8xQgIqhrmL);
+  background: var(--token-bZeWi1PxbxAK);
   height: 200px;
   min-width: 0;
   border-radius: 20px;

@@ -259,6 +259,32 @@ function PlasmicHomepage__RenderFunc(props: {
     $refs
   });
 
+  const [isN24736664Hover, triggerN24736664HoverProps] = useTrigger(
+    "useHover",
+    {}
+  );
+  const [isN24736664Active, triggerN24736664ActiveProps] = useTrigger(
+    "usePressed",
+    {}
+  );
+  const [isN24736664FocusWithin, triggerN24736664FocusWithinProps] = useTrigger(
+    "useFocusedWithin",
+    {}
+  );
+  const [
+    isN24736664FocusVisibleWithin,
+    triggerN24736664FocusVisibleWithinProps
+  ] = useTrigger("useFocusVisibleWithin", {
+    isTextInput: false
+  });
+  const triggers = {
+    hoverActiveFocusWithinFocusVisibleWithin_24736664:
+      isN24736664Hover &&
+      isN24736664Active &&
+      isN24736664FocusWithin &&
+      isN24736664FocusVisibleWithin
+  };
+
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsajVfn3Ya69H5()
   });
@@ -2993,8 +3019,23 @@ function PlasmicHomepage__RenderFunc(props: {
                             projectcss.all,
                             projectcss.h3,
                             projectcss.__wab_text,
-                            sty.h3___4M7DZ
+                            sty.h3___4M7DZ,
+                            {
+                              [sty.h3___hover__active__focusWithin__focusVisibleWithin___4M7DZz2OfP]:
+                                triggers.hoverActiveFocusWithinFocusVisibleWithin_24736664
+                            }
                           )}
+                          title={
+                            hasVariant(globalVariants, "screen", "tablet")
+                              ? ``
+                              : undefined
+                          }
+                          data-plasmic-trigger-props={[
+                            triggerN24736664HoverProps,
+                            triggerN24736664ActiveProps,
+                            triggerN24736664FocusWithinProps,
+                            triggerN24736664FocusVisibleWithinProps
+                          ]}
                         >
                           <React.Fragment>
                             <span
@@ -3771,7 +3812,19 @@ function PlasmicHomepage__RenderFunc(props: {
                             "__wab_instance",
                             sty.emailInput
                           )}
+                          description={"Description..."}
                           inputMode={"email"}
+                          label={
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__qidIx
+                              )}
+                            >
+                              {"Label"}
+                            </div>
+                          }
                           onChange={async (...eventArgs: any) => {
                             generateStateOnChangeProp($state, [
                               "emailInput",
@@ -3821,7 +3874,9 @@ function PlasmicHomepage__RenderFunc(props: {
                             "__wab_instance",
                             sty.phoneField
                           )}
+                          description={"Description..."}
                           inputMode={"tel"}
+                          label={"Label"}
                           onChange={async (...eventArgs: any) => {
                             generateStateOnChangeProp($state, [
                               "phoneField",
@@ -3870,7 +3925,9 @@ function PlasmicHomepage__RenderFunc(props: {
                             "__wab_instance",
                             sty.textField2
                           )}
+                          description={"Description..."}
                           inputMode={"text"}
+                          label={"Label"}
                           multiLine={true}
                           onChange={async (...eventArgs: any) => {
                             generateStateOnChangeProp($state, [
