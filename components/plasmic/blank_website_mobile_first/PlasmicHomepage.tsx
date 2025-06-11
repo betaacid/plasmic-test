@@ -397,8 +397,10 @@ function PlasmicHomepage__RenderFunc(props: {
                 color={"neutral"}
                 flatSide={[]}
                 iconStart={
-                  hasVariant(globalVariants, "screen", "tablet")
+                  hasVariant(globalVariants, "screen", "desktop")
                     ? undefined
+                    : hasVariant(globalVariants, "screen", "tablet")
+                    ? true
                     : true
                 }
                 label={

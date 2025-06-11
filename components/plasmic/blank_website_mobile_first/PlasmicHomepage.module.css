@@ -119,8 +119,14 @@
 }
 @media (min-width: 768px) {
   .button__fZIuf:global(.__wab_instance):global(.__wab_instance) {
-    width: auto;
     height: 56px;
+    width: 60px;
+    flex-shrink: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .button__fZIuf:global(.__wab_instance):global(.__wab_instance) {
+    width: auto;
   }
 }
 .svg__gieMo {
@@ -130,7 +136,8 @@
 }
 @media (min-width: 768px) {
   .svg__gieMo {
-    display: none;
+    width: 48px;
+    height: 48px;
   }
 }
 .text__a8Syd {
@@ -147,9 +154,15 @@
   user-select: text;
   text-decoration-line: none !important;
   text-overflow: clip !important;
+  width: auto;
   display: none;
 }
 @media (min-width: 768px) {
+  .text__a8Syd {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
   .text__a8Syd {
     display: block;
   }
