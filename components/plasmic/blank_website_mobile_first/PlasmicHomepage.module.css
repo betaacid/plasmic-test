@@ -59,6 +59,11 @@
 .navSection > * {
   grid-column: 4;
 }
+@media (min-width: 1024px) {
+  .navSection > * {
+    grid-column: 4;
+  }
+}
 .freeBox__elpz9 {
   display: flex;
   flex-direction: row;
@@ -69,9 +74,9 @@
   height: auto;
   max-width: 100%;
   margin-top: 13px;
-  grid-column-start: 1 !important;
-  grid-column-end: -1 !important;
-  padding: 8px 16px;
+  grid-column-start: 3 !important;
+  grid-column-end: -3 !important;
+  padding: 8px;
 }
 .button__kR0U:global(.__wab_instance):global(.__wab_instance) {
   width: auto;

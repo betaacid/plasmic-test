@@ -259,30 +259,28 @@ function PlasmicHomepage__RenderFunc(props: {
     $refs
   });
 
-  const [isN24736664Hover, triggerN24736664HoverProps] = useTrigger(
+  const [isN3009564Hover, triggerN3009564HoverProps] = useTrigger(
     "useHover",
     {}
   );
-  const [isN24736664Active, triggerN24736664ActiveProps] = useTrigger(
+  const [isN3009564Active, triggerN3009564ActiveProps] = useTrigger(
     "usePressed",
     {}
   );
-  const [isN24736664FocusWithin, triggerN24736664FocusWithinProps] = useTrigger(
+  const [isN3009564FocusWithin, triggerN3009564FocusWithinProps] = useTrigger(
     "useFocusedWithin",
     {}
   );
-  const [
-    isN24736664FocusVisibleWithin,
-    triggerN24736664FocusVisibleWithinProps
-  ] = useTrigger("useFocusVisibleWithin", {
-    isTextInput: false
-  });
+  const [isN3009564FocusVisibleWithin, triggerN3009564FocusVisibleWithinProps] =
+    useTrigger("useFocusVisibleWithin", {
+      isTextInput: false
+    });
   const triggers = {
-    hoverActiveFocusWithinFocusVisibleWithin_24736664:
-      isN24736664Hover &&
-      isN24736664Active &&
-      isN24736664FocusWithin &&
-      isN24736664FocusVisibleWithin
+    hoverActiveFocusWithinFocusVisibleWithin_3009564:
+      isN3009564Hover &&
+      isN3009564Active &&
+      isN3009564FocusWithin &&
+      isN3009564FocusVisibleWithin
   };
 
   const globalVariants = ensureGlobalVariants({
@@ -3022,7 +3020,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             sty.h3___4M7DZ,
                             {
                               [sty.h3___hover__active__focusWithin__focusVisibleWithin___4M7DZz2OfP]:
-                                triggers.hoverActiveFocusWithinFocusVisibleWithin_24736664
+                                triggers.hoverActiveFocusWithinFocusVisibleWithin_3009564
                             }
                           )}
                           title={
@@ -3031,10 +3029,10 @@ function PlasmicHomepage__RenderFunc(props: {
                               : undefined
                           }
                           data-plasmic-trigger-props={[
-                            triggerN24736664HoverProps,
-                            triggerN24736664ActiveProps,
-                            triggerN24736664FocusWithinProps,
-                            triggerN24736664FocusVisibleWithinProps
+                            triggerN3009564HoverProps,
+                            triggerN3009564ActiveProps,
+                            triggerN3009564FocusWithinProps,
+                            triggerN3009564FocusVisibleWithinProps
                           ]}
                         >
                           <React.Fragment>
