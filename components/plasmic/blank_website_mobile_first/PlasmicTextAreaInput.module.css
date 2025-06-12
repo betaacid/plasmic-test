@@ -2,17 +2,18 @@
   box-sizing: border-box;
   object-fit: cover;
   position: relative;
-  box-shadow: inset 0px 0px 0px 1px var(--token-bZeWi1PxbxAK);
+  box-shadow: none;
   font-size: 20px;
   line-height: var(--token-AxGvilwbMKE5);
   width: 100%;
-  color: var(--token-7_3u4At6HfW_);
+  color: var(--token-OpsAqN-5bUxj);
   font-family: var(--token-EHi4kNhL2Nl_);
   background: var(--token-bZeWi1PxbxAK);
   height: 200px;
+  outline-style: none;
   min-width: 0;
   border-radius: 20px;
-  padding: var(--token-_-9KI23YpT-b) var(--token-EmUZI1_hU_zS);
+  padding: 1rem var(--token-EmUZI1_hU_zS) var(--token-_-9KI23YpT-b) 1rem;
   border-style: none;
 }
 .ariaTextArea[data-focused]:global(.__wab_instance) {
