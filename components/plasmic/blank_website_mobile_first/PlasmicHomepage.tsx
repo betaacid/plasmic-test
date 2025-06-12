@@ -2318,7 +2318,11 @@ function PlasmicHomepage__RenderFunc(props: {
             alt={""}
             className={classNames(sty.img__huMB)}
             displayHeight={
-              hasVariant(globalVariants, "screen", "tablet") ? "217px" : "126px"
+              hasVariant(globalVariants, "screen", "desktop")
+                ? "315px"
+                : hasVariant(globalVariants, "screen", "tablet")
+                ? "217px"
+                : "126px"
             }
             displayMaxHeight={"none"}
             displayMaxWidth={"100%"}
