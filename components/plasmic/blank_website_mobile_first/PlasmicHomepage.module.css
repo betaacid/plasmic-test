@@ -393,6 +393,7 @@
     width: 100%;
     justify-content: center;
     align-items: flex-start;
+    margin-bottom: -69px;
     grid-column-start: 1 !important;
     grid-column-end: -1 !important;
   }
@@ -644,10 +645,16 @@
 }
 @media (min-width: 768px) {
   .aboutMeSection {
-    padding-bottom: 35px;
+    padding-bottom: 0px;
+    padding-top: 69px;
   }
 }
 @media (min-width: 768px) {
+  .aboutMeSection > * {
+    grid-column: 4;
+  }
+}
+@media (min-width: 1024px) {
   .aboutMeSection > * {
     grid-column: 4;
   }
@@ -1102,7 +1109,9 @@
   width: 100%;
   padding-left: 0;
   padding-right: 0;
-  margin-top: 69px;
+  margin-top: 0px;
+  padding-top: 69px;
+  margin-bottom: -30px;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
   grid-template-columns:
@@ -1119,6 +1128,7 @@
 @media (min-width: 768px) {
   .portfolioSection {
     padding-bottom: 126px;
+    padding-top: 105px;
   }
 }
 @media (min-width: 768px) {
@@ -2348,13 +2358,10 @@
   position: relative;
   align-content: flex-start;
   justify-items: center;
-  padding-left: 0;
-  padding-right: 0;
   background: var(--token-SkTuGeCN40KD);
   overflow: visible;
   justify-self: auto;
   width: 100%;
-  padding-bottom: 16px;
   height: 2089px;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
@@ -2365,6 +2372,7 @@
       calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
     )
     minmax(0, var(--plsmc-wide-chunk)) 1fr var(--plsmc-viewport-gap);
+  padding: 97px 0 16px;
 }
 .servicesSection > * {
   grid-column: 4;
@@ -2411,7 +2419,7 @@
 }
 .h5___9FxNk {
   font-size: 32px;
-  margin-top: 62px;
+  margin-top: 0px;
   font-weight: 400;
   font-family: "Fraunces", serif;
   font-style: normal;
@@ -3557,6 +3565,7 @@
   width: 100%;
   margin-top: 48px;
   height: 126px;
+  margin-bottom: -32px;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
 }
@@ -3587,7 +3596,8 @@
   width: 100%;
   padding-left: 0;
   padding-right: 0;
-  margin-top: 48px;
+  margin-top: 0px;
+  padding-top: 65px;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
   grid-template-columns:
@@ -4879,7 +4889,7 @@
   .freeBox__rSInS {
     display: flex;
     width: 100%;
-    padding-top: 74px;
+    padding-top: 102px;
     grid-column-start: 3 !important;
     grid-column-end: -3 !important;
   }
