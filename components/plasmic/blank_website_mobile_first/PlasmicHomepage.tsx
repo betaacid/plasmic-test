@@ -2943,6 +2943,46 @@ function PlasmicHomepage__RenderFunc(props: {
                     )}
                     component={Link}
                     href={`/`}
+                    onClick={async event => {
+                      const $steps = {};
+
+                      $steps["updateMenuModalIsOpen"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              variable: {
+                                objRoot: $state,
+                                variablePath: ["menuModal", "isOpen"]
+                              },
+                              operation: 4
+                            };
+                            return (({
+                              variable,
+                              value,
+                              startIndex,
+                              deleteCount
+                            }) => {
+                              if (!variable) {
+                                return;
+                              }
+                              const { objRoot, variablePath } = variable;
+
+                              const oldValue = $stateGet(objRoot, variablePath);
+                              $stateSet(objRoot, variablePath, !oldValue);
+                              return !oldValue;
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["updateMenuModalIsOpen"] != null &&
+                        typeof $steps["updateMenuModalIsOpen"] === "object" &&
+                        typeof $steps["updateMenuModalIsOpen"].then ===
+                          "function"
+                      ) {
+                        $steps["updateMenuModalIsOpen"] = await $steps[
+                          "updateMenuModalIsOpen"
+                        ];
+                      }
+                    }}
                     platform={"nextjs"}
                   >
                     {"HOME"}
@@ -2956,6 +2996,46 @@ function PlasmicHomepage__RenderFunc(props: {
                     )}
                     component={Link}
                     href={"#about-me"}
+                    onClick={async event => {
+                      const $steps = {};
+
+                      $steps["updateMenuModalIsOpen"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              variable: {
+                                objRoot: $state,
+                                variablePath: ["menuModal", "isOpen"]
+                              },
+                              operation: 4
+                            };
+                            return (({
+                              variable,
+                              value,
+                              startIndex,
+                              deleteCount
+                            }) => {
+                              if (!variable) {
+                                return;
+                              }
+                              const { objRoot, variablePath } = variable;
+
+                              const oldValue = $stateGet(objRoot, variablePath);
+                              $stateSet(objRoot, variablePath, !oldValue);
+                              return !oldValue;
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["updateMenuModalIsOpen"] != null &&
+                        typeof $steps["updateMenuModalIsOpen"] === "object" &&
+                        typeof $steps["updateMenuModalIsOpen"].then ===
+                          "function"
+                      ) {
+                        $steps["updateMenuModalIsOpen"] = await $steps[
+                          "updateMenuModalIsOpen"
+                        ];
+                      }
+                    }}
                     platform={"nextjs"}
                   >
                     {"ABOUT ME"}
@@ -2969,6 +3049,46 @@ function PlasmicHomepage__RenderFunc(props: {
                     )}
                     component={Link}
                     href={"#portfolio"}
+                    onClick={async event => {
+                      const $steps = {};
+
+                      $steps["updateMenuModalIsOpen"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              variable: {
+                                objRoot: $state,
+                                variablePath: ["menuModal", "isOpen"]
+                              },
+                              operation: 4
+                            };
+                            return (({
+                              variable,
+                              value,
+                              startIndex,
+                              deleteCount
+                            }) => {
+                              if (!variable) {
+                                return;
+                              }
+                              const { objRoot, variablePath } = variable;
+
+                              const oldValue = $stateGet(objRoot, variablePath);
+                              $stateSet(objRoot, variablePath, !oldValue);
+                              return !oldValue;
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["updateMenuModalIsOpen"] != null &&
+                        typeof $steps["updateMenuModalIsOpen"] === "object" &&
+                        typeof $steps["updateMenuModalIsOpen"].then ===
+                          "function"
+                      ) {
+                        $steps["updateMenuModalIsOpen"] = await $steps[
+                          "updateMenuModalIsOpen"
+                        ];
+                      }
+                    }}
                     platform={"nextjs"}
                   >
                     {"PORTFOLIO"}
@@ -2982,6 +3102,46 @@ function PlasmicHomepage__RenderFunc(props: {
                     )}
                     component={Link}
                     href={"#services"}
+                    onClick={async event => {
+                      const $steps = {};
+
+                      $steps["updateMenuModalIsOpen"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              variable: {
+                                objRoot: $state,
+                                variablePath: ["menuModal", "isOpen"]
+                              },
+                              operation: 4
+                            };
+                            return (({
+                              variable,
+                              value,
+                              startIndex,
+                              deleteCount
+                            }) => {
+                              if (!variable) {
+                                return;
+                              }
+                              const { objRoot, variablePath } = variable;
+
+                              const oldValue = $stateGet(objRoot, variablePath);
+                              $stateSet(objRoot, variablePath, !oldValue);
+                              return !oldValue;
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["updateMenuModalIsOpen"] != null &&
+                        typeof $steps["updateMenuModalIsOpen"] === "object" &&
+                        typeof $steps["updateMenuModalIsOpen"].then ===
+                          "function"
+                      ) {
+                        $steps["updateMenuModalIsOpen"] = await $steps[
+                          "updateMenuModalIsOpen"
+                        ];
+                      }
+                    }}
                     platform={"nextjs"}
                   >
                     {"SERVICES"}
@@ -2995,6 +3155,46 @@ function PlasmicHomepage__RenderFunc(props: {
                     )}
                     component={Link}
                     href={"#press"}
+                    onClick={async event => {
+                      const $steps = {};
+
+                      $steps["updateMenuModalIsOpen"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              variable: {
+                                objRoot: $state,
+                                variablePath: ["menuModal", "isOpen"]
+                              },
+                              operation: 4
+                            };
+                            return (({
+                              variable,
+                              value,
+                              startIndex,
+                              deleteCount
+                            }) => {
+                              if (!variable) {
+                                return;
+                              }
+                              const { objRoot, variablePath } = variable;
+
+                              const oldValue = $stateGet(objRoot, variablePath);
+                              $stateSet(objRoot, variablePath, !oldValue);
+                              return !oldValue;
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["updateMenuModalIsOpen"] != null &&
+                        typeof $steps["updateMenuModalIsOpen"] === "object" &&
+                        typeof $steps["updateMenuModalIsOpen"].then ===
+                          "function"
+                      ) {
+                        $steps["updateMenuModalIsOpen"] = await $steps[
+                          "updateMenuModalIsOpen"
+                        ];
+                      }
+                    }}
                     platform={"nextjs"}
                   >
                     {"PRESS"}
@@ -3008,6 +3208,46 @@ function PlasmicHomepage__RenderFunc(props: {
                     )}
                     component={Link}
                     href={"#contact"}
+                    onClick={async event => {
+                      const $steps = {};
+
+                      $steps["updateMenuModalIsOpen"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              variable: {
+                                objRoot: $state,
+                                variablePath: ["menuModal", "isOpen"]
+                              },
+                              operation: 4
+                            };
+                            return (({
+                              variable,
+                              value,
+                              startIndex,
+                              deleteCount
+                            }) => {
+                              if (!variable) {
+                                return;
+                              }
+                              const { objRoot, variablePath } = variable;
+
+                              const oldValue = $stateGet(objRoot, variablePath);
+                              $stateSet(objRoot, variablePath, !oldValue);
+                              return !oldValue;
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["updateMenuModalIsOpen"] != null &&
+                        typeof $steps["updateMenuModalIsOpen"] === "object" &&
+                        typeof $steps["updateMenuModalIsOpen"].then ===
+                          "function"
+                      ) {
+                        $steps["updateMenuModalIsOpen"] = await $steps[
+                          "updateMenuModalIsOpen"
+                        ];
+                      }
+                    }}
                     platform={"nextjs"}
                   >
                     {"CONTACT"}

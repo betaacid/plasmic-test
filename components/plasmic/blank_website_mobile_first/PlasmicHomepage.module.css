@@ -5388,6 +5388,10 @@
 .root .link__zOGnJ:visited:hover {
   color: var(--token-5Fd7Ld29XUJq);
 }
+.root .link__zOGnJ:focus:active {
+  color: var(--token-5Fd7Ld29XUJq);
+  outline: none;
+}
 .link__vsNyJ {
   color: var(--token-OpsAqN-5bUxj);
   font-size: 48px;

@@ -190,7 +190,7 @@
   --mixin-XbtNCthIKDBa_font-family: var(--token-EHi4kNhL2Nl_);
   --mixin-XbtNCthIKDBa_text-transform: uppercase;
   --mixin-XbtNCthIKDBa_white-space: pre-wrap;
-  --mixin-9qZ6Fz9wVIls_color: #0070f3;
+  --mixin-9qZ6Fz9wVIls_color: var(--token-aRsrMLdPve6a);
   --mixin-9qZ6Fz9wVIls_white-space: pre-wrap;
   --mixin-Kk0VFBINeHOI_border-left-color: #dddddd;
   --mixin-Kk0VFBINeHOI_border-left-style: solid;
@@ -284,8 +284,11 @@
   --mixin-dXwoOOtlIGEq_position: relative;
   --mixin-dXwoOOtlIGEq_list-style-type: disc;
   --mixin-dXwoOOtlIGEq_white-space: pre-wrap;
-  --mixin-0tFDYzc3RmNt_color: #3291ff;
+  --mixin-0tFDYzc3RmNt_color: var(--token-5Fd7Ld29XUJq);
   --mixin-0tFDYzc3RmNt_white-space: pre-wrap;
+  --mixin-CUwYMau5JGYK_white-space: pre-wrap;
+  --mixin-Pef3u0bHZjec_white-space: pre-wrap;
+  --mixin-Kn1ZbyG-KWfw_white-space: pre-wrap;
 }
 
 @media (min-width: 768px) {
@@ -841,4 +844,25 @@ a:where(.root_reset.a):hover,
 :where(.root_reset_tags) a:hover,
 a:where(.root_reset_tags):hover {
   color: var(--mixin-0tFDYzc3RmNt_color);
+}
+
+:where(.root_reset) a:where(.a):not(:hover),
+a:where(.root_reset.a):not(:hover),
+:where(.root_reset .__wab_expr_html_text) a:not(:hover),
+:where(.root_reset_tags) a:not(:hover),
+a:where(.root_reset_tags):not(:hover) {
+}
+
+:where(.root_reset) a:where(.a):active,
+a:where(.root_reset.a):active,
+:where(.root_reset .__wab_expr_html_text) a:active,
+:where(.root_reset_tags) a:active,
+a:where(.root_reset_tags):active {
+}
+
+:where(.root_reset) a:where(.a):focus,
+a:where(.root_reset.a):focus,
+:where(.root_reset .__wab_expr_html_text) a:focus,
+:where(.root_reset_tags) a:focus,
+a:where(.root_reset_tags):focus {
 }
