@@ -42,8 +42,9 @@
   transition-duration: 1s;
   left: 0px;
   top: 0px;
-  z-index: 1;
   background: var(--token-fL_mRu4Bd1K7);
+  right: 0px;
+  z-index: 10;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
   grid-template-columns:
@@ -5527,6 +5528,8 @@
   flex-direction: column;
   position: relative;
   margin-top: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 150px;
 }
 .freeBox__qNqSd > :global(.__wab_flex-container) {
   flex-direction: column;
