@@ -2319,7 +2319,7 @@ function PlasmicHomepage__RenderFunc(props: {
             className={classNames(sty.img__huMB)}
             displayHeight={
               hasVariant(globalVariants, "screen", "desktop")
-                ? "315px"
+                ? "340px"
                 : hasVariant(globalVariants, "screen", "tablet")
                 ? "217px"
                 : "126px"
