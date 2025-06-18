@@ -59,8 +59,8 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
-import Button from "../../Button"; // plasmic-import: 7v6YGoE2Zo0o/component
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
+import Button from "../../Button"; // plasmic-import: 7v6YGoE2Zo0o/component
 import Modal from "../../Modal"; // plasmic-import: 5SZcaRjHDDZd/component
 import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton";
 import { FormWrapper } from "@plasmicpkgs/antd5/skinny/Form";
@@ -101,6 +101,7 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
+  jsonLd?: Flex__<typeof Embed>;
   navSection?: Flex__<"section">;
   headerSection?: Flex__<"section">;
   h1?: Flex__<"h1">;
@@ -328,6 +329,15 @@ function PlasmicHomepage__RenderFunc(props: {
             sty.root
           )}
         >
+          <Embed
+            data-plasmic-name={"jsonLd"}
+            data-plasmic-override={overrides.jsonLd}
+            className={classNames("__wab_instance", sty.jsonLd)}
+            code={
+              '<script type="application/ld+json">\n{\n  "@context": "https://schema.org",\n  "@type": "ProfessionalService",\n  "name": "Cocktails King Beverage Consulting",\n  "description": "Award-winning beverage consultant specializing in cocktail development, production consulting, staff training, and menu design",\n  "serviceType": "Beverage Consulting",\n  "areaServed": "Worldwide",\n  "hasOfferCatalog": {\n    "@type": "OfferCatalog",\n    "name": "Beverage Consulting Services",\n    "itemListElement": [\n      {\n        "@type": "Offer",\n        "itemOffered": {\n          "@type": "Service",\n          "name": "Cocktail Development",\n          "description": "Ingredient-driven cocktail creation and recipe development"\n        }\n      },\n      {\n        "@type": "Offer",\n        "itemOffered": {\n          "@type": "Service",\n          "name": "Production Consulting",\n          "description": "Technical consultation for beverage production and manufacturing"\n        }\n      },\n      {\n        "@type": "Offer",\n        "itemOffered": {\n          "@type": "Service",\n          "name": "Staff Training",\n          "description": "Professional training for bar staff and beverage teams"\n        }\n      },\n      {\n        "@type": "Offer",\n        "itemOffered": {\n          "@type": "Service",\n          "name": "Menu Design",\n          "description": "Clean and minimal beverage menu design and curation"\n        }\n      },\n      {\n        "@type": "Offer",\n        "itemOffered": {\n          "@type": "Service",\n          "name": "Brand Consulting",\n          "description": "Helping beverage brands bring their visions to life"\n        }\n      },\n      {\n        "@type": "Offer",\n        "itemOffered": {\n          "@type": "Service",\n          "name": "Bar Consulting",\n          "description": "Comprehensive consulting services for bars and hospitality venues"\n        }\n      },\n      {\n        "@type": "Offer",\n        "itemOffered": {\n          "@type": "Service",\n          "name": "Product Development",\n          "description": "Supporting product developers in creating new beverage products"\n        }\n      }\n    ]\n  }\n}\n</script>'
+            }
+          />
+
           <section
             data-plasmic-name={"navSection"}
             data-plasmic-override={overrides.navSection}
@@ -3981,6 +3991,7 @@ function PlasmicHomepage__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
+    "jsonLd",
     "navSection",
     "headerSection",
     "h1",
@@ -4031,6 +4042,7 @@ const PlasmicDescendants = {
     "textField2",
     "sendMessage"
   ],
+  jsonLd: ["jsonLd"],
   navSection: ["navSection"],
   headerSection: ["headerSection", "h1"],
   h1: ["h1"],
@@ -4137,6 +4149,7 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  jsonLd: typeof Embed;
   navSection: "section";
   headerSection: "section";
   h1: "h1";
@@ -4248,6 +4261,7 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    jsonLd: makeNodeComponent("jsonLd"),
     navSection: makeNodeComponent("navSection"),
     headerSection: makeNodeComponent("headerSection"),
     h1: makeNodeComponent("h1"),
