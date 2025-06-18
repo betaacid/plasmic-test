@@ -265,7 +265,45 @@ function PlasmicHomepage__RenderFunc(props: {
 
   return (
     <React.Fragment>
-      <Head></Head>
+      <Head>
+        <meta name="twitter:card" content="summary_large_image" />
+        <title key="title">{PlasmicHomepage.pageMetadata.title}</title>
+        <meta
+          key="og:title"
+          property="og:title"
+          content={PlasmicHomepage.pageMetadata.title}
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
+          content={PlasmicHomepage.pageMetadata.title}
+        />
+        <meta
+          key="description"
+          name="description"
+          content={PlasmicHomepage.pageMetadata.description}
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={PlasmicHomepage.pageMetadata.description}
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
+          content={PlasmicHomepage.pageMetadata.description}
+        />
+        <meta
+          key="og:image"
+          property="og:image"
+          content={PlasmicHomepage.pageMetadata.ogImageSrc}
+        />
+        <meta
+          key="twitter:image"
+          name="twitter:image"
+          content={PlasmicHomepage.pageMetadata.ogImageSrc}
+        />
+      </Head>
 
       <style>{`
         body {
@@ -4268,9 +4306,12 @@ export const PlasmicHomepage = Object.assign(
 
     // Page metadata
     pageMetadata: {
-      title: "",
-      description: "",
-      ogImageSrc: "",
+      title:
+        "Cocktails King - Award-Winning Beverage Consultant | Cocktail Development & Production",
+      description:
+        "Award-winning beverage consultant specializing in cocktail development, production consulting, staff training & menu design for global brands & bars.",
+      ogImageSrc:
+        "https://site-assets.plasmic.app/f79c6fa3e66223584fc3ac12303d47e9.png",
       canonical: ""
     }
   }
